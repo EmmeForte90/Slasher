@@ -5,7 +5,6 @@ using UnityEngine;
 public class hero_rule : MonoBehaviour
 {
     private Rigidbody rb;
-    private float dirX, dirZ;
 
     public float velocita_movimento=1;
 
@@ -30,8 +29,6 @@ public class hero_rule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //dirX= Input.GetAxis("Horizontal")*velocita_movimento;
-        //dirZ= Input.GetAxis("Vertical")*velocita_movimento;
 
         heading += Input.GetAxis("Mouse X")*Time.deltaTime*120;
         camPivot.rotation=Quaternion.Euler(0,heading,0);
@@ -49,14 +46,14 @@ public class hero_rule : MonoBehaviour
 
         moveDir=(camR*input.x+camF*input.y);
 
-        Vector3 targetMovePosition = transform.position + moveDir*Time.deltaTime;
+        //Vector3 targetMovePosition = transform.position + moveDir*Time.deltaTime;
         //transform.position=targetMovePosition;
         
 
         //transform.position += moveDir*Time.deltaTime*velocita_movimento;
         //print (transform.position+" - "+camR*input.x+" - "+camF*input.y+" - "+(camR*input.x+camF*input.y));
 
-        //cam.transform.LookAt(transform.position);   //telecamera inquadra semple il pupo
+        //cam.transform.LookAt(transform.position);   //telecamera inquadra sempre il pupo
         transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia
 
         //funzione relativa al flip
