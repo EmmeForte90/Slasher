@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class hero_rule : MonoBehaviour
 {
-    //private Rigidbody rb;
-    //public float velocita_movimento=1;
-    //private float dirX, dirZ;
+    private Rigidbody rb;
+    private float dirX, dirZ;
 
-    public float velocita_movimento=10;
+    public float velocita_movimento=1;
 
     public Transform camPivot;
     float heading=0;
     public Transform cam;
     Vector2 input;
+    public float range_ray=10;
 
     float input_horizontal;
     bool bool_dir_dx=true;
 
+    Vector3 camF,camR,moveDir;
+
     // Start is called before the first frame update
     void Start()
     {
-        //rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -30,32 +33,42 @@ public class hero_rule : MonoBehaviour
         //dirX= Input.GetAxis("Horizontal")*velocita_movimento;
         //dirZ= Input.GetAxis("Vertical")*velocita_movimento;
 
-        heading += Input.GetAxis("Mouse X")*Time.deltaTime*180;
+        heading += Input.GetAxis("Mouse X")*Time.deltaTime*120;
         camPivot.rotation=Quaternion.Euler(0,heading,0);
 
         input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         input=Vector2.ClampMagnitude(input, 1);
 
-        Vector3 camF = cam.forward;
-        Vector3 camR = cam.right;
+        camF = cam.forward;
+        camR = cam.right;
 
         camF.y=0;
         camR.y=0;
         camF=camF.normalized;
         camR=camR.normalized;
 
-        transform.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
+        moveDir=(camR*input.x+camF*input.y);
 
-        cam.transform.LookAt(transform.position);   //telecamera inquadra semple il pupo
+        Vector3 targetMovePosition = transform.position + moveDir*Time.deltaTime;
+        //transform.position=targetMovePosition;
+        
+
+        //transform.position += moveDir*Time.deltaTime*velocita_movimento;
+        //print (transform.position+" - "+camR*input.x+" - "+camF*input.y+" - "+(camR*input.x+camF*input.y));
+
+        //cam.transform.LookAt(transform.position);   //telecamera inquadra semple il pupo
         transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia
 
+        //funzione relativa al flip
         input_horizontal = Input.GetAxisRaw("Horizontal");
-
         Flip();
     }
 
     void FixedUpdate(){
+        rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
+        //rb.AddForce(moveDir.normalized * velocita_movimento * 10f, ForceMode.Force);
         //rb.velocity = new Vector3(dirX,rb.velocity.y,dirZ);
+        //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
     }
 
     private void Flip()
