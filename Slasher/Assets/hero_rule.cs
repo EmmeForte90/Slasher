@@ -12,7 +12,7 @@ public class hero_rule : MonoBehaviour
     float heading=0;
     public Transform cam;
     Vector2 input;
-    public float range_ray=10;
+    public Transform img_hero;
 
     float input_horizontal;
     bool bool_dir_dx=true;
@@ -54,7 +54,7 @@ public class hero_rule : MonoBehaviour
         //print (transform.position+" - "+camR*input.x+" - "+camF*input.y+" - "+(camR*input.x+camF*input.y));
 
         //cam.transform.LookAt(transform.position);   //telecamera inquadra sempre il pupo
-        transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia
+        img_hero.transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia
 
         //funzione relativa al flip
         input_horizontal = Input.GetAxisRaw("Horizontal");
@@ -73,9 +73,9 @@ public class hero_rule : MonoBehaviour
         if (bool_dir_dx && input_horizontal > 0f || !bool_dir_dx && input_horizontal < 0f)
         {
             bool_dir_dx = !bool_dir_dx;
-            Vector3 localScale = transform.localScale;
+            Vector3 localScale = img_hero.localScale;
             localScale.x *= -1f;
-            transform.localScale = localScale;
+            img_hero.localScale = localScale;
         }
     }
 }
