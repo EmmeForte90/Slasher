@@ -1,0 +1,25 @@
+DaggerDemon.png
+size:1024,512
+filter:Linear,Linear
+pma:true
+Gonna
+bounds:605,226,151,79
+baccino
+bounds:2,2,37,133
+rotate:90
+body
+bounds:605,307,187,193
+braccio
+bounds:375,116,103,384
+braccio copia
+bounds:270,116,103,384
+daga
+bounds:480,147,123,353
+gamba
+bounds:794,455,45,222
+rotate:90
+horn
+bounds:2,41,66,232
+rotate:90
+testa
+bounds:2,109,266,391

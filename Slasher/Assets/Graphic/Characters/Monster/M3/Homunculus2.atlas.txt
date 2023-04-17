@@ -1,0 +1,33 @@
+Homunculus2.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Ciuffo
+bounds:1670,752,1214,241
+rotate:90
+Ciuffo copia
+bounds:2,2,1174,432
+Ciuffo copia 2
+bounds:1007,894,1072,661
+rotate:90
+Ciuffo copia 3
+bounds:2,1202,1003,764
+Ciuffo1
+bounds:2,436,1003,764
+mandibola
+bounds:1178,47,556,703
+
+Homunculus2_2.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+Ciuffo2
+bounds:2,1178,1072,661
+Ciuffo3
+bounds:680,2,1174,432
+rotate:90
+Ciuffo4
+bounds:1114,625,1214,241
+rotate:90
+faccia
+bounds:2,190,676,986
