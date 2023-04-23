@@ -9,6 +9,7 @@ public class hero_rule : MonoBehaviour
     private Dictionary<string, GameObject> lista_GO_abilita = new Dictionary<string, GameObject>();
     public GameObject cont_lista_abilita;
     public Dictionary<string, int> lista_abilita_personaggio = new Dictionary<string, int>();   //abilità, livello
+    public Dictionary<string, float> lista_danni_abilita = new Dictionary<string, float>();   //abilità, danno
 
     private Rigidbody rb;
 
@@ -33,6 +34,7 @@ public class hero_rule : MonoBehaviour
 
         foreach (Transform child in cont_lista_abilita.transform) {
             lista_GO_abilita.Add(child.name,child.gameObject);
+            lista_danni_abilita.Add(child.name,0f);
         }
 
         raccogli_info_file();   //funzione chiamata in verità dalle funzioni XML in futuro (cioè da mettere sulla funzione che raccogli da xml)
@@ -85,6 +87,19 @@ public class hero_rule : MonoBehaviour
         //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
     }
 
+    /*
+    void OnCollisionStay(Collision collision){
+        print ("eroe: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        if (collision.gameObject.tag=="nemico"){
+            danneggia_personaggio(info_comuni.lista_danni_nemici[])
+        }
+    }
+    */
+
+    public void danneggia_eroe(float danni){
+        print ("stò danneggiando l'eroe di "+danni);
+    }
+
     private void Flip()
     {
         if (bool_dir_dx && input_horizontal > 0f || !bool_dir_dx && input_horizontal < 0f)
@@ -127,7 +142,11 @@ public class hero_rule : MonoBehaviour
 
     private void aggiorna_abilita_livello(string abilita, int livello){
         switch (abilita){
-            case "catena":{lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);break;}
+            case "catena":{
+                lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_catena>().dmg;
+                break;
+            }
         }
     }
 }

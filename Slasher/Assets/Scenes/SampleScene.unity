@@ -361,8 +361,8 @@ GameObject:
   - component: {fileID: 620276350}
   - component: {fileID: 620276349}
   m_Layer: 0
-  m_Name: hero_container
-  m_TagString: Untagged
+  m_Name: eroe
+  m_TagString: eroe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,37 +432,6 @@ MonoBehaviour:
   camPivot: {fileID: 1311502626}
   cam: {fileID: 963194228}
   img_hero: {fileID: 1552927705}
---- !u!1 &624777501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 624777502}
-  m_Layer: 0
-  m_Name: abilita
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &624777502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624777501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.354605, y: -12.306113, z: 26.287846}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,11 +540,11 @@ GameObject:
   - component: {fileID: 832910714}
   m_Layer: 0
   m_Name: Spine GameObject (DemonsHeadSlash)
-  m_TagString: Untagged
+  m_TagString: nemico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &832910714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,7 +648,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875435607
 GameObject:
@@ -916,11 +885,11 @@ GameObject:
   - component: {fileID: 1238437012}
   m_Layer: 0
   m_Name: catena
-  m_TagString: Untagged
+  m_TagString: abilita
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1238437010
 Transform:
   m_ObjectHideFlags: 0
@@ -958,8 +927,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238437009}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1044,7 +1013,7 @@ GameObject:
   - component: {fileID: 1454235504}
   m_Layer: 0
   m_Name: Spine GameObject (En9)
-  m_TagString: Untagged
+  m_TagString: nemico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1166,6 +1135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb5cd21f13952a44859e7c083d49ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id_nemico: 
+  hero_rule: {fileID: 620276351}
+  danno: 0.01
   cam_r: {fileID: 963194227}
   cam: {fileID: 963194228}
   hero: {fileID: 1552927705}
@@ -1339,11 +1311,11 @@ GameObject:
   - component: {fileID: 1569477287}
   m_Layer: 0
   m_Name: Spine GameObject (DaggerDemon)
-  m_TagString: Untagged
+  m_TagString: nemico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1569477287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,7 +1419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647839265
 GameObject:
@@ -1463,11 +1435,11 @@ GameObject:
   - component: {fileID: 1647839266}
   m_Layer: 0
   m_Name: Spine GameObject (Homunculus2)
-  m_TagString: Untagged
+  m_TagString: nemico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1647839266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1545,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682687238
 GameObject:
@@ -1592,7 +1564,7 @@ GameObject:
   - component: {fileID: 1682687244}
   m_Layer: 0
   m_Name: Spine GameObject (En8)
-  m_TagString: Untagged
+  m_TagString: nemico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1700,7 +1672,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1682687243
 MonoBehaviour:
@@ -1714,6 +1686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb5cd21f13952a44859e7c083d49ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id_nemico: 
+  hero_rule: {fileID: 620276351}
+  danno: 0.01
   cam_r: {fileID: 963194227}
   cam: {fileID: 963194228}
   hero: {fileID: 1552927705}
@@ -1761,7 +1736,7 @@ GameObject:
   - component: {fileID: 1697622265}
   - component: {fileID: 1697622264}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: catena_collider_trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1916,7 +1891,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919132148374655916
 GameObject:

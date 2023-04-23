@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class enemy_rule : MonoBehaviour
 {
+    public string id_nemico;
+    public hero_rule hero_rule;
+    public float danno=0.01f;
+
     private Rigidbody rb;
     public Camera cam_r;
     public Transform cam;
@@ -50,5 +54,29 @@ public class enemy_rule : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    void OnCollisionStay(Collision collision){
+        //print ("nemico: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        switch (collision.gameObject.name){
+            case "eroe":{hero_rule.danneggia_eroe(danno);break;}
+        }
+    }
+
+    /*
+    void OnCollisionEnter(Collision collision){
+        print ("nemico: entro in collisione con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+    }
+    */
+
+    void OnTriggerEnter(Collider collision){
+        //print ("nemico: entro in collisione trigger con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        switch (collision.gameObject.name){
+            case "catena_collider_trigger":{danneggia_nemico(hero_rule.lista_danni_abilita["catena"]);break;}
+        }
+    }
+
+    public void danneggia_nemico(float danni){
+        print ("stò danneggiando il nemico di "+danni);
     }
 }
