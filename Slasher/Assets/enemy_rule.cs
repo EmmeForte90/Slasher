@@ -15,8 +15,7 @@ public class enemy_rule : MonoBehaviour
     bool bool_dir_dx=true;
     Vector3 moveDir;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class hero_rule : MonoBehaviour
 {
+    public info_comuni info_comuni;
+
+    private Dictionary<string, GameObject> lista_GO_abilita = new Dictionary<string, GameObject>();
+    public GameObject cont_lista_abilita;
+    public Dictionary<string, int> lista_abilita_personaggio = new Dictionary<string, int>();   //abilità, livello
+
     private Rigidbody rb;
 
     public float velocita_movimento=1;
@@ -24,6 +30,17 @@ public class hero_rule : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        foreach (Transform child in cont_lista_abilita.transform) {
+            lista_GO_abilita.Add(child.name,child.gameObject);
+        }
+
+        raccogli_info_file();   //funzione chiamata in verità dalle funzioni XML in futuro (cioè da mettere sulla funzione che raccogli da xml)
+
+        foreach(KeyValuePair<string,int> attachStat in lista_abilita_personaggio){
+            aggiorna_abilita_livello(attachStat.Key,1);
+            StartCoroutine(attiva_abilita_coroutine(attachStat.Key));
+        }
     }
 
     // Update is called once per frame
@@ -76,6 +93,41 @@ public class hero_rule : MonoBehaviour
             Vector3 localScale = img_hero.localScale;
             localScale.x *= -1f;
             img_hero.localScale = localScale;
+        }
+    }
+
+    public void raccogli_info_file(){
+        lista_abilita_personaggio.Add("catena",1);
+    }
+
+    private IEnumerator attiva_abilita_coroutine(string abilita){
+        yield return new WaitForSeconds(info_comuni.lista_abilita_cooldown[abilita]);
+        attiva_abilita(abilita);
+    }
+
+    private void attiva_abilita(string abilita){
+        print ("attivo l'abilita "+abilita);
+        switch (abilita){
+            default:{
+                lista_GO_abilita[abilita].SetActive(true);
+                break;
+            }
+        }
+        StartCoroutine(disattiva_abilita(abilita));
+    }
+
+    private IEnumerator disattiva_abilita(string abilita){
+        yield return new WaitForSeconds(info_comuni.lista_abilita_durata[abilita]);
+        print ("disattivo l'abilita "+abilita);
+        switch (abilita){
+            default:{lista_GO_abilita[abilita].SetActive(false);break;}
+        }
+        StartCoroutine(attiva_abilita_coroutine(abilita));
+    }
+
+    private void aggiorna_abilita_livello(string abilita, int livello){
+        switch (abilita){
+            case "catena":{lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);break;}
         }
     }
 }
