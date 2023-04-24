@@ -113,6 +113,7 @@ public class hero_rule : MonoBehaviour
 
     public void raccogli_info_file(){
         lista_abilita_personaggio.Add("catena",1);
+        lista_abilita_personaggio.Add("shuriken",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -123,6 +124,10 @@ public class hero_rule : MonoBehaviour
     private void attiva_abilita(string abilita){
         print ("attivo l'abilita "+abilita);
         switch (abilita){
+            case "shuriken":{
+                lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().lancia_shuriken();
+                break;
+            }
             default:{
                 lista_GO_abilita[abilita].SetActive(true);
                 break;
@@ -135,6 +140,7 @@ public class hero_rule : MonoBehaviour
         yield return new WaitForSeconds(info_comuni.lista_abilita_durata[abilita]);
         print ("disattivo l'abilita "+abilita);
         switch (abilita){
+            case "shuriken":{break;}    //non và disattivata
             default:{lista_GO_abilita[abilita].SetActive(false);break;}
         }
         StartCoroutine(attiva_abilita_coroutine(abilita));
@@ -145,6 +151,11 @@ public class hero_rule : MonoBehaviour
             case "catena":{
                 lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_catena>().dmg;
+                break;
+            }
+            case "shuriken":{
+                lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().dmg;
                 break;
             }
         }

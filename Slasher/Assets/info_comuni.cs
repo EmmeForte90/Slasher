@@ -14,8 +14,10 @@ public class info_comuni : MonoBehaviour
     void Start()
     {
         lista_abilita_cooldown.Add("catena",10);
+        lista_abilita_cooldown.Add("shuriken",5);
 
         lista_abilita_durata.Add("catena",3);
+        lista_abilita_durata.Add("shuriken",1);
 
 
 
