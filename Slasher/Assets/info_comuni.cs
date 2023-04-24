@@ -15,9 +15,11 @@ public class info_comuni : MonoBehaviour
     {
         lista_abilita_cooldown.Add("catena",10);
         lista_abilita_cooldown.Add("shuriken",5);
+        lista_abilita_cooldown.Add("laser",0.5f);
 
         lista_abilita_durata.Add("catena",3);
         lista_abilita_durata.Add("shuriken",1);
+        lista_abilita_durata.Add("laser",0.1f);
 
 
 

@@ -114,6 +114,7 @@ public class hero_rule : MonoBehaviour
     public void raccogli_info_file(){
         lista_abilita_personaggio.Add("catena",1);
         lista_abilita_personaggio.Add("shuriken",1);
+        lista_abilita_personaggio.Add("laser",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -128,7 +129,12 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().lancia_shuriken();
                 break;
             }
-            default:{
+            case "laser":{
+                lista_GO_abilita[abilita].transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+                lista_GO_abilita[abilita].SetActive(true);
+                break;
+            }
+            case "catena":{
                 lista_GO_abilita[abilita].SetActive(true);
                 break;
             }
@@ -156,6 +162,11 @@ public class hero_rule : MonoBehaviour
             case "shuriken":{
                 lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().setta_livello(livello);
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().dmg;
+                break;
+            }
+            case "laser":{
+                lista_GO_abilita[abilita].GetComponent<abilita_laser>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_laser>().dmg;
                 break;
             }
         }

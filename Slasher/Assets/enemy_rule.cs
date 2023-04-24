@@ -73,7 +73,8 @@ public class enemy_rule : MonoBehaviour
         //print ("nemico: entro in collisione trigger con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         switch (collision.gameObject.name){
             case "catena_collider_trigger":{danneggia_nemico(hero_rule.lista_danni_abilita["catena"]);break;}
-            case "shuriken":{print ("mi ha beccato!");danneggia_nemico(hero_rule.lista_danni_abilita["shuriken"]);break;}
+            case "shuriken":{danneggia_nemico(hero_rule.lista_danni_abilita["shuriken"]);break;}
+            case "laser_collider_trigger":{danneggia_nemico(hero_rule.lista_danni_abilita["shuriken"]);break;}
         }
     }
 
