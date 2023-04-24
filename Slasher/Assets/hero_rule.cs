@@ -112,11 +112,12 @@ public class hero_rule : MonoBehaviour
     }
 
     public void raccogli_info_file(){
-        lista_abilita_personaggio.Add("catena",1);
-        lista_abilita_personaggio.Add("shuriken",1);
-        lista_abilita_personaggio.Add("laser",1);
-        lista_abilita_personaggio.Add("sfera_orbitale",1);
-        lista_abilita_personaggio.Add("scia_di_fuoco",1);
+        //lista_abilita_personaggio.Add("catena",1);
+        //lista_abilita_personaggio.Add("shuriken",1);
+        //lista_abilita_personaggio.Add("laser",1);
+        //lista_abilita_personaggio.Add("sfera_orbitale",1);
+        //lista_abilita_personaggio.Add("scia_di_fuoco",1);
+        lista_abilita_personaggio.Add("boccetta_di_acido",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -145,6 +146,10 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().bool_attiva=true;
                 break;
             }
+            case "boccetta_di_acido":{
+                lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().lancia_boccetta();
+                break;
+            }
         }
         StartCoroutine(disattiva_abilita(abilita));
     }
@@ -157,6 +162,7 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().bool_attiva=false;
                 break;
             }
+            case "boccetta_di_acido":
             case "shuriken":{break;}    //non và disattivata
             case "sfera_orbitale":
             case "catena":{
@@ -191,6 +197,11 @@ public class hero_rule : MonoBehaviour
             case "scia_di_fuoco":{
                 lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().setta_livello(livello);
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().dmg;
+                break;
+            }
+            case "boccetta_di_acido":{
+                lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().dmg;
                 break;
             }
         }

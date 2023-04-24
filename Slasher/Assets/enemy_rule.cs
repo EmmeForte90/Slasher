@@ -82,6 +82,7 @@ public class enemy_rule : MonoBehaviour
             case "shuriken":{danneggia_nemico("shuriken",hero_rule.lista_danni_abilita["shuriken"]);break;}
             case "laser_collider_trigger":{danneggia_nemico("laser",hero_rule.lista_danni_abilita["shuriken"]);break;}
             case "sfera_orbitale":{danneggia_nemico("sfera_orbitale",hero_rule.lista_danni_abilita["sfera_orbitale"]);break;}
+            case "pozza_acido":{danneggia_nemico("pozza_acido",hero_rule.lista_danni_abilita["boccetta_di_acido"]);break;}
         }
     }
 
