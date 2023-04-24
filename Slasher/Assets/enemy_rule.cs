@@ -72,13 +72,14 @@ public class enemy_rule : MonoBehaviour
     void OnTriggerEnter(Collider collision){
         //print ("nemico: entro in collisione trigger con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         switch (collision.gameObject.name){
-            case "catena_collider_trigger":{danneggia_nemico(hero_rule.lista_danni_abilita["catena"]);break;}
-            case "shuriken":{danneggia_nemico(hero_rule.lista_danni_abilita["shuriken"]);break;}
-            case "laser_collider_trigger":{danneggia_nemico(hero_rule.lista_danni_abilita["shuriken"]);break;}
+            case "catena_collider_trigger":{danneggia_nemico("catena",hero_rule.lista_danni_abilita["catena"]);break;}
+            case "shuriken":{danneggia_nemico("shuriken",hero_rule.lista_danni_abilita["shuriken"]);break;}
+            case "laser_collider_trigger":{danneggia_nemico("laser",hero_rule.lista_danni_abilita["shuriken"]);break;}
+            case "sfera_orbitale":{danneggia_nemico("sfera_orbitale",hero_rule.lista_danni_abilita["sfera_orbitale"]);break;}
         }
     }
 
-    public void danneggia_nemico(float danni){
-        print ("stò danneggiando il nemico di "+danni);
+    public void danneggia_nemico(string tipo,float danni){
+        print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
     }
 }

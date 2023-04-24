@@ -115,6 +115,7 @@ public class hero_rule : MonoBehaviour
         lista_abilita_personaggio.Add("catena",1);
         lista_abilita_personaggio.Add("shuriken",1);
         lista_abilita_personaggio.Add("laser",1);
+        lista_abilita_personaggio.Add("sfera_orbitale",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -123,7 +124,7 @@ public class hero_rule : MonoBehaviour
     }
 
     private void attiva_abilita(string abilita){
-        print ("attivo l'abilita "+abilita);
+        //print ("attivo l'abilita "+abilita);
         switch (abilita){
             case "shuriken":{
                 lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().lancia_shuriken();
@@ -134,6 +135,7 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].SetActive(true);
                 break;
             }
+            case "sfera_orbitale":
             case "catena":{
                 lista_GO_abilita[abilita].SetActive(true);
                 break;
@@ -144,7 +146,7 @@ public class hero_rule : MonoBehaviour
 
     private IEnumerator disattiva_abilita(string abilita){
         yield return new WaitForSeconds(info_comuni.lista_abilita_durata[abilita]);
-        print ("disattivo l'abilita "+abilita);
+        //print ("disattivo l'abilita "+abilita);
         switch (abilita){
             case "shuriken":{break;}    //non và disattivata
             default:{lista_GO_abilita[abilita].SetActive(false);break;}
@@ -167,6 +169,11 @@ public class hero_rule : MonoBehaviour
             case "laser":{
                 lista_GO_abilita[abilita].GetComponent<abilita_laser>().setta_livello(livello);
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_laser>().dmg;
+                break;
+            }
+            case "sfera_orbitale":{
+                lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().dmg;
                 break;
             }
         }
