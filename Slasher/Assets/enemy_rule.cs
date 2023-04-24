@@ -63,6 +63,12 @@ public class enemy_rule : MonoBehaviour
         }
     }
 
+    void OnTriggerStay(Collider collision){
+        switch (collision.gameObject.name){
+            case "scia_di_fuoco":{danneggia_nemico("scia_di_fuoco",hero_rule.lista_danni_abilita["scia_di_fuoco"]);break;}
+        }
+    }
+
     /*
     void OnCollisionEnter(Collision collision){
         print ("nemico: entro in collisione con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");

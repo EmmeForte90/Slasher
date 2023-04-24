@@ -97,7 +97,7 @@ public class hero_rule : MonoBehaviour
     */
 
     public void danneggia_eroe(float danni){
-        print ("stò danneggiando l'eroe di "+danni);
+        //print ("stò danneggiando l'eroe di "+danni);
     }
 
     private void Flip()
@@ -116,6 +116,7 @@ public class hero_rule : MonoBehaviour
         lista_abilita_personaggio.Add("shuriken",1);
         lista_abilita_personaggio.Add("laser",1);
         lista_abilita_personaggio.Add("sfera_orbitale",1);
+        lista_abilita_personaggio.Add("scia_di_fuoco",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -140,6 +141,10 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].SetActive(true);
                 break;
             }
+            case "scia_di_fuoco":{
+                lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().bool_attiva=true;
+                break;
+            }
         }
         StartCoroutine(disattiva_abilita(abilita));
     }
@@ -148,8 +153,15 @@ public class hero_rule : MonoBehaviour
         yield return new WaitForSeconds(info_comuni.lista_abilita_durata[abilita]);
         //print ("disattivo l'abilita "+abilita);
         switch (abilita){
+            case "scia_di_fuoco":{
+                lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().bool_attiva=false;
+                break;
+            }
             case "shuriken":{break;}    //non và disattivata
-            default:{lista_GO_abilita[abilita].SetActive(false);break;}
+            case "sfera_orbitale":
+            case "catena":{
+                lista_GO_abilita[abilita].SetActive(false);break;
+            }
         }
         StartCoroutine(attiva_abilita_coroutine(abilita));
     }
@@ -174,6 +186,11 @@ public class hero_rule : MonoBehaviour
             case "sfera_orbitale":{
                 lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().setta_livello(livello);
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().dmg;
+                break;
+            }
+            case "scia_di_fuoco":{
+                lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().dmg;
                 break;
             }
         }

@@ -17,11 +17,13 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown.Add("shuriken",5);
         lista_abilita_cooldown.Add("laser",3);
         lista_abilita_cooldown.Add("sfera_orbitale",3);
+        lista_abilita_cooldown.Add("scia_di_fuoco",2);
 
         lista_abilita_durata.Add("catena",3);
         lista_abilita_durata.Add("shuriken",1);
         lista_abilita_durata.Add("laser",0.1f);
         lista_abilita_durata.Add("sfera_orbitale",3);
+        lista_abilita_durata.Add("scia_di_fuoco",20);
 
 
 
