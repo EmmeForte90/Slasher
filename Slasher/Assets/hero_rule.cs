@@ -117,7 +117,8 @@ public class hero_rule : MonoBehaviour
         //lista_abilita_personaggio.Add("laser",1);
         //lista_abilita_personaggio.Add("sfera_orbitale",1);
         //lista_abilita_personaggio.Add("scia_di_fuoco",1);
-        lista_abilita_personaggio.Add("boccetta_di_acido",1);
+        //lista_abilita_personaggio.Add("boccetta_di_acido",1);
+        lista_abilita_personaggio.Add("meteore",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -150,6 +151,10 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().lancia_boccetta();
                 break;
             }
+            case "meteore":{
+                lista_GO_abilita[abilita].GetComponent<abilita_meteore>().lancia_meteora();
+                break;
+            }
         }
         StartCoroutine(disattiva_abilita(abilita));
     }
@@ -162,6 +167,7 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().bool_attiva=false;
                 break;
             }
+            case "meteore":
             case "boccetta_di_acido":
             case "shuriken":{break;}    //non và disattivata
             case "sfera_orbitale":
@@ -202,6 +208,11 @@ public class hero_rule : MonoBehaviour
             case "boccetta_di_acido":{
                 lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().setta_livello(livello);
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().dmg;
+                break;
+            }
+            case "meteore":{
+                lista_GO_abilita[abilita].GetComponent<abilita_meteore>().setta_livello(livello);
+                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_meteore>().dmg;
                 break;
             }
         }

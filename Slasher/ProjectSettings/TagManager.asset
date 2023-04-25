@@ -7,6 +7,7 @@ TagManager:
   - nemico
   - eroe
   - abilita
+  - pavimento
   layers:
   - Default
   - TransparentFX
