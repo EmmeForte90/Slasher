@@ -20,6 +20,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown.Add("scia_di_fuoco",2);
         lista_abilita_cooldown.Add("boccetta_di_acido",2);
         lista_abilita_cooldown.Add("meteore",2);
+        lista_abilita_cooldown.Add("scudo",2);
 
         lista_abilita_durata.Add("catena",3);
         lista_abilita_durata.Add("shuriken",1);
@@ -28,6 +29,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_durata.Add("scia_di_fuoco",5);
         lista_abilita_durata.Add("boccetta_di_acido",5);
         lista_abilita_durata.Add("meteore",5);
+        lista_abilita_durata.Add("scudo",20);
 
 
 

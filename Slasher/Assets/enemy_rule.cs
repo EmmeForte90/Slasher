@@ -66,6 +66,7 @@ public class enemy_rule : MonoBehaviour
     void OnTriggerStay(Collider collision){
         switch (collision.gameObject.name){
             case "scia_di_fuoco":{danneggia_nemico("scia_di_fuoco",hero_rule.lista_danni_abilita["scia_di_fuoco"]);break;}
+            case "pozza_acido":{danneggia_nemico("pozza_acido",hero_rule.lista_danni_abilita["boccetta_di_acido"]);break;}
         }
     }
 
@@ -82,8 +83,14 @@ public class enemy_rule : MonoBehaviour
             case "shuriken":{danneggia_nemico("shuriken",hero_rule.lista_danni_abilita["shuriken"]);break;}
             case "laser_collider_trigger":{danneggia_nemico("laser",hero_rule.lista_danni_abilita["shuriken"]);break;}
             case "sfera_orbitale":{danneggia_nemico("sfera_orbitale",hero_rule.lista_danni_abilita["sfera_orbitale"]);break;}
-            case "pozza_acido":{danneggia_nemico("pozza_acido",hero_rule.lista_danni_abilita["boccetta_di_acido"]);break;}
             case "esplosione_meteora":{danneggia_nemico("meteora",hero_rule.lista_danni_abilita["meteore"]);break;}
+            case "scudo":{
+                print (-rb.velocity);
+                danneggia_nemico("scudo",hero_rule.lista_danni_abilita["scudo"]);
+                //rb.AddForce(-Vector3.forward * 1000 * Time.deltaTime,ForceMode.Impulse);
+                rb.AddForce(new Vector3 (-rb.velocity.x, 0, - rb.velocity.z)*300*Time.deltaTime,ForceMode.Impulse);
+                break;
+            }
         }
     }
 
