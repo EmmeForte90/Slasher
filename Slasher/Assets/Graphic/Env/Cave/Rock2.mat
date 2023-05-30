@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock2
   m_Shader: {fileID: 14000, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - EFFECT_BUMP
   m_InvalidKeywords:
   - _NORMALMAP
   - _SHADERSPACE_UV
