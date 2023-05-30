@@ -1,0 +1,3844 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &38342534
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38342535}
+  - component: {fileID: 38342537}
+  - component: {fileID: 38342536}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38342535
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38342534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 440293027}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &38342536
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38342534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 1
+  m_FollowOffset: {x: 0, y: 4, z: -10}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
+--- !u!114 &38342537
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38342534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &75921347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75921348}
+  - component: {fileID: 75921350}
+  - component: {fileID: 75921349}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &75921348
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75921347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.567781, y: 3.9167, z: 3.9167}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1234529914}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &75921349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75921347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 53b1b554293563647ab2706835b8de9d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &75921350
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75921347}
+  m_CullTransparentMesh: 1
+--- !u!1 &440293026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 440293027}
+  - component: {fileID: 440293030}
+  - component: {fileID: 440293029}
+  - component: {fileID: 440293028}
+  m_Layer: 0
+  m_Name: CM vcam1
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &440293027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440293026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.88, y: 1.0879309, z: -9.942356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 38342535}
+  m_Father: {fileID: 1594845878}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &440293028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440293026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990626814bc1c6442add555f2f76311c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vCam: {fileID: 440293030}
+--- !u!114 &440293029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440293026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1939701325}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
+--- !u!114 &440293030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440293026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 34
+    OrthographicSize: 6.5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 38342535}
+--- !u!1 &485662156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485662157}
+  - component: {fileID: 485662159}
+  - component: {fileID: 485662158}
+  m_Layer: 5
+  m_Name: bkg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &485662157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485662156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1297711092}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &485662158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485662156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.2830189, g: 0.16687435, b: 0.16687435, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0b8752cd027b29d4a9e137338a484b72, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &485662159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485662156}
+  m_CullTransparentMesh: 1
+--- !u!1 &641172279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641172280}
+  - component: {fileID: 641172284}
+  - component: {fileID: 641172283}
+  - component: {fileID: 641172282}
+  - component: {fileID: 641172281}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641172280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641172279}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.88, y: 1.0879309, z: -9.942356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1594845878}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641172281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641172279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &641172282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641172279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!81 &641172283
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641172279}
+  m_Enabled: 1
+--- !u!20 &641172284
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641172279}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 34
+  orthographic: 0
+  orthographic size: 6.5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &1055986936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055986941}
+  - component: {fileID: 1055986940}
+  - component: {fileID: 1055986939}
+  - component: {fileID: 1055986938}
+  - component: {fileID: 1055986937}
+  m_Layer: 5
+  m_Name: Loading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1055986937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055986936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6207f4fbaf2c24f8514f81f9a7bd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScene: SampleScene
+  levelToLoad: SampleScene
+  Timelife: 5
+--- !u!114 &1055986938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055986936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1055986939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055986936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1055986940
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055986936}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 50
+  m_TargetDisplay: 0
+--- !u!224 &1055986941
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055986936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1297711092}
+  - {fileID: 1234529914}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1234529913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234529914}
+  - component: {fileID: 1234529917}
+  - component: {fileID: 1234529916}
+  - component: {fileID: 1234529915}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1234529914
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234529913}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.35575986, y: 0.35575986, z: 0.35575986}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 75921348}
+  - {fileID: 2093650505}
+  m_Father: {fileID: 1055986941}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -12.680908, y: -356}
+  m_SizeDelta: {x: 863.6714, y: 408.5684}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1234529915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234529913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca300b8ff772d98448a163aa8e1e28eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properties:
+  - type: 4
+    propName: _MainTex
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _Color
+    colorValue: {r: 1, g: 1, b: 1, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: PixelSnap
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _AlphaTex
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShaderSpace
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PixelsPerUnit
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 100
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ScreenWidthUnits
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 10
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RectWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 100
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RectHeight
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 100
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _TimeSettings
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _TimeScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _TimeFrequency
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _TimeRange
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _TimeFPS
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _TimeValue
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _UberFading
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FullFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _UberPosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _UberNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _UberNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 2
+    propName: _UberWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.3
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _UberMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _UberNoiseTexture
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 2800000, guid: 6b7b4a61603088549ac748de5e4e6d8c, type: 3}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableStrongTint
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _StrongTintFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _StrongTintTint
+    colorValue: {r: 1, g: 1, b: 1, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _StrongTintContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableAddColor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddColorFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _AddColorColor
+    colorValue: {r: 4, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddColorContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableAlphaTint
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AlphaTintFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _AlphaTintColor
+    colorValue: {r: 23.96863, g: 1.254902, b: 23.96863, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AlphaTintPower
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AlphaTintMinAlpha
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.05
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableBrightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _Brightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1.09
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _Contrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSaturation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _Saturation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableHue
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _Hue
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableRecolor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RecolorFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _RecolorTintAreas
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _RecolorRedTint
+    colorValue: {r: 1, g: 1, b: 1, a: 0.5019608}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _RecolorYellowTint
+    colorValue: {r: 1, g: 1, b: 1, a: 0.5019608}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _RecolorGreenTint
+    colorValue: {r: 1, g: 1, b: 1, a: 0.5019608}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _RecolorCyanTint
+    colorValue: {r: 1, g: 1, b: 1, a: 0.5019608}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _RecolorBlueTint
+    colorValue: {r: 1, g: 1, b: 1, a: 0.5019608}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _RecolorPurpleTint
+    colorValue: {r: 1, g: 1, b: 1, a: 0.5019608}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableInnerOutline
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _InnerOutlineFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.171
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _InnerOutlineColor
+    colorValue: {r: 11.98431, g: 1.254902, b: 1.254902, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _InnerOutlineWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _InnerOutlineDistortionToggle
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _InnerOutlineDistortionIntensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.01, y: 0.01, z: 0, w: 0}
+  - type: 1
+    propName: _InnerOutlineNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 4, y: 4, z: 0, w: 0}
+  - type: 1
+    propName: _InnerOutlineNoiseSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableOuterOutline
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _OuterOutlineFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.087
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _OuterOutlineColor
+    colorValue: {r: 0, g: 0, b: 0, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _OuterOutlineWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.22
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _OuterOutlineDistortionToggle
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _OuterOutlineDistortionIntensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.01, y: 0.01, z: 0, w: 0}
+  - type: 1
+    propName: _OuterOutlineNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 4, y: 4, z: 0, w: 0}
+  - type: 1
+    propName: _OuterOutlineNoiseSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableAddHue
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddHueFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _AddHueShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddHueBrightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddHueContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddHueSaturation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _AddHueSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableShiftHue
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShiftHueFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _ShiftHueShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShiftHueSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableInkSpread
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _InkSpreadFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.355
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _InkSpreadColor
+    colorValue: {r: 8.47419, g: 5.013525, b: 0.08873497, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _InkSpreadContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _InkSpreadPosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: -1, z: 0, w: 0}
+  - type: 2
+    propName: _InkSpreadDistance
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 3
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _InkSpreadWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _InkSpreadNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.4, y: 0.4, z: 0, w: 0}
+  - type: 2
+    propName: _InkSpreadNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableBlackTint
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _BlackTintFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _BlackTintColor
+    colorValue: {r: 1, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _BlackTintPower
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSineGlow
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineGlowFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _SineGlowShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _SineGlowColor
+    colorValue: {r: 0, g: 2.007843, b: 2.996078, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineGlowContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineGlowFrequency
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineGlowMin
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: -0.46
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineGlowMax
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSplitToning
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SplitToningFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _SplitToningHighlightsColor
+    colorValue: {r: 1, g: 0.1, b: 0.1, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _SplitToningShadowsColor
+    colorValue: {r: 0.1, g: 0.4000002, b: 1, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SplitToningContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SplitToningBalance
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SplitToningShift
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableColorReplace
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ColorReplaceFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _ColorReplaceTargetColor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ColorReplaceBias
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _ColorReplaceColor
+    colorValue: {r: 1, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ColorReplaceContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ColorReplaceHueTolerance
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ColorReplaceSaturationTolerance
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ColorReplaceBrightnessTolerance
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableHologram
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _HologramTint
+    colorValue: {r: 0.3137255, g: 1.662745, b: 2.996078, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramLineFrequency
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 500
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramLineGap
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 3
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramLineSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.01
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramMinAlpha
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramDistortionOffset
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramDistortionSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramDistortionDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HologramDistortionScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 10
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableGlitch
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _GlitchFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _GlitchMaskMin
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchMaskScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0.2, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchMaskSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 4, z: 0, w: 0}
+  - type: 2
+    propName: _GlitchHueSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _GlitchBrightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 3, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchNoiseSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 1, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchDistortionScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 3, z: 0, w: 0}
+  - type: 1
+    propName: _GlitchDistortionSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableFrozen
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FrozenFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _FrozenTint
+    colorValue: {r: 1.819608, g: 4.611765, b: 5.992157, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FrozenContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _FrozenSnowColor
+    colorValue: {r: 1.123529, g: 1.373203, b: 1.498039, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FrozenSnowContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FrozenSnowDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.25
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FrozenSnowScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 0
+    propName: _FrozenHighlightColor
+    colorValue: {r: 1.797647, g: 4.604501, b: 5.992157, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FrozenHighlightContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FrozenHighlightDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FrozenHighlightSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 1
+    propName: _FrozenHighlightScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 1
+    propName: _FrozenHighlightDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 1
+    propName: _FrozenHighlightDistortionSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: -0.05, y: -0.05, z: 0, w: 0}
+  - type: 1
+    propName: _FrozenHighlightDistortionScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 2
+    propName: _EnableRainbow
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _RainbowMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowBrightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowSaturation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _RainbowCenter
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _RainbowNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 2
+    propName: _RainbowNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableCamouflage
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _CamouflageShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _CamouflageBaseColor
+    colorValue: {r: 0.7450981, g: 0.7254902, b: 0.5686275, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _CamouflageColorA
+    colorValue: {r: 0.627451, g: 0.5882353, b: 0.4313726, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageDensityA
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageSmoothnessA
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _CamouflageNoiseScaleA
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.25, y: 0.25, z: 0, w: 0}
+  - type: 0
+    propName: _CamouflageColorB
+    colorValue: {r: 0.4705882, g: 0.4313726, b: 0.3137255, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageDensityB
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageSmoothnessB
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _CamouflageNoiseScaleB
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.25, y: 0.25, z: 0, w: 0}
+  - type: 2
+    propName: _CamouflageAnimated
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _CamouflageAnimationSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 1
+    propName: _CamouflageDistortionIntensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 1
+    propName: _CamouflageDistortionScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnableMetal
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _MetalFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _MetalShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _MetalColor
+    colorValue: {r: 5.992157, g: 3.639216, b: 0.3137255, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _MetalContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _MetalHighlightColor
+    colorValue: {r: 5.992157, g: 3.796078, b: 0.6588235, a: 1}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _MetalHighlightDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _MetalHighlightContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _MetalNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.25, y: 0.25, z: 0, w: 0}
+  - type: 1
+    propName: _MetalNoiseSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.05, y: 0.05, z: 0, w: 0}
+  - type: 1
+    propName: _MetalNoiseDistortionScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 1
+    propName: _MetalNoiseDistortionSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: -0.05, y: -0.05, z: 0, w: 0}
+  - type: 1
+    propName: _MetalNoiseDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnableShine
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _ShineShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _ShineColor
+    colorValue: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineSaturation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineSmoothness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.05
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _ShineRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableBurn
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _BurnFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.288
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _BurnPosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 5, z: 0, w: 0}
+  - type: 2
+    propName: _BurnRadius
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.22
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _BurnEdgeColor
+    colorValue: {r: 11.98431, g: 1.129412, b: 0.1254902, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _BurnWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _BurnEdgeNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.3, y: 0.3, z: 0, w: 0}
+  - type: 2
+    propName: _BurnEdgeNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _BurnInsideColor
+    colorValue: {r: 0.75, g: 0.5625, b: 0.525, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _BurnInsideContrast
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _BurnInsideNoiseColor
+    colorValue: {r: 3084.047, g: 257.0039, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _BurnInsideNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.05
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _BurnInsideNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _BurnSwirlFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _BurnSwirlNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _EnablePoison
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PoisonFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.824
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _PoisonColor
+    colorValue: {r: 4, g: 0.45490196, b: 0.29803923, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PoisonDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 3
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PoisonRecolorFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.087
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PoisonShiftSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PoisonNoiseBrightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.86
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _PoisonNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 1
+    propName: _PoisonNoiseSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: -0.2, z: 0, w: 0}
+  - type: 2
+    propName: _EnableFullAlphaDissolve
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FullAlphaDissolveFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FullAlphaDissolveWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FullAlphaDissolveNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableFullGlowDissolve
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FullGlowDissolveFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FullGlowDissolveWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _FullGlowDissolveEdgeColor
+    colorValue: {r: 11.98431, g: 0.627451, b: 0.627451, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FullGlowDissolveNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSourceAlphaDissolve
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SourceAlphaDissolveFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SourceAlphaDissolvePosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SourceAlphaDissolveWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SourceAlphaDissolveNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.3, y: 0.3, z: 0, w: 0}
+  - type: 2
+    propName: _SourceAlphaDissolveNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SourceAlphaDissolveInvert
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSourceGlowDissolve
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SourceGlowDissolveFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SourceGlowDissolvePosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SourceGlowDissolveWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _SourceGlowDissolveEdgeColor
+    colorValue: {r: 11.98431, g: 0.627451, b: 0.627451, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SourceGlowDissolveNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.3, y: 0.3, z: 0, w: 0}
+  - type: 2
+    propName: _SourceGlowDissolveNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SourceGlowDissolveInvert
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableHalftone
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HalftoneFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _HalftonePosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HalftoneTiling
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HalftoneFadeWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _HalftoneInvert
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableDirectionalAlphaFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalAlphaFadeFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalAlphaFadeRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalAlphaFadeWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _DirectionalAlphaFadeNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.3, y: 0.3, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalAlphaFadeNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalAlphaFadeInvert
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableDirectionalGlowFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalGlowFadeFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalGlowFadeRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 0
+    propName: _DirectionalGlowFadeEdgeColor
+    colorValue: {r: 11.98431, g: 0.6901961, b: 0.6901961, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalGlowFadeWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _DirectionalGlowFadeNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.4, y: 0.4, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalGlowFadeNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalGlowFadeInvert
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableDirectionalDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalDistortionFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalDistortionRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalDistortionWidth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _DirectionalDistortionNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.4, y: 0.4, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalDistortionNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _DirectionalDistortionDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalDistortionRandomDirection
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _DirectionalDistortionDistortionScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 1, y: 1, z: 0, w: 0}
+  - type: 2
+    propName: _DirectionalDistortionInvert
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableFullDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FullDistortionFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FullDistortionDistortion
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0.2, z: 0, w: 0}
+  - type: 1
+    propName: _FullDistortionNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnablePixelate
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PixelateFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _PixelatePixelDensity
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 16
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSqueeze
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SqueezeFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SqueezeScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 2, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SqueezePower
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SqueezeCenter
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnableUVDistort
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _UVDistortFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _UVDistortShaderMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _UVDistortFrom
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: -0.02, y: -0.02, z: 0, w: 0}
+  - type: 1
+    propName: _UVDistortTo
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.02, y: 0.02, z: 0, w: 0}
+  - type: 1
+    propName: _UVDistortSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 2, y: 2, z: 0, w: 0}
+  - type: 1
+    propName: _UVDistortNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.1, y: 0.1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableUVScroll
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _UVScrollSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.2, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableUVRotate
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _UVRotateSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _UVRotatePivot
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSineRotate
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineRotateFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineRotateAngle
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 15
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineRotateFrequency
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SineRotatePivot
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnableUVScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _UVScaleScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 1, y: 1, z: 0, w: 0}
+  - type: 1
+    propName: _UVScalePivot
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0.5, y: 0.5, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSineMove
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SineMoveFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _SineMoveOffset
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0.5, z: 0, w: 0}
+  - type: 1
+    propName: _SineMoveFrequency
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 1, y: 1, z: 0, w: 0}
+  - type: 2
+    propName: _EnableVibrate
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _VibrateFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _VibrateOffset
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.04
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _VibrateFrequency
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 100
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _VibrateRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 4
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableWind
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindMaxRotation
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindRotationWindFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindSquishFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.3
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindSquishWindFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindIsParallax
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindXPosition
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _WindFlip
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSquish2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SquishFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SquishStretch
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SquishSquish
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SquishFlip
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableCheckerboard
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CheckerboardDarken
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CheckerboardTiling
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableFlame
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FlameBrightness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 10.98
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FlameSmooth
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1.18
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FlameRadius
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 3.02
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FlameSpeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: -0.5, z: 0, w: 0}
+  - type: 2
+    propName: _FlameNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _FlameNoiseHeightFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2.3
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _FlameNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 1.2, y: 0.8, z: 0, w: 0}
+  - type: 2
+    propName: _EnableSmoke
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SmokeAlpha
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SmokeSmoothness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.82
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SmokeNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.5
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SmokeNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.232
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SmokeDarkEdge
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0.69
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _SmokeVertexSeed
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _EnableCustomFade
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _CustomFadeFadeMask
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CustomFadeSmoothness
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 2
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 1
+    propName: _CustomFadeNoiseScale
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 1, y: 1, z: 0, w: 0}
+  - type: 2
+    propName: _CustomFadeNoiseFactor
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 2
+    propName: _CustomFadeAlpha
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 1
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  - type: 4
+    propName: _texcoord
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    floatValue: 0
+    textureValue: {fileID: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+  shader: {fileID: 4800000, guid: 0803c241834332942abfcbd27c498b46, type: 3}
+  original: {fileID: 0}
+--- !u!114 &1234529916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234529913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 1549340074}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3b73c1a81c89afe4cb3ceac6908e7d55, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1234529917
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234529913}
+  m_CullTransparentMesh: 1
+--- !u!1 &1297711091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297711092}
+  m_Layer: 5
+  m_Name: BKG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1297711092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297711091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 485662157}
+  m_Father: {fileID: 1055986941}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1549306188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549306189}
+  - component: {fileID: 1549306190}
+  m_Layer: 0
+  m_Name: Global Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549306189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549306188}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1594845878}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549306190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549306188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 4
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000ebadcfd7692844f20d61af597fdcb71a8d9b118157d3fc6a831ce3b7
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_Vertices:
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!21 &1549340074
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instanced Shader
+  m_Shader: {fileID: 4800000, guid: 0803c241834332942abfcbd27c498b46, type: 3}
+  m_ValidKeywords:
+  - _ENABLEBRIGHTNESS_ON
+  - _ENABLECOLORREPLACE_ON
+  - _ENABLEINNEROUTLINE_ON
+  - _ENABLEPOISON_ON
+  - _SHADERSPACE_UV
+  - _TIMESETTINGS_LINEAR_DEFAULT
+  - _UBERFADING_NONE
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AddHueShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CamouflageShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CustomFadeFadeMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetalShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RainbowMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RecolorTintAreas:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShiftHueShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SineGlowShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UVDistortShaderMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UberMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UberNoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 6b7b4a61603088549ac748de5e4e6d8c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _AddColorContrast: 0.5
+    - _AddColorFade: 1
+    - _AddHueBrightness: 2
+    - _AddHueContrast: 1
+    - _AddHueFade: 1
+    - _AddHueSaturation: 1
+    - _AddHueSpeed: 1
+    - _AlphaTintFade: 1
+    - _AlphaTintMinAlpha: 0.05
+    - _AlphaTintPower: 1
+    - _BlackTintFade: 1
+    - _BlackTintPower: 2
+    - _Brightness: 1.09
+    - _BurnEdgeNoiseFactor: 0.5
+    - _BurnFade: 0.288
+    - _BurnInsideContrast: 2
+    - _BurnInsideNoiseFactor: 0.05
+    - _BurnRadius: 0.22
+    - _BurnSwirlFactor: 1
+    - _BurnWidth: 0.1
+    - _CamouflageAnimated: 0
+    - _CamouflageContrast: 1
+    - _CamouflageDensityA: 0.4
+    - _CamouflageDensityB: 0.4
+    - _CamouflageFade: 1
+    - _CamouflageSmoothnessA: 0.2
+    - _CamouflageSmoothnessB: 0.2
+    - _CheckerboardDarken: 0.5
+    - _CheckerboardTiling: 1
+    - _ColorReplaceBias: 0.1
+    - _ColorReplaceBrightnessTolerance: 1
+    - _ColorReplaceContrast: 1
+    - _ColorReplaceFade: 1
+    - _ColorReplaceHueTolerance: 1
+    - _ColorReplaceSaturationTolerance: 1
+    - _Contrast: 1
+    - _CustomFadeAlpha: 1
+    - _CustomFadeNoiseFactor: 0
+    - _CustomFadeSmoothness: 2
+    - _DirectionalAlphaFadeFade: 0
+    - _DirectionalAlphaFadeInvert: 0
+    - _DirectionalAlphaFadeNoiseFactor: 0.2
+    - _DirectionalAlphaFadeRotation: 0
+    - _DirectionalAlphaFadeWidth: 0.2
+    - _DirectionalDistortionFade: 0
+    - _DirectionalDistortionInvert: 0
+    - _DirectionalDistortionNoiseFactor: 0.2
+    - _DirectionalDistortionRandomDirection: 0.1
+    - _DirectionalDistortionRotation: 0
+    - _DirectionalDistortionWidth: 0.5
+    - _DirectionalGlowFadeFade: 0
+    - _DirectionalGlowFadeInvert: 0
+    - _DirectionalGlowFadeNoiseFactor: 0.2
+    - _DirectionalGlowFadeRotation: 0
+    - _DirectionalGlowFadeWidth: 0.1
+    - _EnableAddColor: 0
+    - _EnableAddHue: 0
+    - _EnableAlphaTint: 0
+    - _EnableBlackTint: 0
+    - _EnableBrightness: 1
+    - _EnableBurn: 0
+    - _EnableCamouflage: 0
+    - _EnableCheckerboard: 0
+    - _EnableColorReplace: 1
+    - _EnableContrast: 0
+    - _EnableCustomFade: 0
+    - _EnableDirectionalAlphaFade: 0
+    - _EnableDirectionalDistortion: 0
+    - _EnableDirectionalGlowFade: 0
+    - _EnableFlame: 0
+    - _EnableFrozen: 0
+    - _EnableFullAlphaDissolve: 0
+    - _EnableFullDistortion: 0
+    - _EnableFullGlowDissolve: 0
+    - _EnableGlitch: 0
+    - _EnableHalftone: 0
+    - _EnableHologram: 0
+    - _EnableHue: 0
+    - _EnableInkSpread: 0
+    - _EnableInnerOutline: 1
+    - _EnableMetal: 0
+    - _EnableOuterOutline: 0
+    - _EnablePixelate: 0
+    - _EnablePoison: 1
+    - _EnableRainbow: 0
+    - _EnableRecolor: 0
+    - _EnableSaturation: 0
+    - _EnableShiftHue: 0
+    - _EnableShine: 0
+    - _EnableSineGlow: 0
+    - _EnableSineMove: 0
+    - _EnableSineRotate: 0
+    - _EnableSmoke: 0
+    - _EnableSourceAlphaDissolve: 0
+    - _EnableSourceGlowDissolve: 0
+    - _EnableSplitToning: 0
+    - _EnableSqueeze: 0
+    - _EnableSquish2: 0
+    - _EnableStrongTint: 0
+    - _EnableUVDistort: 0
+    - _EnableUVRotate: 0
+    - _EnableUVScale: 0
+    - _EnableUVScroll: 0
+    - _EnableVibrate: 0
+    - _EnableWind: 0
+    - _FlameBrightness: 10.98
+    - _FlameNoiseFactor: 2.5
+    - _FlameNoiseHeightFactor: 2.3
+    - _FlameRadius: 3.02
+    - _FlameSmooth: 1.18
+    - _FrozenContrast: 2
+    - _FrozenFade: 1
+    - _FrozenHighlightContrast: 2
+    - _FrozenHighlightDensity: 1
+    - _FrozenSnowContrast: 1
+    - _FrozenSnowDensity: 0.25
+    - _FullAlphaDissolveFade: 0.5
+    - _FullAlphaDissolveWidth: 0.5
+    - _FullDistortionFade: 1
+    - _FullFade: 1
+    - _FullGlowDissolveFade: 0.5
+    - _FullGlowDissolveWidth: 0.5
+    - _GlitchBrightness: 4
+    - _GlitchFade: 1
+    - _GlitchHueSpeed: 1
+    - _GlitchMaskMin: 0.4
+    - _HalftoneFade: 1
+    - _HalftoneFadeWidth: 1.5
+    - _HalftoneInvert: 0
+    - _HalftoneTiling: 4
+    - _HologramContrast: 1
+    - _HologramDistortionDensity: 0.5
+    - _HologramDistortionOffset: 0.5
+    - _HologramDistortionScale: 10
+    - _HologramDistortionSpeed: 2
+    - _HologramFade: 1
+    - _HologramLineFrequency: 500
+    - _HologramLineGap: 3
+    - _HologramLineSpeed: 0.01
+    - _HologramMinAlpha: 0.2
+    - _Hue: 0
+    - _InkSpreadContrast: 2
+    - _InkSpreadDistance: 3
+    - _InkSpreadFade: 0.355
+    - _InkSpreadNoiseFactor: 0.5
+    - _InkSpreadWidth: 0.2
+    - _InnerOutlineDistortionToggle: 0
+    - _InnerOutlineFade: 0.171
+    - _InnerOutlineWidth: 0
+    - _MetalContrast: 2
+    - _MetalFade: 1
+    - _MetalHighlightContrast: 2
+    - _MetalHighlightDensity: 1
+    - _OuterOutlineDistortionToggle: 1
+    - _OuterOutlineFade: 0.087
+    - _OuterOutlineWidth: 0.22
+    - _PixelateFade: 1
+    - _PixelatePixelDensity: 16
+    - _PixelsPerUnit: 100
+    - _PoisonDensity: 3
+    - _PoisonFade: 0.824
+    - _PoisonNoiseBrightness: 0.86
+    - _PoisonRecolorFactor: 0.087
+    - _PoisonShiftSpeed: 0.2
+    - _RainbowBrightness: 2
+    - _RainbowContrast: 1
+    - _RainbowDensity: 0.5
+    - _RainbowFade: 1
+    - _RainbowNoiseFactor: 0.2
+    - _RainbowSaturation: 1
+    - _RainbowSpeed: 1
+    - _RecolorFade: 1
+    - _RectHeight: 100
+    - _RectWidth: 100
+    - _Saturation: 1
+    - _ScreenWidthUnits: 10
+    - _ShaderSpace: 0
+    - _ShiftHueFade: 1
+    - _ShiftHueSpeed: 0.5
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineRotation: 0
+    - _ShineSaturation: 0.5
+    - _ShineScale: 0.05
+    - _ShineSmoothness: 2
+    - _ShineSpeed: 0.1
+    - _ShineWidth: 0.1
+    - _SineGlowContrast: 1
+    - _SineGlowFade: 1
+    - _SineGlowFrequency: 4
+    - _SineGlowMax: 1
+    - _SineGlowMin: -0.46
+    - _SineMoveFade: 1
+    - _SineRotateAngle: 15
+    - _SineRotateFade: 1
+    - _SineRotateFrequency: 1
+    - _SmokeAlpha: 1
+    - _SmokeDarkEdge: 0.69
+    - _SmokeNoiseFactor: 0.232
+    - _SmokeNoiseScale: 0.5
+    - _SmokeSmoothness: 0.82
+    - _SmokeVertexSeed: 0
+    - _SourceAlphaDissolveFade: 1
+    - _SourceAlphaDissolveInvert: 0
+    - _SourceAlphaDissolveNoiseFactor: 0.2
+    - _SourceAlphaDissolveWidth: 0.2
+    - _SourceGlowDissolveFade: 1
+    - _SourceGlowDissolveInvert: 0
+    - _SourceGlowDissolveNoiseFactor: 0.2
+    - _SourceGlowDissolveWidth: 0.1
+    - _SplitToningBalance: 1
+    - _SplitToningContrast: 1
+    - _SplitToningFade: 1
+    - _SplitToningShift: 0
+    - _SqueezeFade: 1
+    - _SqueezePower: 1
+    - _SquishFade: 1
+    - _SquishFlip: 0
+    - _SquishSquish: 0.1
+    - _SquishStretch: 0.1
+    - _StrongTintContrast: 0
+    - _StrongTintFade: 1
+    - _TimeFPS: 5
+    - _TimeFrequency: 2
+    - _TimeRange: 0.5
+    - _TimeScale: 1
+    - _TimeSettings: 0
+    - _TimeValue: 0
+    - _UVDistortFade: 1
+    - _UVRotateSpeed: 1
+    - _UberFading: 0
+    - _UberNoiseFactor: 0.2
+    - _UberWidth: 0.3
+    - _VibrateFade: 1
+    - _VibrateFrequency: 100
+    - _VibrateOffset: 0.04
+    - _VibrateRotation: 4
+    - _WindFlip: 0
+    - _WindIsParallax: 0
+    - _WindMaxRotation: 2
+    - _WindRotation: 0
+    - _WindRotationWindFactor: 1
+    - _WindSquishFactor: 0.3
+    - _WindSquishWindFactor: 0
+    - _WindXPosition: 0
+    m_Colors:
+    - _AddColorColor: {r: 4, g: 0, b: 0, a: 0}
+    - _AlphaTintColor: {r: 23.96863, g: 1.254902, b: 23.96863, a: 0}
+    - _BlackTintColor: {r: 1, g: 0, b: 0, a: 0}
+    - _BurnEdgeColor: {r: 11.98431, g: 1.129412, b: 0.1254902, a: 0}
+    - _BurnEdgeNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
+    - _BurnInsideColor: {r: 0.75, g: 0.5625, b: 0.525, a: 0}
+    - _BurnInsideNoiseColor: {r: 3084.047, g: 257.0039, b: 0, a: 0}
+    - _BurnInsideNoiseScale: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _BurnPosition: {r: 0, g: 5, b: 0, a: 0}
+    - _BurnSwirlNoiseScale: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _CamouflageAnimationSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _CamouflageBaseColor: {r: 0.7450981, g: 0.7254902, b: 0.5686275, a: 0}
+    - _CamouflageColorA: {r: 0.627451, g: 0.5882353, b: 0.4313726, a: 0}
+    - _CamouflageColorB: {r: 0.4705882, g: 0.4313726, b: 0.3137255, a: 0}
+    - _CamouflageDistortionIntensity: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _CamouflageDistortionScale: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _CamouflageNoiseScaleA: {r: 0.25, g: 0.25, b: 0, a: 0}
+    - _CamouflageNoiseScaleB: {r: 0.25, g: 0.25, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorReplaceColor: {r: 1, g: 0, b: 0, a: 0}
+    - _ColorReplaceTargetColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CustomFadeNoiseScale: {r: 1, g: 1, b: 0, a: 0}
+    - _DirectionalAlphaFadeNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
+    - _DirectionalDistortionDistortion: {r: 0, g: 0.1, b: 0, a: 0}
+    - _DirectionalDistortionDistortionScale: {r: 1, g: 1, b: 0, a: 0}
+    - _DirectionalDistortionNoiseScale: {r: 0.4, g: 0.4, b: 0, a: 0}
+    - _DirectionalGlowFadeEdgeColor: {r: 11.98431, g: 0.6901961, b: 0.6901961, a: 0}
+    - _DirectionalGlowFadeNoiseScale: {r: 0.4, g: 0.4, b: 0, a: 0}
+    - _FlameNoiseScale: {r: 1.2, g: 0.8, b: 0, a: 0}
+    - _FlameSpeed: {r: 0, g: -0.5, b: 0, a: 0}
+    - _FrozenHighlightColor: {r: 1.797647, g: 4.604501, b: 5.992157, a: 1}
+    - _FrozenHighlightDistortion: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _FrozenHighlightDistortionScale: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _FrozenHighlightDistortionSpeed: {r: -0.05, g: -0.05, b: 0, a: 0}
+    - _FrozenHighlightScale: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _FrozenHighlightSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _FrozenSnowColor: {r: 1.123529, g: 1.373203, b: 1.498039, a: 0}
+    - _FrozenSnowScale: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _FrozenTint: {r: 1.819608, g: 4.611765, b: 5.992157, a: 0}
+    - _FullAlphaDissolveNoiseScale: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _FullDistortionDistortion: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _FullDistortionNoiseScale: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _FullGlowDissolveEdgeColor: {r: 11.98431, g: 0.627451, b: 0.627451, a: 0}
+    - _FullGlowDissolveNoiseScale: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _GlitchDistortion: {r: 0.1, g: 0, b: 0, a: 0}
+    - _GlitchDistortionScale: {r: 0, g: 3, b: 0, a: 0}
+    - _GlitchDistortionSpeed: {r: 0, g: 1, b: 0, a: 0}
+    - _GlitchMaskScale: {r: 0, g: 0.2, b: 0, a: 0}
+    - _GlitchMaskSpeed: {r: 0, g: 4, b: 0, a: 0}
+    - _GlitchNoiseScale: {r: 0, g: 3, b: 0, a: 0}
+    - _GlitchNoiseSpeed: {r: 0, g: 1, b: 0, a: 0}
+    - _HalftonePosition: {r: 0, g: 0, b: 0, a: 0}
+    - _HologramTint: {r: 0.3137255, g: 1.662745, b: 2.996078, a: 1}
+    - _InkSpreadColor: {r: 8.47419, g: 5.013525, b: 0.08873497, a: 0}
+    - _InkSpreadNoiseScale: {r: 0.4, g: 0.4, b: 0, a: 0}
+    - _InkSpreadPosition: {r: 0.5, g: -1, b: 0, a: 0}
+    - _InnerOutlineColor: {r: 11.98431, g: 1.254902, b: 1.254902, a: 1}
+    - _InnerOutlineDistortionIntensity: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _InnerOutlineNoiseScale: {r: 4, g: 4, b: 0, a: 0}
+    - _InnerOutlineNoiseSpeed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _MetalColor: {r: 5.992157, g: 3.639216, b: 0.3137255, a: 1}
+    - _MetalHighlightColor: {r: 5.992157, g: 3.796078, b: 0.6588235, a: 1}
+    - _MetalNoiseDistortion: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _MetalNoiseDistortionScale: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _MetalNoiseDistortionSpeed: {r: -0.05, g: -0.05, b: 0, a: 0}
+    - _MetalNoiseScale: {r: 0.25, g: 0.25, b: 0, a: 0}
+    - _MetalNoiseSpeed: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _OuterOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OuterOutlineDistortionIntensity: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _OuterOutlineNoiseScale: {r: 4, g: 4, b: 0, a: 0}
+    - _OuterOutlineNoiseSpeed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _PoisonColor: {r: 4, g: 0.45490196, b: 0.29803923, a: 0}
+    - _PoisonNoiseScale: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _PoisonNoiseSpeed: {r: 0, g: -0.2, b: 0, a: 0}
+    - _RainbowCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _RainbowNoiseScale: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _RecolorBlueTint: {r: 1, g: 1, b: 1, a: 0.5019608}
+    - _RecolorCyanTint: {r: 1, g: 1, b: 1, a: 0.5019608}
+    - _RecolorGreenTint: {r: 1, g: 1, b: 1, a: 0.5019608}
+    - _RecolorPurpleTint: {r: 1, g: 1, b: 1, a: 0.5019608}
+    - _RecolorRedTint: {r: 1, g: 1, b: 1, a: 0.5019608}
+    - _RecolorYellowTint: {r: 1, g: 1, b: 1, a: 0.5019608}
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
+    - _SineGlowColor: {r: 0, g: 2.007843, b: 2.996078, a: 0}
+    - _SineMoveFrequency: {r: 1, g: 1, b: 0, a: 0}
+    - _SineMoveOffset: {r: 0, g: 0.5, b: 0, a: 0}
+    - _SineRotatePivot: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _SourceAlphaDissolveNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
+    - _SourceAlphaDissolvePosition: {r: 0, g: 0, b: 0, a: 0}
+    - _SourceGlowDissolveEdgeColor: {r: 11.98431, g: 0.627451, b: 0.627451, a: 0}
+    - _SourceGlowDissolveNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
+    - _SourceGlowDissolvePosition: {r: 0, g: 0, b: 0, a: 0}
+    - _SplitToningHighlightsColor: {r: 1, g: 0.1, b: 0.1, a: 0}
+    - _SplitToningShadowsColor: {r: 0.1, g: 0.4000002, b: 1, a: 0}
+    - _SqueezeCenter: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _SqueezeScale: {r: 2, g: 0, b: 0, a: 0}
+    - _StrongTintTint: {r: 1, g: 1, b: 1, a: 1}
+    - _UVDistortFrom: {r: -0.02, g: -0.02, b: 0, a: 0}
+    - _UVDistortNoiseScale: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _UVDistortSpeed: {r: 2, g: 2, b: 0, a: 0}
+    - _UVDistortTo: {r: 0.02, g: 0.02, b: 0, a: 0}
+    - _UVRotatePivot: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _UVScalePivot: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _UVScaleScale: {r: 1, g: 1, b: 0, a: 0}
+    - _UVScrollSpeed: {r: 0.2, g: 0, b: 0, a: 0}
+    - _UberNoiseScale: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _UberPosition: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!1 &1594845877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1594845878}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1594845878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594845877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 440293027}
+  - {fileID: 641172280}
+  - {fileID: 1549306189}
+  - {fileID: 1939701324}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1939701323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939701324}
+  - component: {fileID: 1939701325}
+  m_Layer: 0
+  m_Name: Confiner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1939701324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939701323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1594845878}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1939701325
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939701323}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.1013093, y: 10.077654}
+      - {x: -20.030941, y: 9.890986}
+      - {x: -20.003878, y: -9.886672}
+      - {x: 30.09016, y: -9.886672}
+      - {x: 30.117224, y: 10.059092}
+--- !u!1 &2093650504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2093650505}
+  - component: {fileID: 2093650507}
+  - component: {fileID: 2093650506}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2093650505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093650504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5015, y: 3.5015, z: 3.5015}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1234529914}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 492, y: -307}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2093650506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093650504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Now Loading...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -260.19473, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2093650507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093650504}
+  m_CullTransparentMesh: 1
