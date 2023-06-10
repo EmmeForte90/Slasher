@@ -88,7 +88,7 @@ public class enemy_rule : MonoBehaviour
                 print (-rb.velocity);
                 danneggia_nemico("scudo",hero_rule.lista_danni_abilita["scudo"]);
                 //rb.AddForce(-Vector3.forward * 1000 * Time.deltaTime,ForceMode.Impulse);
-                rb.AddForce(new Vector3 (-rb.velocity.x, 0, - rb.velocity.z)*300*Time.deltaTime,ForceMode.Impulse);
+                //rb.AddForce(new Vector3 (-rb.velocity.x, 0, - rb.velocity.z)*300*Time.deltaTime,ForceMode.Impulse);
                 break;
             }
         }
