@@ -125,6 +125,17 @@ public class game : MonoBehaviour
         GameObject go_temp;
         go_temp=Instantiate(lista_GO_nemici_tipo["nemico_1"],nemici.transform);
         go_temp.transform.position=new Vector3(x,1,z);
+        go_temp.SetActive(true);
+    }
+
+    private int get_next_level_xp(int level){
+        int xp=0;
+        if (level<=10){xp=level*10;}
+        else if (level<=20){xp=level*12;}
+        else if (level<=30){xp=level*15;}
+        else if (level<=40){xp=level*20;}
+        else {xp=level*30;}
+        return xp;
     }
 
     //questo blocco è servita a generare temporaneamente i sep del bordo; Presto potrai cancellare

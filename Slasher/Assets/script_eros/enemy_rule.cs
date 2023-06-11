@@ -30,14 +30,15 @@ public class enemy_rule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveDir = hero.position - transform.position;
+        moveDir = (hero.position - transform.position).normalized;
 
         transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia TELECAMERA
         //transform.LookAt(hero.transform.position);   //il pupo mostra sempre la stessa faccia HERO
         Flip();
     }
     void FixedUpdate(){
-        rb.MovePosition(transform.position+moveDir*0.01f*velocita_movimento);
+        //rb.MovePosition(transform.position+moveDir*0.01f*velocita_movimento);
+        rb.MovePosition(transform.position+moveDir* velocita_movimento * Time.deltaTime);
     }
 
     private void Flip()
