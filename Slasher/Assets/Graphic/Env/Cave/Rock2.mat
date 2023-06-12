@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7016211126710055928
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -8,14 +21,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock2
-  m_Shader: {fileID: 14000, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - EFFECT_BUMP
-  m_InvalidKeywords:
-  - _NORMALMAP
-  - _SHADERSPACE_UV
-  - _TIMESETTINGS_LINEAR_DEFAULT
-  - _USE8NEIGHBOURHOOD_ON
+  m_Shader: {fileID: -6465566751694194690, guid: 1fe1e45aa397cf94a872d6f26a4307c1, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -33,12 +41,40 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_0d499e0f1fb24fc59968541aefa4bea3:
+        m_Texture: {fileID: 2800000, guid: a31fbca401d3aa94baa001e445df807e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_51a21466fbb74817b70f62a96e525858:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_883b5e755bd84e93b086f731bee4d70b:
+        m_Texture: {fileID: 2800000, guid: 8788ad8080920fd4c8eb3df9f7fc3c6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_c98054455cb64e2eb3af5c1310f66cf6:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BASE_COLOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BUMP_MAP:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 99e780e787e35ce4c828128679ac3d11, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CustomFadeFadeMask:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -54,6 +90,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EMISSION_COLOR_MAP:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -77,11 +117,31 @@ Material:
         m_Texture: {fileID: 2800000, guid: cd21d0de17dcd734691f79979be13330, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _METALNESS_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 1dd3cab3d990f5c4da923b2a725fabd4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NORMAL_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 4addb5285d2d96b46bcc3d03bf698f23, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -94,6 +154,42 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _REFLECTIONS_COLOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _REFLECTIONS_IOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _REFLECTIONS_ROUGHNESS_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SPECULAR_COLOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SPECULAR_IOR_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SPECULAR_ROUGHNESS_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TRANSPARENCY_MAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureFadeTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UVDistortShaderMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -115,10 +211,30 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Boolean_8c9ca0d8eb01493da7c19d2c85eb15eb: 1
+    - Boolean_b0523346adc34c91af8a466392e41cd1: 1
+    - Boolean_cf6c3701851a4241a6a2fdd166392aa5: 0
     - Normal_Blend: 0.5
     - PixelSnap: 0
+    - Vector1_11828729941c42e482e8e129a5b5088b: 0
+    - Vector1_1e7704ebd5584b06be5b311be89b08c3: 0
+    - _AdjustColorBrightness: 1
+    - _AdjustColorContrast: 1
+    - _AdjustColorFade: 1
+    - _AdjustColorHueShift: 0
+    - _AdjustColorSaturation: 1
+    - _AlphaTintFade: 1
+    - _AlphaTintMinAlpha: 0.05
+    - _AlphaTintPower: 1
+    - _BASE_COLOR_WEIGHT: 1
+    - _BUMP_MAP_STRENGTH: 0.3
+    - _BlackTintFade: 1
+    - _BlackTintPower: 2
     - _BumpScale: 1.8
     - _Cull: 2
+    - _CustomFadeAlpha: 1
+    - _CustomFadeNoiseFactor: 0
+    - _CustomFadeSmoothness: 2
     - _Cutoff: 0.5
     - _DecalMeshBiasType: 0
     - _DecalMeshDepthBias: 0
@@ -126,6 +242,16 @@ Material:
     - _DetailNormalMapScale: 1
     - _DrawOrder: 0
     - _DstBlend: 0
+    - _EMISSION_WEIGHT: 1
+    - _EnableAdjustColor: 0
+    - _EnableAlphaTint: 0
+    - _EnableBlackTint: 0
+    - _EnableCustomFade: 0
+    - _EnableExternalAlpha: 0
+    - _EnableSplitToning: 0
+    - _EnableTextureSprite1: 0
+    - _EnableUVDistort: 0
+    - _EnableUVScroll: 0
     - _GlitchBrightness: 4
     - _GlitchFade: 1
     - _GlitchHueSpeed: 1
@@ -136,6 +262,8 @@ Material:
     - _InnerOutlineDistortionToggle: 0
     - _InnerOutlineFade: 1
     - _InnerOutlineWidth: 0.02
+    - _InvFade: 1
+    - _METALNESS: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -149,16 +277,30 @@ Material:
     - _OutlineWidth: 3
     - _Parallax: 0.02
     - _PixelsPerUnit: 100
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _REFLECTIONS_IOR: 1.52
+    - _REFLECTIONS_ROUGHNESS: 1
+    - _REFLECTIONS_WEIGHT: 1
     - _RectHeight: 100
     - _RectWidth: 100
+    - _SPECULAR_IOR: 1.5
+    - _SPECULAR_ROUGHNESS: 0
     - _ScreenWidthUnits: 10
     - _ShaderSpace: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SplitToningBalance: 1
+    - _SplitToningContrast: 1
+    - _SplitToningFade: 1
+    - _SplitToningShift: 0
     - _SrcBlend: 1
     - _StencilComp: 8
     - _StencilRef: 1
     - _StraightAlphaInput: 0
+    - _TRANSPARENCY: 0
+    - _TextureFadeFrom: 0
+    - _TextureFadeTo: 1
     - _ThresholdEnd: 0.25
     - _TimeFPS: 5
     - _TimeFrequency: 2
@@ -166,13 +308,23 @@ Material:
     - _TimeScale: 1
     - _TimeSettings: 0
     - _TimeValue: 0
+    - _UVDistortFade: 1
+    - _UVDistortSpace: 0
     - _UVSec: 0
     - _Use8Neighbourhood: 1
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_898b24fbac2f414b81ac325fb5cb452a: {r: 445.722, g: 0, b: 0, a: 0}
+    - Color_8b7106704f8646d5a48d98ab24996790: {r: 1, g: 1, b: 1, a: 0}
+    - _AlphaTintColor: {r: 23.96863, g: 1.254902, b: 23.96863, a: 0}
+    - _BASE_COLOR: {r: 0, g: 0, b: 0, a: 0}
+    - _BlackTintColor: {r: 1, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _CustomFadeNoiseScale: {r: 1, g: 1, b: 0, a: 0}
+    - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _GlitchDistortion: {r: 0.1, g: 0, b: 0, a: 0}
     - _GlitchDistortionScale: {r: 0, g: 3, b: 0, a: 0}
     - _GlitchDistortionSpeed: {r: 0, g: 1, b: 0, a: 0}
@@ -190,4 +342,15 @@ Material:
     - _OuterOutlineNoiseScale: {r: 4, g: 4, b: 0, a: 0}
     - _OuterOutlineNoiseSpeed: {r: 0, g: 0.1, b: 0, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
+    - _REFLECTIONS_COLOR: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SPECULAR_COLOR: {r: 1, g: 1, b: 1, a: 0}
+    - _SplitToningHighlightsColor: {r: 1, g: 0.1, b: 0.1, a: 0}
+    - _SplitToningShadowsColor: {r: 0.1, g: 0.4000002, b: 1, a: 0}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _UVDistortFrom: {r: -0.02, g: -0.02, b: 0, a: 0}
+    - _UVDistortNoiseScale: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _UVDistortSpeed: {r: 2, g: 2, b: 0, a: 0}
+    - _UVDistortTo: {r: 0.02, g: 0.02, b: 0, a: 0}
+    - _UVScrollSpeed: {r: 0.2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
