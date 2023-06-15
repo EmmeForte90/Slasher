@@ -112,14 +112,14 @@ public class hero_rule : MonoBehaviour
     }
 
     public void raccogli_info_file(){
-        //lista_abilita_personaggio.Add("catena",1);
+        lista_abilita_personaggio.Add("catena",1);
         //lista_abilita_personaggio.Add("shuriken",1);
         //lista_abilita_personaggio.Add("laser",1);
         //lista_abilita_personaggio.Add("sfera_orbitale",1);
         //lista_abilita_personaggio.Add("scia_di_fuoco",1);
         //lista_abilita_personaggio.Add("boccetta_di_acido",1);
         //lista_abilita_personaggio.Add("meteore",1);
-        lista_abilita_personaggio.Add("scudo",1);
+        //lista_abilita_personaggio.Add("scudo",1);
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){

@@ -25,6 +25,11 @@ public class game : MonoBehaviour
     private float tempo_spawn_bordo=1f;
     private float tempo_spawn_bordo_attuale=1f;
 
+    private int eroe_livello=0;
+    private float xp_attuale=0;
+    private float xp_next=0;
+    private float xp_eccesso=0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +50,8 @@ public class game : MonoBehaviour
             }
         }
         //genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
+
+        xp_next=get_next_level_xp(1);
     }
 
     // Update is called once per frame
@@ -136,6 +143,17 @@ public class game : MonoBehaviour
         else if (level<=40){xp=level*20;}
         else {xp=level*30;}
         return xp;
+    }
+
+    public void eroe_guadagna_exp(float xp){
+        xp_attuale+=xp;
+        print ("xp_attuale: "+xp_attuale);
+        if (xp_attuale>=xp_next){
+            eroe_livello++;
+            xp_next=get_next_level_xp(eroe_livello);
+            xp_attuale=0;
+            xp_eccesso=xp_attuale-xp_next;
+        }
     }
 
     //questo blocco è servita a generare temporaneamente i sep del bordo; Presto potrai cancellare

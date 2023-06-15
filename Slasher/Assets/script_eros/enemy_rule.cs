@@ -15,11 +15,20 @@ public class enemy_rule : MonoBehaviour
     public float velocita_movimento=1;
     private float x_start_hero_screen;
 
+    private float vitalita;
+    public float vitalita_max=1;
+
     float input_horizontal;
     bool bool_dir_dx=true;
     Vector3 moveDir;
+
+    public GameObject obj_exp;
+
+    private bool bool_morto=false;
+
     // Start is called before the first frame update
     void Start(){
+        vitalita=vitalita_max;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -30,6 +39,7 @@ public class enemy_rule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (bool_morto){return;}
         moveDir = (hero.position - transform.position).normalized;
 
         transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia TELECAMERA
@@ -37,6 +47,8 @@ public class enemy_rule : MonoBehaviour
         Flip();
     }
     void FixedUpdate(){
+        if (bool_morto){return;}
+
         //rb.MovePosition(transform.position+moveDir*0.01f*velocita_movimento);
         rb.MovePosition(transform.position+moveDir* velocita_movimento * Time.deltaTime);
     }
@@ -96,6 +108,24 @@ public class enemy_rule : MonoBehaviour
     }
 
     public void danneggia_nemico(string tipo,float danni){
+        if (bool_morto){return;}
         print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
+        vitalita-=danni;
+        if (vitalita<=0){
+            attiva_morte_nemico();
+        }
+    }
+
+    public void attiva_morte_nemico(){
+        bool_morto=true;
+        GameObject go_temp;
+        go_temp=Instantiate(obj_exp);
+        go_temp.transform.position=new Vector3(transform.position.x,1,transform.position.z);
+        StartCoroutine(anim_morte_nemico());
+    }
+
+    private IEnumerator anim_morte_nemico(){
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }

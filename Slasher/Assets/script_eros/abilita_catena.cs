@@ -14,7 +14,7 @@ public class abilita_catena : MonoBehaviour
     }
 
     public void setta_livello(int livello){
-        dmg=0.1f+(0.025f*livello);
+        dmg=1+(0.25f*livello);
         rotationSpeed=120+(10*livello);
     }
 }

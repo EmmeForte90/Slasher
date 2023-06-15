@@ -13,7 +13,7 @@ public class info_comuni : MonoBehaviour
 
     void Start()
     {
-        lista_abilita_cooldown.Add("catena",10);
+        lista_abilita_cooldown.Add("catena",5);
         lista_abilita_cooldown.Add("shuriken",5);
         lista_abilita_cooldown.Add("laser",3);
         lista_abilita_cooldown.Add("sfera_orbitale",3);
