@@ -40,7 +40,7 @@ public class hero_rule : MonoBehaviour
         raccogli_info_file();   //funzione chiamata in verità dalle funzioni XML in futuro (cioè da mettere sulla funzione che raccogli da xml)
 
         foreach(KeyValuePair<string,int> attachStat in lista_abilita_personaggio){
-            aggiorna_abilita_livello(attachStat.Key,1);
+            aggiorna_abilita_livello(attachStat.Key,attachStat.Value);
             StartCoroutine(attiva_abilita_coroutine(attachStat.Key));
         }
     }

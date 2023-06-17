@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class game : MonoBehaviour
 {
+    public ui_upgrade ui_upgrade;
+
     public GameObject nemici;
     public GameObject lista_nemici_tipo;
     private Dictionary<string, GameObject> lista_GO_nemici_tipo = new Dictionary<string, GameObject>();
@@ -52,6 +54,7 @@ public class game : MonoBehaviour
         //genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
 
         xp_next=get_next_level_xp(1);
+        ui_upgrade.attiva_schermata_upgrade();
     }
 
     // Update is called once per frame
@@ -71,6 +74,11 @@ public class game : MonoBehaviour
             tempo_spawn_bordo_attuale+=tempo_spawn_bordo;
         } else {
             tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)){
+            print ("debug");
+
         }
     }
 
