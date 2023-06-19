@@ -159,6 +159,13 @@ public class game : MonoBehaviour
             xp_next=get_next_level_xp(eroe_livello);
             xp_attuale=0;
             xp_eccesso=xp_attuale-xp_next;
+            ui_upgrade.attiva_schermata_upgrade();
+        }
+    }
+
+    public void check_esp_eccesso(){
+        if (xp_eccesso>0){
+            eroe_guadagna_exp(xp_eccesso);
         }
     }
 

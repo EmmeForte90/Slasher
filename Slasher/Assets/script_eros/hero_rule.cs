@@ -41,7 +41,6 @@ public class hero_rule : MonoBehaviour
 
         foreach(KeyValuePair<string,int> attachStat in lista_abilita_personaggio){
             aggiorna_abilita_livello(attachStat.Key,attachStat.Value);
-            StartCoroutine(attiva_abilita_coroutine(attachStat.Key));
         }
     }
 
@@ -187,7 +186,7 @@ public class hero_rule : MonoBehaviour
         StartCoroutine(attiva_abilita_coroutine(abilita));
     }
 
-    private void aggiorna_abilita_livello(string abilita, int livello){
+    public void aggiorna_abilita_livello(string abilita, int livello){
         switch (abilita){
             case "catena":{
                 lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);
@@ -229,6 +228,9 @@ public class hero_rule : MonoBehaviour
                 lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_scudo>().dmg;
                 break;
             }
+        }
+        if (livello==1){
+            StartCoroutine(attiva_abilita_coroutine(abilita));
         }
     }
 }
