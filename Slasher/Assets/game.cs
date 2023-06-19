@@ -54,7 +54,6 @@ public class game : MonoBehaviour
         //genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
 
         xp_next=get_next_level_xp(1);
-        ui_upgrade.attiva_schermata_upgrade();
     }
 
     // Update is called once per frame
@@ -77,8 +76,7 @@ public class game : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Space)){
-            print ("debug");
-
+            ui_upgrade.attiva_schermata_upgrade();
         }
     }
 
