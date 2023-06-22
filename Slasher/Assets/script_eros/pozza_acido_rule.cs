@@ -17,7 +17,7 @@ public class pozza_acido_rule : MonoBehaviour
     }
 
     private IEnumerator distruggi_pozza_acido(){
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 }

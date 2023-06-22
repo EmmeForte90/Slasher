@@ -38,8 +38,8 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown.Add("shuriken",5);
         lista_abilita_cooldown.Add("laser",3);
         lista_abilita_cooldown.Add("sfera_orbitale",3);
-        lista_abilita_cooldown.Add("scia_di_fuoco",2);
-        lista_abilita_cooldown.Add("boccetta_di_acido",2);
+        lista_abilita_cooldown.Add("scia_di_fuoco",6);
+        lista_abilita_cooldown.Add("boccetta_di_acido",5);
         lista_abilita_cooldown.Add("meteore",2);
         lista_abilita_cooldown.Add("scudo",2);
 

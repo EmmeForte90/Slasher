@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class scia_fuoco_singola_rule : MonoBehaviour
 {
+    public float durata=3;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class scia_fuoco_singola_rule : MonoBehaviour
         
     }
     private IEnumerator distruggi_scia(){
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(durata);
         Destroy(gameObject);
     }
 }

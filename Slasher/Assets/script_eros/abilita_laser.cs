@@ -18,6 +18,6 @@ public class abilita_laser : MonoBehaviour
     }
 
     public void setta_livello(int livello){
-        dmg=0.1f+(0.025f*livello);
+        dmg=1.5f+(0.1f*livello);
     }
 }

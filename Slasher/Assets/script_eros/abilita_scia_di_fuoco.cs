@@ -5,9 +5,10 @@ using UnityEngine;
 public class abilita_scia_di_fuoco : MonoBehaviour
 {
     public float dmg=0.1f;
-    public int durata=3;
+    public float durata=3;
     public bool bool_attiva=false;
     public GameObject GO_scia_singola;
+    public scia_fuoco_singola_rule scia_fuoco_singola_rule;
     public Transform hero;
 
     // Start is called before the first frame update
@@ -29,8 +30,8 @@ public class abilita_scia_di_fuoco : MonoBehaviour
     }
 
     public void setta_livello(int livello){
-        durata=3+(1*livello);
-        dmg=0.1f+(0.025f*livello);
-        //rotationSpeed=120+(10*livello);
+        durata=1.3f+(0.2f*livello);
+        dmg=0.1f*livello;
+        scia_fuoco_singola_rule.durata=durata;
     }
 }

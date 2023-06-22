@@ -38,7 +38,7 @@ public class boccetta_di_acido_rule : MonoBehaviour
     }
 
     private IEnumerator distruggi_boccetta(){
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         if (!bool_distrutta){
             Destroy(gameObject);
         }

@@ -28,7 +28,7 @@ public class abilita_boccetta_di_acido : MonoBehaviour
     }
 
     private IEnumerator lancia_boccetta_coroutine(int num){
-        yield return new WaitForSeconds(1f*num);
+        yield return new WaitForSeconds(0.5f*num);
         GameObject go_temp;
         go_temp=Instantiate(GO_boccetta_acido);
         go_temp.name="boccetta_acido";
@@ -39,6 +39,7 @@ public class abilita_boccetta_di_acido : MonoBehaviour
     public void setta_livello(int livello){
         quantita=2+(1*livello);
         dmg=0.1f+(0.025f*livello);
+        dmg=0.4f;       //indipendentemente da livello...
         //rotationSpeed=120+(10*livello);
     }
 }

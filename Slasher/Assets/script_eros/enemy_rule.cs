@@ -94,7 +94,7 @@ public class enemy_rule : MonoBehaviour
         switch (collision.gameObject.name){
             case "catena_collider_trigger":{danneggia_nemico("catena",hero_rule.lista_danni_abilita["catena"]);break;}
             case "shuriken":{danneggia_nemico("shuriken",hero_rule.lista_danni_abilita["shuriken"]);break;}
-            case "laser_collider_trigger":{danneggia_nemico("laser",hero_rule.lista_danni_abilita["shuriken"]);break;}
+            case "laser_collider_trigger":{danneggia_nemico("laser",hero_rule.lista_danni_abilita["laser"]);break;}
             case "sfera_orbitale":{danneggia_nemico("sfera_orbitale",hero_rule.lista_danni_abilita["sfera_orbitale"]);break;}
             case "esplosione_meteora":{danneggia_nemico("meteora",hero_rule.lista_danni_abilita["meteore"]);break;}
             case "scudo":{
