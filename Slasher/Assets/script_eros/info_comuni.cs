@@ -40,7 +40,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown.Add("sfera_orbitale",3);
         lista_abilita_cooldown.Add("scia_di_fuoco",6);
         lista_abilita_cooldown.Add("boccetta_di_acido",5);
-        lista_abilita_cooldown.Add("meteore",2);
+        lista_abilita_cooldown.Add("meteore",1);
         lista_abilita_cooldown.Add("scudo",2);
 
         lista_abilita_durata.Add("catena",3);
@@ -49,7 +49,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_durata.Add("sfera_orbitale",3);
         lista_abilita_durata.Add("scia_di_fuoco",5);
         lista_abilita_durata.Add("boccetta_di_acido",5);
-        lista_abilita_durata.Add("meteore",5);
+        lista_abilita_durata.Add("meteore",10);
         lista_abilita_durata.Add("scudo",20);
 
         //lista_danni_nemici.Add("",0.1f);

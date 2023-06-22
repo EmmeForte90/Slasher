@@ -89,9 +89,9 @@ public class hero_rule : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)){attiva_abilita_tastiera("boccetta_di_acido");}
         if (Input.GetKeyDown(KeyCode.Alpha2)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha3)){attiva_abilita_tastiera("laser");}
-        /*
         if (Input.GetKeyDown(KeyCode.Alpha4)){attiva_abilita_tastiera("meteore");}
         if (Input.GetKeyDown(KeyCode.Alpha5)){attiva_abilita_tastiera("scia_di_fuoco");}
+        /*
         if (Input.GetKeyDown(KeyCode.Alpha6)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha7)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha8)){attiva_abilita_tastiera("catena");}
@@ -146,13 +146,13 @@ public class hero_rule : MonoBehaviour
     }
 
     public void raccogli_info_file(){
-        //lista_abilita_personaggio.Add("catena",1);              //OK
+        //lista_abilita_personaggio.Add("catena",1);            //OK
         //lista_abilita_personaggio.Add("shuriken",1);          //
         //lista_abilita_personaggio.Add("laser",1);             //OK
         //lista_abilita_personaggio.Add("sfera_orbitale",1);
-        lista_abilita_personaggio.Add("scia_di_fuoco",1);
+        //lista_abilita_personaggio.Add("scia_di_fuoco",1);     //OK
         //lista_abilita_personaggio.Add("boccetta_di_acido",1); //OK
-        //lista_abilita_personaggio.Add("meteore",1);
+        lista_abilita_personaggio.Add("meteore",1);             //OK
         //lista_abilita_personaggio.Add("scudo",1);
     }
 

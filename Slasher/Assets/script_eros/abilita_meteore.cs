@@ -8,8 +8,11 @@ public class abilita_meteore : MonoBehaviour
     private int quantita=0;
     public GameObject GO_meteora_singola;
     public Transform hero;
-    int range_x=30;
-    int range_y=30;
+    private int min_range_x=10;
+    private int max_range_x=30;
+    private int min_range_y=10;
+    private int max_range_y=30;
+    private int range_x, range_y;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,16 +32,18 @@ public class abilita_meteore : MonoBehaviour
     }
 
     private IEnumerator lancia_meteora_coroutine(int num){
-        yield return new WaitForSeconds(1f*num);
+        yield return new WaitForSeconds(0.1f*num);
         GameObject go_temp;
         go_temp=Instantiate(GO_meteora_singola);
         go_temp.name="meteoria_singola";
-        go_temp.transform.localPosition = new Vector3(hero.position.x+Random.Range(-range_x,range_x), hero.position.y+40, hero.position.z+Random.Range(-range_y,range_y));
+        range_x=Random.Range(min_range_x,max_range_x);  if (Random.Range(0,2)==1){range_x*=-1;}
+        range_y=Random.Range(min_range_y,max_range_y);  if (Random.Range(0,2)==1){range_y*=-1;}
+        go_temp.transform.localPosition = new Vector3(hero.position.x+range_x, hero.position.y+40, hero.position.z+range_y);
         go_temp.SetActive(true);
     }
 
     public void setta_livello(int livello){
         dmg=1f+(0.25f*livello);
-        quantita=30+livello;
+        quantita=30+(livello*3);
     }
 }
