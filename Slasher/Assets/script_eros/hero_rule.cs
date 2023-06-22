@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spine;
+using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
@@ -24,11 +26,15 @@ public class hero_rule : MonoBehaviour
     float input_horizontal;
     bool bool_dir_dx=true;
 
+    public bool bool_movimento;
+
     Vector3 camF,camR,moveDir;
 
-    // Start is called before the first frame update
+    public SkeletonAnimation skeletonAnimation;
+
     void Start()
     {
+        bool_movimento=false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -54,6 +60,8 @@ public class hero_rule : MonoBehaviour
         input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         input=Vector2.ClampMagnitude(input, 1);
 
+        if (input!=Vector2.zero){bool_movimento=true;} else {bool_movimento=false;}
+
         camF = cam.forward;
         camR = cam.right;
 
@@ -77,10 +85,37 @@ public class hero_rule : MonoBehaviour
         //funzione relativa al flip
         input_horizontal = Input.GetAxisRaw("Horizontal");
         Flip();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)){attiva_abilita_tastiera("boccetta_di_acido");}
+        if (Input.GetKeyDown(KeyCode.Alpha2)){attiva_abilita_tastiera("catena");}
+        if (Input.GetKeyDown(KeyCode.Alpha3)){attiva_abilita_tastiera("laser");}
+        /*
+        if (Input.GetKeyDown(KeyCode.Alpha4)){attiva_abilita_tastiera("meteore");}
+        if (Input.GetKeyDown(KeyCode.Alpha5)){attiva_abilita_tastiera("scia_di_fuoco");}
+        if (Input.GetKeyDown(KeyCode.Alpha6)){attiva_abilita_tastiera("catena");}
+        if (Input.GetKeyDown(KeyCode.Alpha7)){attiva_abilita_tastiera("catena");}
+        if (Input.GetKeyDown(KeyCode.Alpha8)){attiva_abilita_tastiera("catena");}
+        if (Input.GetKeyDown(KeyCode.Alpha9)){attiva_abilita_tastiera("catena");}
+        */
+        if (Input.GetKeyDown(KeyCode.Space)){
+            //print (Random.Range(0.0f, 3.0f));
+        }
+    }
+
+    void attiva_abilita_tastiera(string abilita){
+        if (!lista_abilita_personaggio.ContainsKey(abilita)){
+            print ("aggiungo l'abilità da tastiera "+abilita);
+            lista_abilita_personaggio.Add(abilita,1);
+            aggiorna_abilita_livello(abilita,1);
+        } else {
+            print ("hai già l'ablità "+abilita);
+        }
     }
 
     void FixedUpdate(){
         rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
+        if (bool_movimento){skeletonAnimation.AnimationName = "move";}
+        else {skeletonAnimation.AnimationName = "idle";}
         //rb.AddForce(moveDir.normalized * velocita_movimento * 10f, ForceMode.Force);
         //rb.velocity = new Vector3(dirX,rb.velocity.y,dirZ);
         //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;

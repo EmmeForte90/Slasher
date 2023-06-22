@@ -74,10 +74,6 @@ public class game : MonoBehaviour
         } else {
             tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
         }
-
-        if (Input.GetKeyDown(KeyCode.Space)){
-            ui_upgrade.attiva_schermata_upgrade();
-        }
     }
 
     private void spawn_enemy(string raggio){

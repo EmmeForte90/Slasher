@@ -17,7 +17,9 @@ public class scia_fuoco_singola_rule : MonoBehaviour
         
     }
     private IEnumerator distruggi_scia(){
-        yield return new WaitForSeconds(durata);
+        float durata_ienumerator=durata;
+        durata_ienumerator+=Random.Range(0.0f, 1f);
+        yield return new WaitForSeconds(durata_ienumerator);
         Destroy(gameObject);
     }
 }
