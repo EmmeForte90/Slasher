@@ -9,6 +9,7 @@ public class info_comuni : MonoBehaviour
 
     //blocco legato alle abilita
     public Dictionary<string, float> lista_abilita_cooldown = new Dictionary<string, float>();
+    public Dictionary<string, float> lista_abilita_durata_iniziale = new Dictionary<string, float>();
     public Dictionary<string, float> lista_abilita_durata = new Dictionary<string, float>();
 
     public Dictionary<string, string> lista_abilita_nome = new Dictionary<string, string>();
@@ -28,7 +29,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_descrizione_generica.Add("catena","Descrizione di Catena");
         lista_abilita_descrizione_generica.Add("shuriken","Descrizione di Shuriken");
         lista_abilita_descrizione_generica.Add("laser","Descrizione di Laser");
-        lista_abilita_descrizione_generica.Add("sfera_orbitale","Descrizione di Sfera Orbitale");
+        //lista_abilita_descrizione_generica.Add("sfera_orbitale","Descrizione di Sfera Orbitale");
         lista_abilita_descrizione_generica.Add("scia_di_fuoco","Descrizione di Scia di fuoco");
         lista_abilita_descrizione_generica.Add("boccetta_di_acido","Descrizione di Boccetta d'acido");
         lista_abilita_descrizione_generica.Add("meteore","Descrizione di Meteroe");
@@ -40,17 +41,21 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown.Add("sfera_orbitale",3);
         lista_abilita_cooldown.Add("scia_di_fuoco",6);
         lista_abilita_cooldown.Add("boccetta_di_acido",5);
-        lista_abilita_cooldown.Add("meteore",1);
-        lista_abilita_cooldown.Add("scudo",2);
+        lista_abilita_cooldown.Add("meteore",3);
+        lista_abilita_cooldown.Add("scudo",5);
 
-        lista_abilita_durata.Add("catena",3);
-        lista_abilita_durata.Add("shuriken",1);
-        lista_abilita_durata.Add("laser",0.1f);
-        lista_abilita_durata.Add("sfera_orbitale",3);
-        lista_abilita_durata.Add("scia_di_fuoco",5);
-        lista_abilita_durata.Add("boccetta_di_acido",5);
-        lista_abilita_durata.Add("meteore",10);
-        lista_abilita_durata.Add("scudo",20);
+        lista_abilita_durata_iniziale.Add("catena",3);
+        lista_abilita_durata_iniziale.Add("shuriken",1);
+        lista_abilita_durata_iniziale.Add("laser",0.1f);
+        lista_abilita_durata_iniziale.Add("sfera_orbitale",3);
+        lista_abilita_durata_iniziale.Add("scia_di_fuoco",5);
+        lista_abilita_durata_iniziale.Add("boccetta_di_acido",5);
+        lista_abilita_durata_iniziale.Add("meteore",10);
+        lista_abilita_durata_iniziale.Add("scudo",3);
+
+        foreach(KeyValuePair<string,float> attachStat in lista_abilita_durata_iniziale){
+            lista_abilita_durata.Add(attachStat.Key,attachStat.Value);
+        }
 
         //lista_danni_nemici.Add("",0.1f);
         //lista_danni_nemici.Add("Homunculus2",0.1f);

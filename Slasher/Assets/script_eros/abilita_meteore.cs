@@ -44,6 +44,6 @@ public class abilita_meteore : MonoBehaviour
 
     public void setta_livello(int livello){
         dmg=1f+(0.25f*livello);
-        quantita=30+(livello*3);
+        quantita=20+(livello*2);
     }
 }

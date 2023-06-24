@@ -28,6 +28,9 @@ public class hero_rule : MonoBehaviour
 
     public bool bool_movimento;
 
+    public abilita_scudo abilita_scudo;
+    private bool bool_scudo_attivo=false;
+
     Vector3 camF,camR,moveDir;
 
     public SkeletonAnimation skeletonAnimation;
@@ -91,9 +94,9 @@ public class hero_rule : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3)){attiva_abilita_tastiera("laser");}
         if (Input.GetKeyDown(KeyCode.Alpha4)){attiva_abilita_tastiera("meteore");}
         if (Input.GetKeyDown(KeyCode.Alpha5)){attiva_abilita_tastiera("scia_di_fuoco");}
+        if (Input.GetKeyDown(KeyCode.Alpha6)){attiva_abilita_tastiera("scudo");}
+        if (Input.GetKeyDown(KeyCode.Alpha7)){attiva_abilita_tastiera("shuriken");}
         /*
-        if (Input.GetKeyDown(KeyCode.Alpha6)){attiva_abilita_tastiera("catena");}
-        if (Input.GetKeyDown(KeyCode.Alpha7)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha8)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha9)){attiva_abilita_tastiera("catena");}
         */
@@ -108,7 +111,11 @@ public class hero_rule : MonoBehaviour
             lista_abilita_personaggio.Add(abilita,1);
             aggiorna_abilita_livello(abilita,1);
         } else {
-            print ("hai già l'ablità "+abilita);
+            int livello=lista_abilita_personaggio[abilita];
+            livello++;
+            print ("hai già l'ablità "+abilita+"la aggiorno al livello "+livello);
+            lista_abilita_personaggio[abilita]=livello;
+            aggiorna_abilita_livello(abilita,livello);
         }
     }
 
@@ -126,6 +133,7 @@ public class hero_rule : MonoBehaviour
         print ("eroe: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         if (collision.gameObject.tag=="nemico"){
             danneggia_personaggio(info_comuni.lista_danni_nemici[])
+            //abilita_scudo.per_protezione  per rimuovere eventuali danni
         }
     }
     */
@@ -147,13 +155,13 @@ public class hero_rule : MonoBehaviour
 
     public void raccogli_info_file(){
         //lista_abilita_personaggio.Add("catena",1);            //OK
-        //lista_abilita_personaggio.Add("shuriken",1);          //
+        lista_abilita_personaggio.Add("shuriken",1);          //
         //lista_abilita_personaggio.Add("laser",1);             //OK
         //lista_abilita_personaggio.Add("sfera_orbitale",1);
         //lista_abilita_personaggio.Add("scia_di_fuoco",1);     //OK
         //lista_abilita_personaggio.Add("boccetta_di_acido",1); //OK
-        lista_abilita_personaggio.Add("meteore",1);             //OK
-        //lista_abilita_personaggio.Add("scudo",1);
+        //lista_abilita_personaggio.Add("meteore",1);           //OK
+        //lista_abilita_personaggio.Add("scudo",1);             //OK
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -191,6 +199,7 @@ public class hero_rule : MonoBehaviour
                 break;
             }
             case "scudo":{
+                bool_scudo_attivo=true;
                 lista_GO_abilita[abilita].GetComponent<abilita_scudo>().attiva_scudo();
                 break;
             }
@@ -215,6 +224,7 @@ public class hero_rule : MonoBehaviour
                 lista_GO_abilita[abilita].SetActive(false);break;
             }
             case "scudo":{
+                bool_scudo_attivo=false;
                 lista_GO_abilita[abilita].GetComponent<abilita_scudo>().disattiva_scudo();
                 break;
             }
@@ -260,8 +270,9 @@ public class hero_rule : MonoBehaviour
                 break;
             }
             case "scudo":{
-                lista_GO_abilita[abilita].GetComponent<abilita_scudo>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_scudo>().dmg;
+                abilita_scudo.setta_livello(livello);
+                lista_danni_abilita[abilita]=abilita_scudo.dmg;
+                info_comuni.lista_abilita_durata[abilita]=abilita_scudo.durata;
                 break;
             }
         }

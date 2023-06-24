@@ -37,8 +37,18 @@ public class abilita_shuriken : MonoBehaviour
     }
 
     public void setta_livello(int livello){
-        quantita=3+(1*livello);
-        dmg=0.1f+(0.025f*livello);
-        //rotationSpeed=120+(10*livello);
+        switch (livello){
+            case 1:{quantita=3;break;}
+            case 2:{quantita=5;break;}
+            case 3:{quantita=7;break;}
+            case 4:{quantita=9;break;}
+            case 5:{quantita=10;break;}
+            case 6:{quantita=11;break;}
+            case 7:{quantita=12;break;}
+            case 8:{quantita=13;break;}
+            case 9:{quantita=14;break;}
+            case 10:{quantita=15;break;}
+        }
+        dmg=0.3f+(0.05f*livello);
     }
 }

@@ -7,6 +7,7 @@ public class abilita_scudo : MonoBehaviour
     public float dmg=1f;
     public int durata=3;
     public Transform hero;
+    public float per_protezione=0;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,8 @@ public class abilita_scudo : MonoBehaviour
 
     public void setta_livello(int livello){
         durata=3+(1*livello);
-        dmg=0.1f+(0.025f*livello);
+        dmg=(0.05f*livello);
+        per_protezione=(5*livello);
         //rotationSpeed=120+(10*livello);
     }
 }
