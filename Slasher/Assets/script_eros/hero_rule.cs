@@ -6,6 +6,7 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    public mappa mappa;
     public info_comuni info_comuni;
 
     private Dictionary<string, GameObject> lista_GO_abilita = new Dictionary<string, GameObject>();
@@ -137,6 +138,20 @@ public class hero_rule : MonoBehaviour
         }
     }
     */
+
+    void OnTriggerEnter(Collider collision){
+        //print ("eroe: entro in collisione trigger con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        if (collision.gameObject.tag=="pavimento"){
+            mappa.genera_blocchi_mappa_stringa(collision.gameObject.name);
+        }
+    }
+
+    void OnTriggerExit(Collider collision){
+        //print ("eroe: esco dalla collisione trigger con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        if (collision.gameObject.tag=="pavimento"){
+            mappa.hero_esce_blocco(collision.gameObject.name);
+        }
+    }
 
     public void danneggia_eroe(float danni){
         //print ("stò danneggiando l'eroe di "+danni);

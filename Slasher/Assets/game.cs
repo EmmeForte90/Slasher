@@ -35,6 +35,7 @@ public class game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         foreach(Transform child in lista_nemici_tipo.transform) {
             lista_GO_nemici_tipo.Add(child.gameObject.name,child.gameObject);
         }
@@ -55,6 +56,8 @@ public class game : MonoBehaviour
 
         xp_next=get_next_level_xp(1);
     }
+
+    
 
     // Update is called once per frame
     void Update()
