@@ -20,7 +20,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_nome.Add("catena","Catena");
         lista_abilita_nome.Add("shuriken","Shuriken");
         lista_abilita_nome.Add("laser","Laser");
-        lista_abilita_nome.Add("sfera_orbitale","Sfera Orbitale");
+        //lista_abilita_nome.Add("sfera_orbitale","Sfera Orbitale");
         lista_abilita_nome.Add("scia_di_fuoco","Scia di fuoco");
         lista_abilita_nome.Add("boccetta_di_acido","Boccetta d'acido");
         lista_abilita_nome.Add("meteore","Meteroe");
@@ -38,7 +38,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown.Add("catena",5);
         lista_abilita_cooldown.Add("shuriken",5);
         lista_abilita_cooldown.Add("laser",3);
-        lista_abilita_cooldown.Add("sfera_orbitale",3);
+        //lista_abilita_cooldown.Add("sfera_orbitale",3);
         lista_abilita_cooldown.Add("scia_di_fuoco",6);
         lista_abilita_cooldown.Add("boccetta_di_acido",5);
         lista_abilita_cooldown.Add("meteore",3);
@@ -47,7 +47,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_durata_iniziale.Add("catena",3);
         lista_abilita_durata_iniziale.Add("shuriken",1);
         lista_abilita_durata_iniziale.Add("laser",0.1f);
-        lista_abilita_durata_iniziale.Add("sfera_orbitale",3);
+        //lista_abilita_durata_iniziale.Add("sfera_orbitale",3);
         lista_abilita_durata_iniziale.Add("scia_di_fuoco",5);
         lista_abilita_durata_iniziale.Add("boccetta_di_acido",5);
         lista_abilita_durata_iniziale.Add("meteore",10);
