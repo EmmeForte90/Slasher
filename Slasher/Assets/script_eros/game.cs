@@ -32,10 +32,12 @@ public class game : MonoBehaviour
     private float xp_next=0;
     private float xp_eccesso=0;
 
+    private float tempo_attuale=0;
+    public TMPro.TextMeshProUGUI txt_tempo;
+
     // Start is called before the first frame update
     void Start()
     {
-
         foreach(Transform child in lista_nemici_tipo.transform) {
             lista_GO_nemici_tipo.Add(child.gameObject.name,child.gameObject);
         }
@@ -57,11 +59,27 @@ public class game : MonoBehaviour
         xp_next=get_next_level_xp(1);
     }
 
-    
+    private void setta_txt_tempo(){
+        tempo_attuale+=(1*Time.deltaTime);
+        int num_secondi=(int)tempo_attuale;
+        int num_minuti=0;
+        if (num_secondi>=60){
+            num_minuti=num_secondi/60;
+            num_secondi-=(num_minuti*60);
+        }
+        string testo="";
+        if (num_minuti<10){testo+="0";}
+        testo+=num_minuti.ToString();
+        testo+=" - ";
+        if (num_secondi<10){testo+="0";}
+        testo+=num_secondi.ToString();
+        txt_tempo.SetText(testo);
+    }
 
     // Update is called once per frame
     void Update()
     {
+        setta_txt_tempo();
         /*
         if (tempo_spawn_vicino_attuale<=0){
             spawn_enemy("vicino");

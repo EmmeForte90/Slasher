@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spine;
+using Spine.Unity;
 
 public class enemy_rule : MonoBehaviour
 {
+    public SkeletonAnimation skeletonAnimation;
+
     public string id_nemico;
     public hero_rule hero_rule;
     public float danno=0.01f;
@@ -111,6 +115,9 @@ public class enemy_rule : MonoBehaviour
         if (bool_morto){return;}
         print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
         vitalita-=danni;
+
+        StartCoroutine(anim_dmg_nemico());
+
         if (vitalita<=0){
             attiva_morte_nemico();
         }
@@ -127,5 +134,13 @@ public class enemy_rule : MonoBehaviour
     private IEnumerator anim_morte_nemico(){
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+    }
+
+    private IEnumerator anim_dmg_nemico(){
+        Color colore_rosso=new Color(255,0,0);
+        skeletonAnimation.Skeleton.SetColor(colore_rosso);
+        yield return new WaitForSeconds(0.1f);
+        Color colore_bianco=new Color(255,255,255);
+        skeletonAnimation.Skeleton.SetColor(colore_bianco);
     }
 }
