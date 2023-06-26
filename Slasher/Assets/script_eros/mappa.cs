@@ -81,7 +81,8 @@ public class mappa : MonoBehaviour
 
     private void genera_blocco_random(int x, int y){
         string string_blocco=from_coordinate_to_string(x,y);
-        int numero_casuale=Random.Range(1,num_blocchi_creazione_mappa);
+        int numero_casuale=Random.Range(1,(num_blocchi_creazione_mappa+1));
+        print (numero_casuale+" - "+num_blocchi_creazione_mappa);
         GameObject go_temp=Instantiate(lista_blocchi_creazione_mappa[numero_casuale]);
         float pos_x=x*grandezza_blocchi;
         float pos_z=y*grandezza_blocchi;
