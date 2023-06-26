@@ -37,7 +37,9 @@ public class ui_upgrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space)){
+            attiva_schermata_upgrade();
+        }
     }
 
     public void attiva_schermata_upgrade(){
@@ -52,7 +54,7 @@ public class ui_upgrade : MonoBehaviour
         }
 
         abilita_random_su_tre = Getabilita_random_su_tre(scelta_abilita, 3);
-        print ("numero di scelte: "+scelta_abilita.Count);
+        //print ("numero di scelte: "+scelta_abilita.Count);
 
         schermata_upgrade.SetActive(true);
 
@@ -73,6 +75,11 @@ public class ui_upgrade : MonoBehaviour
     public void click_scelta_upgrade(int num_scelta){
         schermata_upgrade.SetActive(false);
         string abilita_temp=abilita_random_su_tre[num_scelta-1];
+        if (scelta_abilita[abilita_temp]>1){
+            hero_rule.lista_abilita_personaggio[abilita_temp]=scelta_abilita[abilita_temp];
+        } else {
+            hero_rule.lista_abilita_personaggio.Add(abilita_temp,1);
+        }
         hero_rule.aggiorna_abilita_livello(abilita_temp,scelta_abilita[abilita_temp]);
         Time.timeScale = 1f;
         game.check_esp_eccesso();
