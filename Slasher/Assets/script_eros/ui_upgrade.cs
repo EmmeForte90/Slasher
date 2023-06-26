@@ -5,6 +5,7 @@ using UnityEngine;
 using Random = System.Random;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class ui_upgrade : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class ui_upgrade : MonoBehaviour
     }
 
     public void click_scelta_upgrade(int num_scelta){
+        EventSystem.current.SetSelectedGameObject(null);
         schermata_upgrade.SetActive(false);
         string abilita_temp=abilita_random_su_tre[num_scelta-1];
         if (scelta_abilita[abilita_temp]>1){
