@@ -24,7 +24,7 @@ public class mappa : MonoBehaviour
     }
 
     public void hero_esce_blocco(string string_blocco){
-        string[] splitArray =  string_blocco.Split(char.Parse("-"));
+        string[] splitArray =  string_blocco.Split(char.Parse("_"));
         name = splitArray[0];
         int x=int.Parse(splitArray[0]);
         int y=int.Parse(splitArray[1]);
@@ -41,7 +41,7 @@ public class mappa : MonoBehaviour
     }
 
     public void hero_entra_mappa_stringa(string string_blocco){
-        string[] splitArray =  string_blocco.Split(char.Parse("-"));
+        string[] splitArray =  string_blocco.Split(char.Parse("_"));
         name = splitArray[0];
         int x=int.Parse(splitArray[0]);
         int y=int.Parse(splitArray[1]);
@@ -49,7 +49,8 @@ public class mappa : MonoBehaviour
     }
 
     public void genera_blocchi_mappa_stringa(string string_blocco){
-        string[] splitArray =  string_blocco.Split(char.Parse("-"));
+        print (string_blocco);
+        string[] splitArray =  string_blocco.Split(char.Parse("_"));
         name = splitArray[0];
         int x=int.Parse(splitArray[0]);
         int y=int.Parse(splitArray[1]);
@@ -82,7 +83,6 @@ public class mappa : MonoBehaviour
     private void genera_blocco_random(int x, int y){
         string string_blocco=from_coordinate_to_string(x,y);
         int numero_casuale=Random.Range(1,(num_blocchi_creazione_mappa+1));
-        print (numero_casuale+" - "+num_blocchi_creazione_mappa);
         GameObject go_temp=Instantiate(lista_blocchi_creazione_mappa[numero_casuale]);
         float pos_x=x*grandezza_blocchi;
         float pos_z=y*grandezza_blocchi;
@@ -103,5 +103,5 @@ public class mappa : MonoBehaviour
         mappa_reale.Add(string_blocco,go_temp);
     }
 
-    private string from_coordinate_to_string(int x, int y){return x.ToString()+"-"+y.ToString();}
+    private string from_coordinate_to_string(int x, int y){return x.ToString()+"_"+y.ToString();}
 }
