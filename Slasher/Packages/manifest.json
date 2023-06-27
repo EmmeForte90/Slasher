@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "com.esotericsoftware.spine.lwrp-shaders": "file:C:/little_army_studio pachages/com.esotericsoftware.spine.lwrp-shaders-4.1-2019.1",
-    "com.esotericsoftware.spine.timeline": "file:C:/little_army_studio pachages/com.esotericsoftware.spine.timeline-4.1",
-    "com.esotericsoftware.spine.urp-shaders": "file:C:/little_army_studio pachages/com.esotericsoftware.spine.urp-shaders-4.1-2019.1",
+    "com.esotericsoftware.spine.lwrp-shaders": "file:C:/little_army_studio_packages/com.esotericsoftware.spine.lwrp-shaders-4.1-2019.1",
+    "com.esotericsoftware.spine.timeline": "file:C:/little_army_studio_packages/com.esotericsoftware.spine.timeline-4.1",
+    "com.esotericsoftware.spine.urp-shaders": "file:C:/little_army_studio_packages/com.esotericsoftware.spine.urp-shaders-4.1-2019.1",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "2.0.1",
     "com.unity.feature.development": "1.0.1",
