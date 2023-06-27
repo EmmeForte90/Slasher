@@ -1,7 +1,23 @@
 {
   "dependencies": {
+    "com.esotericsoftware.spine.lwrp-shaders": {
+      "version": "file:C:/little_army_studio pachages/com.esotericsoftware.spine.lwrp-shaders-4.1-2019.1",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.render-pipelines.lightweight": "5.7.2"
+      }
+    },
+    "com.esotericsoftware.spine.timeline": {
+      "version": "file:C:/little_army_studio pachages/com.esotericsoftware.spine.timeline-4.1",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.timeline": "1.2.10"
+      }
+    },
     "com.esotericsoftware.spine.urp-shaders": {
-      "version": "file:C:/Users/Utente/Pictures/SpinePack/com.esotericsoftware.spine.urp-shaders-4.1-2019.1",
+      "version": "file:C:/little_army_studio pachages/com.esotericsoftware.spine.urp-shaders-4.1-2019.1",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -118,6 +134,17 @@
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
+    },
+    "com.unity.render-pipelines.lightweight": {
+      "version": "5.7.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.postprocessing": "2.1.4",
+        "com.unity.render-pipelines.core": "5.7.2",
+        "com.unity.shadergraph": "5.7.2"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.universal": {
       "version": "12.1.10",
