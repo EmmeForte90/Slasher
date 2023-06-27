@@ -6,6 +6,7 @@ public class mappa : MonoBehaviour
 {
     public GameObject GO_mappa;
     public GameObject lista_blocchi_mappa_totali;
+    public GameObject lista_blocchi_mappa_fighi;
     private Dictionary<string, GameObject> mappa_reale = new Dictionary<string, GameObject>();
     private Dictionary<int, GameObject> lista_blocchi_creazione_mappa = new Dictionary<int, GameObject>();
     private int num_blocchi_creazione_mappa=0;
@@ -15,6 +16,7 @@ public class mappa : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lista_blocchi_mappa_fighi.SetActive(false);
         foreach(Transform child in lista_blocchi_mappa_totali.transform) {
             num_blocchi_creazione_mappa++;
             lista_blocchi_creazione_mappa.Add(num_blocchi_creazione_mappa,child.gameObject);
