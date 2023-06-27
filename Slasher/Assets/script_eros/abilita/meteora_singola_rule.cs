@@ -21,7 +21,7 @@ public class meteora_singola_rule : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider collision){
-        print ("meteora: entro in collissione con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        //print ("meteora: entro in collissione con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         if (collision.gameObject.tag=="pavimento"){
             bool_distrutta=true;
             Destroy(gameObject);

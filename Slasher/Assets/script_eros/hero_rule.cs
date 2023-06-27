@@ -6,6 +6,7 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    public gestione_gui gestione_gui;
     public mappa mappa;
     public info_comuni info_comuni;
 
@@ -13,6 +14,7 @@ public class hero_rule : MonoBehaviour
     public GameObject cont_lista_abilita;
     public Dictionary<string, int> lista_abilita_personaggio = new Dictionary<string, int>();   //abilità, livello
     public Dictionary<string, float> lista_danni_abilita = new Dictionary<string, float>();   //abilità, danno
+    public int num_abilita_attive=0;
 
     private Rigidbody rb;
 
@@ -48,10 +50,6 @@ public class hero_rule : MonoBehaviour
         }
 
         raccogli_info_file();   //funzione chiamata in verità dalle funzioni XML in futuro (cioè da mettere sulla funzione che raccogli da xml)
-
-        foreach(KeyValuePair<string,int> attachStat in lista_abilita_personaggio){
-            aggiorna_abilita_livello(attachStat.Key,attachStat.Value);
-        }
     }
 
     // Update is called once per frame
@@ -90,33 +88,19 @@ public class hero_rule : MonoBehaviour
         input_horizontal = Input.GetAxisRaw("Horizontal");
         Flip();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)){attiva_abilita_tastiera("boccetta_di_acido");}
-        if (Input.GetKeyDown(KeyCode.Alpha2)){attiva_abilita_tastiera("catena");}
-        if (Input.GetKeyDown(KeyCode.Alpha3)){attiva_abilita_tastiera("laser");}
-        if (Input.GetKeyDown(KeyCode.Alpha4)){attiva_abilita_tastiera("meteore");}
-        if (Input.GetKeyDown(KeyCode.Alpha5)){attiva_abilita_tastiera("scia_di_fuoco");}
-        if (Input.GetKeyDown(KeyCode.Alpha6)){attiva_abilita_tastiera("scudo");}
-        if (Input.GetKeyDown(KeyCode.Alpha7)){attiva_abilita_tastiera("shuriken");}
+        if (Input.GetKeyDown(KeyCode.Alpha1)){aggiorna_abilita_livello("boccetta_di_acido");}
+        if (Input.GetKeyDown(KeyCode.Alpha2)){aggiorna_abilita_livello("catena");}
+        if (Input.GetKeyDown(KeyCode.Alpha3)){aggiorna_abilita_livello("laser");}
+        if (Input.GetKeyDown(KeyCode.Alpha4)){aggiorna_abilita_livello("meteore");}
+        if (Input.GetKeyDown(KeyCode.Alpha5)){aggiorna_abilita_livello("scia_di_fuoco");}
+        if (Input.GetKeyDown(KeyCode.Alpha6)){aggiorna_abilita_livello("scudo");}
+        if (Input.GetKeyDown(KeyCode.Alpha7)){aggiorna_abilita_livello("shuriken");}
         /*
         if (Input.GetKeyDown(KeyCode.Alpha8)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha9)){attiva_abilita_tastiera("catena");}
         */
         if (Input.GetKeyDown(KeyCode.Space)){
             //print (Random.Range(0.0f, 3.0f));
-        }
-    }
-
-    void attiva_abilita_tastiera(string abilita){
-        if (!lista_abilita_personaggio.ContainsKey(abilita)){
-            print ("aggiungo l'abilità da tastiera "+abilita);
-            lista_abilita_personaggio.Add(abilita,1);
-            aggiorna_abilita_livello(abilita,1);
-        } else {
-            int livello=lista_abilita_personaggio[abilita];
-            livello++;
-            print ("hai già l'ablità "+abilita+"la aggiorno al livello "+livello);
-            lista_abilita_personaggio[abilita]=livello;
-            aggiorna_abilita_livello(abilita,livello);
         }
     }
 
@@ -169,14 +153,16 @@ public class hero_rule : MonoBehaviour
     }
 
     public void raccogli_info_file(){
-        //lista_abilita_personaggio.Add("catena",1);            //OK
-        lista_abilita_personaggio.Add("shuriken",1);          //
-        //lista_abilita_personaggio.Add("laser",1);             //OK
-        //lista_abilita_personaggio.Add("sfera_orbitale",1);
-        //lista_abilita_personaggio.Add("scia_di_fuoco",1);     //OK
-        //lista_abilita_personaggio.Add("boccetta_di_acido",1); //OK
-        //lista_abilita_personaggio.Add("meteore",1);           //OK
-        //lista_abilita_personaggio.Add("scudo",1);             //OK
+        //aggiorna_abilita_livello("catena");              //OK
+        //aggiorna_abilita_livello("shuriken");          //OK
+        //aggiorna_abilita_livello("laser");             //OK
+        //aggiorna_abilita_livello("sfera_orbitale");
+        //aggiorna_abilita_livello("scia_di_fuoco");     //OK
+        //aggiorna_abilita_livello("boccetta_di_acido"); //OK
+        //aggiorna_abilita_livello("meteore");           //OK
+        //aggiorna_abilita_livello("scudo");             //OK
+
+        aggiorna_abilita_livello("catena");
     }
 
     private IEnumerator attiva_abilita_coroutine(string abilita){
@@ -247,7 +233,21 @@ public class hero_rule : MonoBehaviour
         StartCoroutine(attiva_abilita_coroutine(abilita));
     }
 
-    public void aggiorna_abilita_livello(string abilita, int livello){
+    public void aggiorna_abilita_livello(string abilita){
+        int livello=0;
+        if (!lista_abilita_personaggio.ContainsKey(abilita)){
+            print ("aggiungo l'abilità "+abilita);
+            livello=1;
+            lista_abilita_personaggio.Add(abilita,1);
+            num_abilita_attive++;
+            gestione_gui.lista_posizioni_abilita.Add(abilita,num_abilita_attive);
+        } else {
+            livello=lista_abilita_personaggio[abilita];
+            livello++;
+            print ("hai già l'ablità "+abilita+"la aggiorno al livello "+livello);
+            lista_abilita_personaggio[abilita]=livello;
+        }
+        gestione_gui.abilita_attiva_gui(abilita,livello,num_abilita_attive);
         switch (abilita){
             case "catena":{
                 lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);

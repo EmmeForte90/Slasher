@@ -77,12 +77,7 @@ public class ui_upgrade : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         schermata_upgrade.SetActive(false);
         string abilita_temp=abilita_random_su_tre[num_scelta-1];
-        if (scelta_abilita[abilita_temp]>1){
-            hero_rule.lista_abilita_personaggio[abilita_temp]=scelta_abilita[abilita_temp];
-        } else {
-            hero_rule.lista_abilita_personaggio.Add(abilita_temp,1);
-        }
-        hero_rule.aggiorna_abilita_livello(abilita_temp,scelta_abilita[abilita_temp]);
+        hero_rule.aggiorna_abilita_livello(abilita_temp);
         Time.timeScale = 1f;
         game.check_esp_eccesso();
     }
