@@ -23,8 +23,14 @@ public class info_comuni : MonoBehaviour
         //lista_abilita_nome.Add("sfera_orbitale","Sfera Orbitale");
         lista_abilita_nome.Add("scia_di_fuoco","Scia di fuoco");
         lista_abilita_nome.Add("boccetta_di_acido","Boccetta d'acido");
-        lista_abilita_nome.Add("meteore","Meteroe");
+        lista_abilita_nome.Add("meteore","Meteore");
         lista_abilita_nome.Add("scudo","Scudo");
+
+        lista_abilita_nome.Add("armatura","Armatura");
+        lista_abilita_nome.Add("velocita","Velocità");
+        lista_abilita_nome.Add("danno","Danno");
+        lista_abilita_nome.Add("rigenerazione","Rigenerazione");
+        lista_abilita_nome.Add("magnetismo","Magnetismo");
 
         lista_abilita_descrizione_generica.Add("catena","Descrizione di Catena");
         lista_abilita_descrizione_generica.Add("shuriken","Descrizione di Shuriken");
@@ -32,8 +38,14 @@ public class info_comuni : MonoBehaviour
         //lista_abilita_descrizione_generica.Add("sfera_orbitale","Descrizione di Sfera Orbitale");
         lista_abilita_descrizione_generica.Add("scia_di_fuoco","Descrizione di Scia di fuoco");
         lista_abilita_descrizione_generica.Add("boccetta_di_acido","Descrizione di Boccetta d'acido");
-        lista_abilita_descrizione_generica.Add("meteore","Descrizione di Meteroe");
+        lista_abilita_descrizione_generica.Add("meteore","Descrizione di Meteore");
         lista_abilita_descrizione_generica.Add("scudo","Descrizione di Scudo");
+
+        lista_abilita_descrizione_generica.Add("armatura","Descrizione di Armatura");
+        lista_abilita_descrizione_generica.Add("velocita","Descrizione di Velocità");
+        lista_abilita_descrizione_generica.Add("danno","Descrizione di Danno");
+        lista_abilita_descrizione_generica.Add("rigenerazione","Descrizione di Rigenerazione");
+        lista_abilita_descrizione_generica.Add("magnetismo","Descrizione di Magnetismo");
 
         lista_abilita_cooldown.Add("catena",5);
         lista_abilita_cooldown.Add("shuriken",5);

@@ -14,7 +14,9 @@ public class hero_rule : MonoBehaviour
     public GameObject cont_lista_abilita;
     public Dictionary<string, int> lista_abilita_personaggio = new Dictionary<string, int>();   //abilità, livello
     public Dictionary<string, float> lista_danni_abilita = new Dictionary<string, float>();   //abilità, danno
+    public Dictionary<string, int> lista_abilita_passive = new Dictionary<string, int>();   //abilità passiva, livello
     public int num_abilita_attive=0;
+    public int num_abilita_passive=0;
 
     private Rigidbody rb;
 
@@ -50,6 +52,12 @@ public class hero_rule : MonoBehaviour
         }
 
         raccogli_info_file();   //funzione chiamata in verità dalle funzioni XML in futuro (cioè da mettere sulla funzione che raccogli da xml)
+
+        foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
+            if (!info_comuni.lista_abilita_cooldown.ContainsKey(attachStat.Key)){
+                lista_abilita_passive.Add(attachStat.Key,0);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -235,64 +243,73 @@ public class hero_rule : MonoBehaviour
 
     public void aggiorna_abilita_livello(string abilita){
         int livello=0;
-        if (!lista_abilita_personaggio.ContainsKey(abilita)){
-            print ("aggiungo l'abilità "+abilita);
-            livello=1;
-            lista_abilita_personaggio.Add(abilita,1);
-            num_abilita_attive++;
-            gestione_gui.lista_posizioni_abilita.Add(abilita,num_abilita_attive);
-        } else {
-            livello=lista_abilita_personaggio[abilita];
-            livello++;
-            print ("hai già l'ablità "+abilita+"la aggiorno al livello "+livello);
-            lista_abilita_personaggio[abilita]=livello;
-        }
-        gestione_gui.abilita_attiva_gui(abilita,livello,num_abilita_attive);
-        switch (abilita){
-            case "catena":{
-                lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_catena>().dmg;
-                break;
+        if (info_comuni.lista_abilita_cooldown.ContainsKey(abilita)){
+            if (!lista_abilita_personaggio.ContainsKey(abilita)){
+                print ("aggiungo l'abilità "+abilita);
+                livello=1;
+                lista_abilita_personaggio.Add(abilita,1);
+                num_abilita_attive++;
+                gestione_gui.lista_posizioni_abilita.Add(abilita,num_abilita_attive);
+            } else {
+                livello=lista_abilita_personaggio[abilita];
+                livello++;
+                print ("hai già l'ablità "+abilita+"la aggiorno al livello "+livello);
+                lista_abilita_personaggio[abilita]=livello;
             }
-            case "shuriken":{
-                lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().dmg;
-                break;
+            gestione_gui.abilita_attiva_gui(abilita,livello,num_abilita_attive);
+            switch (abilita){
+                case "catena":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_catena>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_catena>().dmg;
+                    break;
+                }
+                case "shuriken":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_shuriken>().dmg;
+                    break;
+                }
+                case "laser":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_laser>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_laser>().dmg;
+                    break;
+                }
+                case "sfera_orbitale":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().dmg;
+                    break;
+                }
+                case "scia_di_fuoco":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().dmg;
+                    break;
+                }
+                case "boccetta_di_acido":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().dmg;
+                    break;
+                }
+                case "meteore":{
+                    lista_GO_abilita[abilita].GetComponent<abilita_meteore>().setta_livello(livello);
+                    lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_meteore>().dmg;
+                    break;
+                }
+                case "scudo":{
+                    abilita_scudo.setta_livello(livello);
+                    lista_danni_abilita[abilita]=abilita_scudo.dmg;
+                    info_comuni.lista_abilita_durata[abilita]=abilita_scudo.durata;
+                    break;
+                }
             }
-            case "laser":{
-                lista_GO_abilita[abilita].GetComponent<abilita_laser>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_laser>().dmg;
-                break;
+            if (livello==1){
+                StartCoroutine(attiva_abilita_coroutine(abilita));
             }
-            case "sfera_orbitale":{
-                lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_sfera_orbitale>().dmg;
-                break;
+        } else {//stiamo parlando di abilità passive;
+            lista_abilita_passive[abilita]++;
+            if (lista_abilita_passive[abilita]==1){
+                num_abilita_passive++;
+                gestione_gui.lista_posizioni_abilita_passive.Add(abilita,num_abilita_passive);
             }
-            case "scia_di_fuoco":{
-                lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_scia_di_fuoco>().dmg;
-                break;
-            }
-            case "boccetta_di_acido":{
-                lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_boccetta_di_acido>().dmg;
-                break;
-            }
-            case "meteore":{
-                lista_GO_abilita[abilita].GetComponent<abilita_meteore>().setta_livello(livello);
-                lista_danni_abilita[abilita]=lista_GO_abilita[abilita].GetComponent<abilita_meteore>().dmg;
-                break;
-            }
-            case "scudo":{
-                abilita_scudo.setta_livello(livello);
-                lista_danni_abilita[abilita]=abilita_scudo.dmg;
-                info_comuni.lista_abilita_durata[abilita]=abilita_scudo.durata;
-                break;
-            }
-        }
-        if (livello==1){
-            StartCoroutine(attiva_abilita_coroutine(abilita));
+            gestione_gui.abilita_passiva_gui(abilita,lista_abilita_passive[abilita],num_abilita_passive);
         }
     }
 }
