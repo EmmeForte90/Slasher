@@ -10,7 +10,7 @@ public class enemy_rule : MonoBehaviour
 
     public string id_nemico;
     public hero_rule hero_rule;
-    public float danno=0.01f;
+    public float danno=1f;
 
     private Rigidbody rb;
     public Camera cam_r;
@@ -76,7 +76,11 @@ public class enemy_rule : MonoBehaviour
     void OnCollisionStay(Collision collision){
         //print ("nemico: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         switch (collision.gameObject.name){
-            case "eroe":{hero_rule.danneggia_eroe(danno);break;}
+            case "Eroe":{
+                hero_rule.check_danneggia_eroe(danno);
+                //hero_rule.danneggia_eroe(danno);
+                break;
+            }
         }
     }
 

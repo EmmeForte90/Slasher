@@ -5,7 +5,6 @@ using UnityEngine;
 public class info_comuni : MonoBehaviour
 {
     //blocco legato ai nemici
-    //public Dictionary<string, float> lista_danni_nemici = new Dictionary<string, float>();
 
     //blocco legato alle abilita
     public Dictionary<string, float> lista_abilita_cooldown = new Dictionary<string, float>();
@@ -68,9 +67,6 @@ public class info_comuni : MonoBehaviour
         foreach(KeyValuePair<string,float> attachStat in lista_abilita_durata_iniziale){
             lista_abilita_durata.Add(attachStat.Key,attachStat.Value);
         }
-
-        //lista_danni_nemici.Add("",0.1f);
-        //lista_danni_nemici.Add("Homunculus2",0.1f);
     }
 
     // Update is called once per frame

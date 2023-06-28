@@ -178,6 +178,7 @@ public class game : MonoBehaviour
             xp_attuale=0;
             xp_eccesso=xp_attuale-xp_next;
             ui_upgrade.attiva_schermata_upgrade();
+            gestione_gui.txt_level.SetText(eroe_livello.ToString());
         }
         gestione_gui.setta_img_xp(xp_attuale,xp_next);
     }

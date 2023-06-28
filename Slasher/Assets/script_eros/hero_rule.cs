@@ -6,6 +6,10 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    private bool bool_colpibile=true;
+    private float vitalita_max;
+    private float vitalita;
+
     public gestione_gui gestione_gui;
     public mappa mappa;
     public info_comuni info_comuni;
@@ -52,6 +56,9 @@ public class hero_rule : MonoBehaviour
         }
 
         raccogli_info_file();   //funzione chiamata in verità dalle funzioni XML in futuro (cioè da mettere sulla funzione che raccogli da xml)
+
+        vitalita_max=100;
+        vitalita=vitalita_max;
 
         foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
             if (!info_comuni.lista_abilita_cooldown.ContainsKey(attachStat.Key)){
@@ -121,15 +128,30 @@ public class hero_rule : MonoBehaviour
         //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
     }
 
-    /*
-    void OnCollisionStay(Collision collision){
-        print ("eroe: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
-        if (collision.gameObject.tag=="nemico"){
-            danneggia_personaggio(info_comuni.lista_danni_nemici[])
-            //abilita_scudo.per_protezione  per rimuovere eventuali danni
+    public void check_danneggia_eroe(float danni){
+        if (bool_colpibile){
+            bool_colpibile=false;
+            StartCoroutine(ritorna_colpibile_coroutine());
+            danneggia_eroe(danni);
         }
     }
-    */
+
+    public void danneggia_eroe(float danni){
+        print ("stò danneggiando l'eroe di "+danni);
+        vitalita-=danni;
+        gestione_gui.setta_img_vitalita(vitalita,vitalita_max);
+    }
+
+    void OnCollisionStay(Collision collision){
+        //print ("eroe: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        if (collision.gameObject.tag=="nemico"){
+            
+        }
+    }
+    private IEnumerator ritorna_colpibile_coroutine(){
+        yield return new WaitForSeconds(0.2f);
+        bool_colpibile=true;
+    }
 
     void OnTriggerEnter(Collider collision){
         //print ("eroe: entro in collisione trigger con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
@@ -143,10 +165,6 @@ public class hero_rule : MonoBehaviour
         if (collision.gameObject.tag=="pavimento"){
             mappa.hero_esce_blocco(collision.gameObject.name);
         }
-    }
-
-    public void danneggia_eroe(float danni){
-        //print ("stò danneggiando l'eroe di "+danni);
     }
 
     private void Flip()

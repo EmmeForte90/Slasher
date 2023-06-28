@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class gestione_gui : MonoBehaviour
 {
+    public TextMeshProUGUI txt_level;
+
     public Image fill_ampolla_sx;
     public Image fill_ampolla_dx;
     public Image fill_barra_bottom;
@@ -23,6 +25,8 @@ public class gestione_gui : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        txt_level.SetText("1");
+
         ricerca_ricorsiva_ab_attive(GO_abilita_attive.transform);
         ricerca_ricorsiva_ab_passive(GO_abilita_passive.transform);
 
@@ -31,6 +35,10 @@ public class gestione_gui : MonoBehaviour
         setta_fill(fill_ampolla_dx,2f);
         setta_fill(fill_barra_bottom,0.8f);
         */
+        setta_fill(fill_ampolla_dx,0f);
+    }
+    public void setta_img_vitalita(float vitalita, float vitalita_max){
+        fill_ampolla_sx.fillAmount=vitalita/vitalita_max;
     }
 
     public void setta_img_xp(float xp, float xp_totale){

@@ -49,6 +49,6 @@ public class abilita_shuriken : MonoBehaviour
             case 9:{quantita=14;break;}
             case 10:{quantita=15;break;}
         }
-        dmg=0.3f+(0.05f*livello);
+        dmg=1f+(0.3f*livello);
     }
 }
