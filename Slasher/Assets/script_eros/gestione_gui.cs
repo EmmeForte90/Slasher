@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class gestione_gui : MonoBehaviour
 {
+    public Image fill_ampolla_sx;
+    public Image fill_ampolla_dx;
+    public Image fill_barra_bottom;
+
     public Dictionary<string, int> lista_posizioni_abilita = new Dictionary<string, int>();    //abilità, posizione
     private Dictionary<int,TextMeshProUGUI> lista_lvl_abilita = new Dictionary<int, TextMeshProUGUI>();  //posizione, abilita
     private Dictionary<int,Image> lista_img_abilita = new Dictionary<int, Image>();  //posizione, abilita
@@ -21,6 +25,14 @@ public class gestione_gui : MonoBehaviour
     {
         ricerca_ricorsiva_ab_attive(GO_abilita_attive.transform);
         ricerca_ricorsiva_ab_passive(GO_abilita_passive.transform);
+
+        setta_fill(fill_ampolla_sx,0.2f);
+        setta_fill(fill_ampolla_dx,0.5f);
+        setta_fill(fill_barra_bottom,0.8f);
+    }
+
+    private void setta_fill(Image img, float settaggio){
+        img.fillAmount=settaggio;
     }
 
     private void ricerca_ricorsiva_ab_attive(Transform parent){
