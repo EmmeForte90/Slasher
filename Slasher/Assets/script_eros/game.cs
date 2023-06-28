@@ -71,7 +71,7 @@ public class game : MonoBehaviour
         string testo="";
         if (num_minuti<10){testo+="0";}
         testo+=num_minuti.ToString();
-        testo+=" - ";
+        testo+=" : ";
         if (num_secondi<10){testo+="0";}
         testo+=num_secondi.ToString();
         txt_tempo.SetText(testo);
