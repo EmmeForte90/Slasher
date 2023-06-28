@@ -26,9 +26,15 @@ public class gestione_gui : MonoBehaviour
         ricerca_ricorsiva_ab_attive(GO_abilita_attive.transform);
         ricerca_ricorsiva_ab_passive(GO_abilita_passive.transform);
 
-        setta_fill(fill_ampolla_sx,0.2f);
-        setta_fill(fill_ampolla_dx,0.5f);
+        /*
+        setta_fill(fill_ampolla_sx,-0.2f);
+        setta_fill(fill_ampolla_dx,2f);
         setta_fill(fill_barra_bottom,0.8f);
+        */
+    }
+
+    public void setta_img_xp(float xp, float xp_totale){
+        fill_barra_bottom.fillAmount=xp/xp_totale;
     }
 
     private void setta_fill(Image img, float settaggio){

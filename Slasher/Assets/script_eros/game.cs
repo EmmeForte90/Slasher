@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class game : MonoBehaviour
 {
+    public gestione_gui gestione_gui;
     public ui_upgrade ui_upgrade;
 
     public GameObject nemici;
@@ -178,6 +179,7 @@ public class game : MonoBehaviour
             xp_eccesso=xp_attuale-xp_next;
             ui_upgrade.attiva_schermata_upgrade();
         }
+        gestione_gui.setta_img_xp(xp_attuale,xp_next);
     }
 
     public void check_esp_eccesso(){
