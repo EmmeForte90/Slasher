@@ -358,6 +358,15 @@ public class hero_rule : MonoBehaviour
                     raggio_exp.radius=5+(lista_abilita_passive[abilita]*1f);
                     break;
                 }
+                case "diminuire_cooldown":{
+                    float cooldown_temp;
+                    foreach(KeyValuePair<string,float> attachStat in info_comuni.lista_abilita_cooldown_iniziale){
+                        cooldown_temp=info_comuni.lista_abilita_cooldown_iniziale[attachStat.Key];
+                        cooldown_temp-=(info_comuni.lista_abilita_cooldown_iniziale[attachStat.Key]*5/100);
+                        info_comuni.lista_abilita_cooldown[attachStat.Key]=cooldown_temp;
+                    }
+                    break;
+                }
             }
             gestione_gui.abilita_passiva_gui(abilita,lista_abilita_passive[abilita],num_abilita_passive);
         }
