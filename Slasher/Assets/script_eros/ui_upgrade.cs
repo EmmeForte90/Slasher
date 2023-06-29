@@ -47,10 +47,16 @@ public class ui_upgrade : MonoBehaviour
         Time.timeScale = 0f;
         scelta_abilita.Clear();
         foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
-            if (!hero_rule.lista_abilita_personaggio.ContainsKey(attachStat.Key)){
-                scelta_abilita.Add(attachStat.Key,1);
-            } else if (hero_rule.lista_abilita_personaggio[attachStat.Key]<10){
-                scelta_abilita.Add(attachStat.Key,hero_rule.lista_abilita_personaggio[attachStat.Key]+1);
+            if (!hero_rule.lista_abilita_passive.ContainsKey(attachStat.Key)){  //abilità attive
+                if (!hero_rule.lista_abilita_personaggio.ContainsKey(attachStat.Key)){
+                    scelta_abilita.Add(attachStat.Key,1);
+                } else if (hero_rule.lista_abilita_personaggio[attachStat.Key]<10){
+                    scelta_abilita.Add(attachStat.Key,hero_rule.lista_abilita_personaggio[attachStat.Key]+1);
+                }
+            } else {    //abilita passive 
+                if (hero_rule.lista_abilita_passive[attachStat.Key]<10){
+                    scelta_abilita.Add(attachStat.Key,(hero_rule.lista_abilita_passive[attachStat.Key]+1));
+                }
             }
         }
 

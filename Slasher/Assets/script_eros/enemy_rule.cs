@@ -120,6 +120,14 @@ public class enemy_rule : MonoBehaviour
     public void danneggia_nemico(string tipo,float danni){
         if (bool_morto){return;}
         print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
+        switch (tipo){
+            default:{//viene danneggiato dall'eroe
+                if (hero_rule.lista_abilita_passive["danno"]>0){
+                    danni+=(danni*hero_rule.lista_abilita_passive["danno"]*5/100);
+                }
+                break;
+            }
+        }
         vitalita-=danni;
 
         StartCoroutine(anim_dmg_nemico());

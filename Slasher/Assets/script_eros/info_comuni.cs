@@ -7,6 +7,7 @@ public class info_comuni : MonoBehaviour
     //blocco legato ai nemici
 
     //blocco legato alle abilita
+    public Dictionary<string, float> lista_abilita_cooldown_iniziale = new Dictionary<string, float>();
     public Dictionary<string, float> lista_abilita_cooldown = new Dictionary<string, float>();
     public Dictionary<string, float> lista_abilita_durata_iniziale = new Dictionary<string, float>();
     public Dictionary<string, float> lista_abilita_durata = new Dictionary<string, float>();
@@ -48,14 +49,14 @@ public class info_comuni : MonoBehaviour
         lista_abilita_descrizione_generica.Add("magnetismo","Descrizione di Magnetismo");
         lista_abilita_descrizione_generica.Add("diminuire_cooldown","Descrizione di Prontezza");
 
-        lista_abilita_cooldown.Add("catena",5);
-        lista_abilita_cooldown.Add("shuriken",5);
-        lista_abilita_cooldown.Add("laser",3);
-        //lista_abilita_cooldown.Add("sfera_orbitale",3);
-        lista_abilita_cooldown.Add("scia_di_fuoco",6);
-        lista_abilita_cooldown.Add("boccetta_di_acido",5);
-        lista_abilita_cooldown.Add("meteore",3);
-        lista_abilita_cooldown.Add("scudo",5);
+        lista_abilita_cooldown_iniziale.Add("catena",5);
+        lista_abilita_cooldown_iniziale.Add("shuriken",5);
+        lista_abilita_cooldown_iniziale.Add("laser",3);
+        //lista_abilita_cooldown_iniziale.Add("sfera_orbitale",3);
+        lista_abilita_cooldown_iniziale.Add("scia_di_fuoco",6);
+        lista_abilita_cooldown_iniziale.Add("boccetta_di_acido",5);
+        lista_abilita_cooldown_iniziale.Add("meteore",3);
+        lista_abilita_cooldown_iniziale.Add("scudo",5);
 
         lista_abilita_durata_iniziale.Add("catena",3);
         lista_abilita_durata_iniziale.Add("shuriken",1);
@@ -68,6 +69,9 @@ public class info_comuni : MonoBehaviour
 
         foreach(KeyValuePair<string,float> attachStat in lista_abilita_durata_iniziale){
             lista_abilita_durata.Add(attachStat.Key,attachStat.Value);
+        }
+        foreach(KeyValuePair<string,float> attachStat in lista_abilita_cooldown_iniziale){
+            lista_abilita_cooldown.Add(attachStat.Key,attachStat.Value);
         }
     }
 

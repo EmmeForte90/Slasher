@@ -6,6 +6,9 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    public SphereCollider raggio_exp;
+    private float tempo_al_secondo=0;
+
     private bool bool_colpibile=true;
     private float vitalita_max;
     private float vitalita;
@@ -47,6 +50,7 @@ public class hero_rule : MonoBehaviour
 
     void Start()
     {
+        raggio_exp.radius=5;    //la base
         velocita_movimento=velocita_movimento_base;
         bool_movimento=false;
         rb = GetComponent<Rigidbody>();
@@ -72,6 +76,14 @@ public class hero_rule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        tempo_al_secondo+=(1*Time.deltaTime);
+        if (tempo_al_secondo>=1){
+            tempo_al_secondo=0;
+            if (lista_abilita_passive["rigenerazione"]>0){
+                vitalita+=(0.1f*lista_abilita_passive["rigenerazione"]);
+                gestione_gui.setta_img_vitalita(vitalita,vitalita_max);
+            }
+        }
 
         heading += Input.GetAxis("Mouse X")*Time.deltaTime*120;
         camPivot.rotation=Quaternion.Euler(0,heading,0);
@@ -340,6 +352,10 @@ public class hero_rule : MonoBehaviour
             switch (abilita){
                 case "velocita":{
                     velocita_movimento=velocita_movimento_base+(0.2f*lista_abilita_passive[abilita]);
+                    break;
+                }
+                case "magnetismo":{
+                    raggio_exp.radius=5+(lista_abilita_passive[abilita]*1f);
                     break;
                 }
             }
