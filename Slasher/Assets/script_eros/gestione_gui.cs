@@ -35,6 +35,7 @@ public class gestione_gui : MonoBehaviour
         setta_fill(fill_ampolla_dx,2f);
         setta_fill(fill_barra_bottom,0.8f);
         */
+        setta_fill(fill_barra_bottom,0f);
         setta_fill(fill_ampolla_dx,0f);
     }
     public void setta_img_vitalita(float vitalita, float vitalita_max){
@@ -85,7 +86,7 @@ public class gestione_gui : MonoBehaviour
 
     public void abilita_attiva_gui(string abilita, int livello, int posizione){
         if (livello==1){
-            lista_img_abilita[posizione].sprite=Resources.Load<Sprite>("icone_abilita/abilita");
+            lista_img_abilita[posizione].sprite=Resources.Load<Sprite>("icone_abilita/"+abilita);
             lista_img_abilita[posizione].enabled=true;
         } else {
             posizione=lista_posizioni_abilita[abilita];
@@ -95,7 +96,7 @@ public class gestione_gui : MonoBehaviour
 
     public void abilita_passiva_gui(string abilita, int livello, int posizione){
         if (livello==1){
-            lista_img_abilita_passive[posizione].sprite=Resources.Load<Sprite>("icone_abilita/abilita");
+            lista_img_abilita_passive[posizione].sprite=Resources.Load<Sprite>("icone_abilita/"+abilita);
             lista_img_abilita_passive[posizione].enabled=true;
         } else {
             posizione=lista_posizioni_abilita_passive[abilita];
