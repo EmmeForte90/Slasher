@@ -30,6 +30,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_nome.Add("danno","Danno");
         lista_abilita_nome.Add("rigenerazione","Rigenerazione");
         lista_abilita_nome.Add("magnetismo","Magnetismo");
+        lista_abilita_nome.Add("diminuire_cooldown","Prontezza");
 
         lista_abilita_descrizione_generica.Add("catena","Descrizione di Catena");
         lista_abilita_descrizione_generica.Add("shuriken","Descrizione di Shuriken");
@@ -45,6 +46,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_descrizione_generica.Add("danno","Descrizione di Danno");
         lista_abilita_descrizione_generica.Add("rigenerazione","Descrizione di Rigenerazione");
         lista_abilita_descrizione_generica.Add("magnetismo","Descrizione di Magnetismo");
+        lista_abilita_descrizione_generica.Add("diminuire_cooldown","Descrizione di Prontezza");
 
         lista_abilita_cooldown.Add("catena",5);
         lista_abilita_cooldown.Add("shuriken",5);

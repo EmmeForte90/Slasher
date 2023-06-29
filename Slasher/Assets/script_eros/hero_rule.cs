@@ -24,7 +24,8 @@ public class hero_rule : MonoBehaviour
 
     private Rigidbody rb;
 
-    public float velocita_movimento=1;
+    public float velocita_movimento_base=2.5f;
+    private float velocita_movimento=2.5f;
 
     public Transform camPivot;
     float heading=0;
@@ -46,6 +47,7 @@ public class hero_rule : MonoBehaviour
 
     void Start()
     {
+        velocita_movimento=velocita_movimento_base;
         bool_movimento=false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -128,10 +130,18 @@ public class hero_rule : MonoBehaviour
         //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
     }
 
-    public void check_danneggia_eroe(float danni){
+    public void check_danneggia_eroe(float danni, string tipo, string tipo_2){
         if (bool_colpibile){
             bool_colpibile=false;
             StartCoroutine(ritorna_colpibile_coroutine());
+
+            switch (tipo){
+                case "nemici":{
+                    danni-=(lista_abilita_passive["armatura"]*0.1f);
+                    break;
+                }
+            }
+            if (danni<=0){danni=0.1f;}
             danneggia_eroe(danni);
         }
     }
@@ -326,6 +336,12 @@ public class hero_rule : MonoBehaviour
             if (lista_abilita_passive[abilita]==1){
                 num_abilita_passive++;
                 gestione_gui.lista_posizioni_abilita_passive.Add(abilita,num_abilita_passive);
+            }
+            switch (abilita){
+                case "velocita":{
+                    velocita_movimento=velocita_movimento_base+(0.2f*lista_abilita_passive[abilita]);
+                    break;
+                }
             }
             gestione_gui.abilita_passiva_gui(abilita,lista_abilita_passive[abilita],num_abilita_passive);
         }

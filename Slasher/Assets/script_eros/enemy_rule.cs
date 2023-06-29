@@ -79,7 +79,7 @@ public class enemy_rule : MonoBehaviour
         //print ("nemico: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         switch (collision.gameObject.name){
             case "Eroe":{
-                hero_rule.check_danneggia_eroe(danno);
+                hero_rule.check_danneggia_eroe(danno,"nemici","");
                 //hero_rule.danneggia_eroe(danno);
                 break;
             }
