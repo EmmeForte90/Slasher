@@ -6,6 +6,8 @@ using Spine.Unity;
 
 public class enemy_rule : MonoBehaviour
 {
+    public GameObject pf_vfx_destroy;
+
     public SkeletonAnimation skeletonAnimation;
 
     public string id_nemico;
@@ -133,9 +135,14 @@ public class enemy_rule : MonoBehaviour
         go_temp=Instantiate(obj_exp);
         go_temp.transform.position=new Vector3(transform.position.x,1,transform.position.z);
         StartCoroutine(anim_morte_nemico());
+
     }
 
     private IEnumerator anim_morte_nemico(){
+        gameObject.SetActive(false);
+        GameObject go_temp_2;
+        go_temp_2=Instantiate(pf_vfx_destroy);
+        go_temp_2.transform.position=new Vector3(transform.position.x,1,transform.position.z);
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
