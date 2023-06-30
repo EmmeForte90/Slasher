@@ -11,6 +11,7 @@ public class gestione_gui : MonoBehaviour
     public Image fill_ampolla_sx;
     public Image fill_ampolla_dx;
     public Image fill_barra_bottom;
+    public Image fill_barra_verde;
 
     public Dictionary<string, int> lista_posizioni_abilita = new Dictionary<string, int>();    //abilità, posizione
     private Dictionary<int,TextMeshProUGUI> lista_lvl_abilita = new Dictionary<int, TextMeshProUGUI>();  //posizione, abilita
@@ -30,16 +31,14 @@ public class gestione_gui : MonoBehaviour
         ricerca_ricorsiva_ab_attive(GO_abilita_attive.transform);
         ricerca_ricorsiva_ab_passive(GO_abilita_passive.transform);
 
-        /*
-        setta_fill(fill_ampolla_sx,-0.2f);
-        setta_fill(fill_ampolla_dx,2f);
-        setta_fill(fill_barra_bottom,0.8f);
-        */
         setta_fill(fill_barra_bottom,0f);
-        setta_fill(fill_ampolla_dx,0f);
+        setta_fill(fill_barra_verde,1f);
+        //setta_fill(fill_ampolla_dx,0f);
     }
     public void setta_img_vitalita(float vitalita, float vitalita_max){
-        fill_ampolla_sx.fillAmount=vitalita/vitalita_max;
+        //fill_ampolla_sx.fillAmount=vitalita/vitalita_max;
+        fill_barra_verde.fillAmount=vitalita/vitalita_max;
+
     }
 
     public void setta_img_xp(float xp, float xp_totale){
@@ -91,7 +90,7 @@ public class gestione_gui : MonoBehaviour
         } else {
             posizione=lista_posizioni_abilita[abilita];
         }
-        lista_lvl_abilita[posizione].SetText(livello.ToString());
+        //lista_lvl_abilita[posizione].SetText(livello.ToString());
     }
 
     public void abilita_passiva_gui(string abilita, int livello, int posizione){
@@ -101,6 +100,6 @@ public class gestione_gui : MonoBehaviour
         } else {
             posizione=lista_posizioni_abilita_passive[abilita];
         }
-        lista_lvl_abilita_passive[posizione].SetText(livello.ToString());
+        //lista_lvl_abilita_passive[posizione].SetText(livello.ToString());
     }
 }
