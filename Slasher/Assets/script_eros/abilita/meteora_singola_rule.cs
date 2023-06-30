@@ -7,21 +7,22 @@ public class meteora_singola_rule : MonoBehaviour
     private Rigidbody rb;
     public GameObject GO_esplosione_meteora;
     private bool bool_distrutta=false;
+    public float potenza = 50f;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         StartCoroutine(distruggi_meteora());
-        rb.AddForce(-transform.up * 50f,ForceMode.Impulse);
+        //rb.AddForce(-transform.up * potenza,ForceMode.Impulse);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(-Vector3.up * potenza * Time.deltaTime, Space.World);
     }
     void OnTriggerEnter(Collider collision){
-        //print ("meteora: entro in collissione con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
+        print ("meteora: entro in collissione con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         if (collision.gameObject.tag=="pavimento"){
             bool_distrutta=true;
             Destroy(gameObject);
