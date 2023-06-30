@@ -8,32 +8,28 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ValidKeywords:
-  - _NORMALMAP
-  - _PARALLAXMAP
-  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_Shader: {fileID: -6465566751694194690, guid: 1fe1e45aa397cf94a872d6f26a4307c1, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_0d499e0f1fb24fc59968541aefa4bea3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a708a0180be8c8d40bcd4a47da1ef561, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_51a21466fbb74817b70f62a96e525858:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b39929d9d4231794c92199abd11fd9c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_883b5e755bd84e93b086f731bee4d70b:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7f1774c6c6da81d40b8ff5737e9f446e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_c98054455cb64e2eb3af5c1310f66cf6:
