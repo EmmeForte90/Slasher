@@ -56,7 +56,9 @@ public class enemy_rule : MonoBehaviour
         if (bool_morto){return;}
 
         //rb.MovePosition(transform.position+moveDir*0.01f*velocita_movimento);
-        rb.MovePosition(transform.position+moveDir* velocita_movimento * Time.deltaTime);
+        if (hero_rule.tempo_freeze==0){
+            rb.MovePosition(transform.position+moveDir * velocita_movimento * Time.deltaTime);
+        }
     }
 
     private void Flip()

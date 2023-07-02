@@ -6,8 +6,8 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
-    private float tempo_velocita=0;
-    public ParticleSystem ps_velocita;
+    public float tempo_freeze=0;
+    public ParticleSystem ps_freeze;
 
     private float tempo_invincibilita=0;
     public ParticleSystem ps_invulnerabilita;
@@ -79,6 +79,7 @@ public class hero_rule : MonoBehaviour
         }
 
         //eroe_invincibilita(10);
+        eroe_freeze(100);
     }
 
     // Update is called once per frame
@@ -97,6 +98,14 @@ public class hero_rule : MonoBehaviour
             if (tempo_invincibilita<=0){
                 tempo_invincibilita=0;
                 ps_invulnerabilita.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            }
+        }
+
+        if (tempo_freeze>0){
+            tempo_freeze-=(1*Time.deltaTime);
+            if (tempo_freeze<=0){
+                tempo_freeze=0;
+                ps_freeze.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
         }
 
@@ -162,10 +171,15 @@ public class hero_rule : MonoBehaviour
         tempo_invincibilita+=time;
     }
 
+    public void eroe_freeze(float time){
+        ps_freeze.Play(true);
+        tempo_freeze+=time;
+    }
+
     public void check_danneggia_eroe(float danni, string tipo, string tipo_2){
         if (tempo_invincibilita>0){return;}
+        if (tempo_freeze>0){return;}
         if (bool_colpibile){
-            if (tempo_invincibilita<0)
             bool_colpibile=false;
             StartCoroutine(ritorna_colpibile_coroutine());
 
