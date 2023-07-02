@@ -6,6 +6,9 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    private float tempo_velocita=0;
+    public ParticleSystem ps_velocita;
+
     private float tempo_invincibilita=0;
     public ParticleSystem ps_invulnerabilita;
 
