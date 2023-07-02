@@ -6,6 +6,9 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    private float tempo_invincibilita=0;
+    public ParticleSystem ps_invulnerabilita;
+
     public SphereCollider raggio_exp;
     private float tempo_al_secondo=0;
 
@@ -71,6 +74,8 @@ public class hero_rule : MonoBehaviour
                 lista_abilita_passive.Add(attachStat.Key,0);
             }
         }
+
+        //eroe_invincibilita(10);
     }
 
     // Update is called once per frame
@@ -81,6 +86,14 @@ public class hero_rule : MonoBehaviour
             tempo_al_secondo=0;
             if (lista_abilita_passive["rigenerazione"]>0){
                 eroe_guadagna_vitalita(0.1f*lista_abilita_passive["rigenerazione"]);
+            }
+        }
+
+        if (tempo_invincibilita>0){
+            tempo_invincibilita-=(1*Time.deltaTime);
+            if (tempo_invincibilita<=0){
+                tempo_invincibilita=0;
+                ps_invulnerabilita.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             }
         }
 
@@ -141,8 +154,15 @@ public class hero_rule : MonoBehaviour
         //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
     }
 
+    public void eroe_invincibilita(float time){
+        ps_invulnerabilita.Play(true);
+        tempo_invincibilita+=time;
+    }
+
     public void check_danneggia_eroe(float danni, string tipo, string tipo_2){
+        if (tempo_invincibilita>0){return;}
         if (bool_colpibile){
+            if (tempo_invincibilita<0)
             bool_colpibile=false;
             StartCoroutine(ritorna_colpibile_coroutine());
 
