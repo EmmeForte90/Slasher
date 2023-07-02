@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 459848745414500885, guid: 7d5e53535bf77c340bca21a018e742a1, type: 3}
       propertyPath: m_Name
-      value: HCFX_Marble_04
+      value: BluGl
       objectReference: {fileID: 0}
     - target: {fileID: 459848745414500886, guid: 7d5e53535bf77c340bca21a018e742a1, type: 3}
       propertyPath: m_RootOrder

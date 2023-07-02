@@ -80,8 +80,7 @@ public class hero_rule : MonoBehaviour
         if (tempo_al_secondo>=1){
             tempo_al_secondo=0;
             if (lista_abilita_passive["rigenerazione"]>0){
-                vitalita+=(0.1f*lista_abilita_passive["rigenerazione"]);
-                gestione_gui.setta_img_vitalita(vitalita,vitalita_max);
+                eroe_guadagna_vitalita(0.1f*lista_abilita_passive["rigenerazione"]);
             }
         }
 
@@ -155,6 +154,14 @@ public class hero_rule : MonoBehaviour
             }
             if (danni<=0){danni=0.1f;}
             danneggia_eroe(danni);
+        }
+    }
+
+    public void eroe_guadagna_vitalita(float vitalita_n){
+        if (vitalita<vitalita_max){
+            vitalita+=vitalita_n;
+            if (vitalita>vitalita_max){vitalita=vitalita_max;}
+            gestione_gui.setta_img_vitalita(vitalita,vitalita_max);
         }
     }
 
