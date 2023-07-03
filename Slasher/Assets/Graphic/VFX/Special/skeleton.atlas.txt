@@ -1,0 +1,44 @@
+skeleton.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+Al
+bounds:2,232,1202,722
+Elements - Speedline BG 003 loop_00000
+bounds:2,117,200,113
+Elements - Speedline BG 003 loop_00001
+bounds:1206,841,200,113
+Elements - Speedline BG 003 loop_00002
+bounds:2,2,200,113
+Elements - Speedline BG 003 loop_00003
+bounds:204,117,200,113
+Elements - Speedline BG 003 loop_00004
+bounds:1206,726,200,113
+Elements - Speedline BG 003 loop_00005
+bounds:1408,841,200,113
+Elements - Speedline BG 003 loop_00006
+bounds:204,2,200,113
+Elements - Speedline BG 003 loop_00007
+bounds:406,117,200,113
+Elements - Speedline BG 003 loop_00008
+bounds:1206,611,200,113
+Elements - Speedline BG 003 loop_00009
+bounds:1408,726,200,113
+Elements - Speedline BG 003 loop_00010
+bounds:1610,841,200,113
+Elements - Speedline BG 003 loop_00011
+bounds:406,2,200,113
+Elements - Speedline BG 003 loop_00012
+bounds:608,117,200,113
+Elements - Speedline BG 003 loop_00013
+bounds:1206,496,200,113
+Elements - Speedline BG 003 loop_00014
+bounds:1408,611,200,113
+Elements - Speedline BG 003 loop_00015
+bounds:1610,726,200,113
+Elements - Speedline BG 003 loop_00016
+bounds:1812,841,200,113
+Elements - Speedline BG 003 loop_00017
+bounds:608,2,200,113
+Elements - Speedline BG 003 loop_00018
+bounds:810,117,200,113
