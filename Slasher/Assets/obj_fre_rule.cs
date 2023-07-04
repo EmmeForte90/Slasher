@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class obj_fre_rule : MonoBehaviour
 {
-    public game game;
-    public float distanza=60;
+    public hero_rule hero_rule;
+    public float tempo_freeze=60;
     private bool bool_attivo=false;
     public GameObject ps_attiva;
     private float tempo_al_secondo=0.5f;
@@ -33,14 +33,14 @@ public class obj_fre_rule : MonoBehaviour
         if (bool_attivo){return;}
         if (collision.gameObject.name=="go_raggio_exp"){
             bool_attivo=true;
-            StartCoroutine(co_eroe_distrugge_area());
+            StartCoroutine(co_eroe_freeze());
         }
     }
 
-    private IEnumerator co_eroe_distrugge_area(){
+    private IEnumerator co_eroe_freeze(){
         ps_attiva.SetActive(true);
         yield return new WaitForSeconds(0.6f);
-        game.eroe_distrugge_area(distanza);
+        hero_rule.eroe_freeze(tempo_freeze);
         Destroy(gameObject);
     }
 }
