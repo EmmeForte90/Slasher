@@ -12,7 +12,7 @@ public class mappa : MonoBehaviour
     private Dictionary<int, GameObject> lista_blocchi_creazione_mappa_fighi = new Dictionary<int, GameObject>();
     private int num_blocchi_creazione_mappa=0;
     private int num_blocchi_creazione_mappa_fighi=0;
-    private int grandezza_blocchi=230;
+    private float grandezza_blocchi=228.65f;  //start da 230
     private Dictionary<string, int> blocchi_sempre_visibili = new Dictionary<string, int>();
     public GameObject obj_vit_50;
 
@@ -105,7 +105,7 @@ public class mappa : MonoBehaviour
         if (num_blocchi_generati%2!=0){
             numero_casuale=Random.Range(1,(num_blocchi_creazione_mappa+1));
             GameObject go_temp=Instantiate(lista_blocchi_creazione_mappa[numero_casuale]);
-            if ((x+y)%2==0){pos_y=-0.1f;}
+            if ((x+y)%2==0){pos_y=-0.01f;}
             go_temp.transform.SetParent(GO_mappa.transform);
             go_temp.transform.position=new Vector3(pos_x,pos_y,pos_z);
 
