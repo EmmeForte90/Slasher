@@ -6,6 +6,7 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    public game game;
     public float tempo_freeze=0;
     public ParticleSystem ps_freeze;
 
@@ -79,7 +80,7 @@ public class hero_rule : MonoBehaviour
         }
 
         //eroe_invincibilita(10);
-        eroe_freeze(100);
+        //eroe_freeze(100);
     }
 
     // Update is called once per frame
@@ -148,6 +149,7 @@ public class hero_rule : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5)){aggiorna_abilita_livello("scia_di_fuoco");}
         if (Input.GetKeyDown(KeyCode.Alpha6)){aggiorna_abilita_livello("scudo");}
         if (Input.GetKeyDown(KeyCode.Alpha7)){aggiorna_abilita_livello("shuriken");}
+        if (Input.GetKeyDown(KeyCode.Z)){game.eroe_distrugge_area(60);}
         /*
         if (Input.GetKeyDown(KeyCode.Alpha8)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha9)){attiva_abilita_tastiera("catena");}

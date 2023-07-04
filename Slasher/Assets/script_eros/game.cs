@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class game : MonoBehaviour
 {
+    public Transform hero_transform; 
+
     public gestione_gui gestione_gui;
     public ui_upgrade ui_upgrade;
 
@@ -58,6 +60,17 @@ public class game : MonoBehaviour
         //genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
 
         xp_next=get_next_level_xp(1);
+    }
+
+    public void eroe_distrugge_area(float distanza_distruzione){
+        float distanza_temp=0;
+        foreach(Transform child in nemici.transform) {
+            distanza_temp=Vector3.Distance(hero_transform.position, child.transform.position);
+            if (distanza_temp<=distanza_distruzione){
+                child.GetComponent<enemy_rule>().attiva_morte_nemico();
+            }
+            print (distanza_temp);
+        }
     }
 
     private void setta_txt_tempo(){
