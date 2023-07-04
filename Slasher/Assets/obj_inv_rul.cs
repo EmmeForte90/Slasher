@@ -39,7 +39,7 @@ public class obj_inv_rul : MonoBehaviour
 
     private IEnumerator eroe_guadagna_invincibilita(){
         ps_attiva.SetActive(true);
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(0.6f);
         hero_rule.eroe_invincibilita(tempo_invincibilita);
         Destroy(gameObject);
     }

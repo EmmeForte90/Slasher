@@ -39,7 +39,7 @@ public class obj_vit_rule : MonoBehaviour
 
     private IEnumerator eroe_guadagna_vit(){
         ps_attiva.SetActive(true);
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(0.6f);
         hero_rule.eroe_guadagna_vitalita(vitalita);
         Destroy(gameObject);
     }

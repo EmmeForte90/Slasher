@@ -39,7 +39,7 @@ public class obj_exp_rule : MonoBehaviour
 
     private IEnumerator eroe_guadagna_xp(){
         ps_attiva.SetActive(true);
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(0.6f);
         game.eroe_guadagna_exp(xp);
         Destroy(gameObject);
     }
