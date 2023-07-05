@@ -23,7 +23,8 @@ public class tempo_special : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SkeletonAnimation_anim_eroe.AnimationState.ClearTrack(0);
+        GO_schermata_animazione_special.SetActive(false);
+        resetta_animazione();
         GO_tempo_special.SetActive(false);
     }
 
@@ -40,11 +41,10 @@ public class tempo_special : MonoBehaviour
                     txt_ultra.SetText(parola_finale);
                     bool_attivo=false;
 
-                    SkeletonAnimation_anim_eroe.AnimationState.SetAnimation(0,"animation",false);
-
+                    SkeletonAnimation_anim_eroe.timeScale=1;
                     GO_schermata_animazione_special.SetActive(true);
-                    StartCoroutine(attiva_potere_hero());
 
+                    StartCoroutine(attiva_potere_hero());
                     StartCoroutine(disattiva_tempo_special());
                 }
             }
@@ -61,14 +61,20 @@ public class tempo_special : MonoBehaviour
     }
 
     private IEnumerator disattiva_tempo_special(){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         GO_tempo_special.SetActive(false);
     }
 
     private IEnumerator attiva_potere_hero(){
-        yield return new WaitForSeconds(1f);
-        GO_schermata_animazione_special.SetActive(false);
+        yield return new WaitForSeconds(2f);
         hero_rule.attiva_potere_tempo_speciale();
+        resetta_animazione();
+    }
+
+    private void resetta_animazione(){
         SkeletonAnimation_anim_eroe.AnimationState.ClearTrack(0);
+        SkeletonAnimation_anim_eroe.AnimationState.SetAnimation(0,"animation",false);
+        SkeletonAnimation_anim_eroe.timeScale=0;
+        GO_schermata_animazione_special.SetActive(false);
     }
 }
