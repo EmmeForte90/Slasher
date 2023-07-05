@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class game : MonoBehaviour
 {
+    public tempo_special tempo_special;
     public Transform hero_transform; 
 
     public gestione_gui gestione_gui;
@@ -76,6 +77,13 @@ public class game : MonoBehaviour
     private void setta_txt_tempo(){
         tempo_attuale+=(1*Time.deltaTime);
         int num_secondi=(int)tempo_attuale;
+
+        if (num_secondi>0){
+            if (num_secondi%20==0){
+                tempo_special.attiva_special(9f, "ULTRA!", "BOOM!");
+            }
+        }
+
         int num_minuti=0;
         if (num_secondi>=60){
             num_minuti=num_secondi/60;
@@ -88,6 +96,8 @@ public class game : MonoBehaviour
         if (num_secondi<10){testo+="0";}
         testo+=num_secondi.ToString();
         txt_tempo.SetText(testo);
+
+        
     }
 
     // Update is called once per frame

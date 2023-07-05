@@ -145,7 +145,6 @@ public class enemy_rule : MonoBehaviour
         go_temp=Instantiate(obj_exp);
         go_temp.transform.position=new Vector3(transform.position.x,1,transform.position.z);
         StartCoroutine(anim_morte_nemico());
-
     }
 
     private IEnumerator anim_morte_nemico(){

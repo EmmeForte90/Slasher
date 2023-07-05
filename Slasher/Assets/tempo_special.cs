@@ -24,17 +24,13 @@ public class tempo_special : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z)){
-            print ("ci");
-            attiva_special(12f, "ULTRA!", "BOOM!");
-        }
         if (bool_attivo){
             if (tempo_scadenza>0){
                 tempo_scadenza-=(1*Time.deltaTime);
                 tempo_secondi=Mathf.RoundToInt(tempo_scadenza);
                 txt_time.SetText(tempo_secondi.ToString());
                 if (tempo_secondi<=0){
-                    txt_time.SetText("0");
+                    txt_time.SetText("");
                     txt_ultra.SetText(parola_finale);
                     bool_attivo=false;
 
@@ -46,10 +42,11 @@ public class tempo_special : MonoBehaviour
         }
     }
 
-    public void attiva_special(float tempo_partenza, string parola_inizio, string parola_fine){
+    public void attiva_special(float tempo_partenza_f, string parola_inizio, string parola_fine){
+        txt_time.SetText("");
         txt_ultra.SetText(parola_inizio);
         parola_finale=parola_fine;
-        tempo_scadenza=tempo_partenza+0.5f;
+        tempo_scadenza=tempo_partenza_f+0.5f;
         bool_attivo=true;
         GO_tempo_special.SetActive(true);
     }
