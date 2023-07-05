@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Spine;
+using Spine.Unity;
 
 public class tempo_special : MonoBehaviour
 {
+    public GameObject GO_schermata_animazione_special;
+    public SkeletonGraphic SkeletonAnimation_anim_eroe;
+
     public hero_rule hero_rule;
     public GameObject GO_tempo_special;
     public TextMeshProUGUI txt_time;
@@ -18,6 +23,7 @@ public class tempo_special : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SkeletonAnimation_anim_eroe.AnimationState.ClearTrack(0);
         GO_tempo_special.SetActive(false);
     }
 
@@ -34,7 +40,10 @@ public class tempo_special : MonoBehaviour
                     txt_ultra.SetText(parola_finale);
                     bool_attivo=false;
 
-                    hero_rule.attiva_potere_tempo_speciale();
+                    SkeletonAnimation_anim_eroe.AnimationState.SetAnimation(0,"animation",false);
+
+                    GO_schermata_animazione_special.SetActive(true);
+                    StartCoroutine(attiva_potere_hero());
 
                     StartCoroutine(disattiva_tempo_special());
                 }
@@ -54,5 +63,12 @@ public class tempo_special : MonoBehaviour
     private IEnumerator disattiva_tempo_special(){
         yield return new WaitForSeconds(2f);
         GO_tempo_special.SetActive(false);
+    }
+
+    private IEnumerator attiva_potere_hero(){
+        yield return new WaitForSeconds(1f);
+        GO_schermata_animazione_special.SetActive(false);
+        hero_rule.attiva_potere_tempo_speciale();
+        SkeletonAnimation_anim_eroe.AnimationState.ClearTrack(0);
     }
 }

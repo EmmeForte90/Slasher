@@ -81,8 +81,8 @@ public class game : MonoBehaviour
         int num_secondi=(int)tempo_attuale;
 
         if (num_secondi>0){
-            if (num_secondi%20==0){
-                tempo_special.attiva_special(9f, "ULTRA!", "BOOM!");
+            if (num_secondi%5==0){
+                tempo_special.attiva_special(1f, "ULTRA!", "BOOM!");
             }
         }
 
