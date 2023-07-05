@@ -37,15 +37,21 @@ public class tempo_special : MonoBehaviour
                 tempo_secondi=Mathf.RoundToInt(tempo_scadenza);
                 txt_time.SetText(tempo_secondi.ToString());
                 if (tempo_secondi<=0){
+                    /*
                     txt_time.SetText("");
                     txt_ultra.SetText(parola_finale);
+                    */
+                    GO_tempo_special.SetActive(false);
+
+
                     bool_attivo=false;
 
+                    
                     SkeletonAnimation_anim_eroe.timeScale=1;
                     GO_schermata_animazione_special.SetActive(true);
 
                     StartCoroutine(attiva_potere_hero());
-                    StartCoroutine(disattiva_tempo_special());
+                    //StartCoroutine(disattiva_tempo_special());
                 }
             }
         }
