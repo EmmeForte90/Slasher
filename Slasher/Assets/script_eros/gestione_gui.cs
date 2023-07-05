@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class gestione_gui : MonoBehaviour
 {
+    public GameObject GO_gui;
+
     public TextMeshProUGUI txt_level;
 
     public Image fill_ampolla_sx;

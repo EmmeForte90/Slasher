@@ -149,7 +149,9 @@ public class hero_rule : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5)){aggiorna_abilita_livello("scia_di_fuoco");}
         if (Input.GetKeyDown(KeyCode.Alpha6)){aggiorna_abilita_livello("scudo");}
         if (Input.GetKeyDown(KeyCode.Alpha7)){aggiorna_abilita_livello("shuriken");}
-        if (Input.GetKeyDown(KeyCode.Z)){game.eroe_distrugge_area(60);}
+        if (Input.GetKeyDown(KeyCode.Z)){
+            //game.eroe_distrugge_area(60);
+        }
         /*
         if (Input.GetKeyDown(KeyCode.Alpha8)){attiva_abilita_tastiera("catena");}
         if (Input.GetKeyDown(KeyCode.Alpha9)){attiva_abilita_tastiera("catena");}
@@ -166,6 +168,11 @@ public class hero_rule : MonoBehaviour
         //rb.AddForce(moveDir.normalized * velocita_movimento * 10f, ForceMode.Force);
         //rb.velocity = new Vector3(dirX,rb.velocity.y,dirZ);
         //rb.position += (camF*input.y + camR*input.x)*Time.deltaTime*velocita_movimento;
+    }
+
+    public void attiva_potere_tempo_speciale(){
+        //è chiaro dipenderà dal tipo di eroe...che per ora è solo questo!
+        game.eroe_distrugge_area(60);
     }
 
     public void eroe_invincibilita(float time){

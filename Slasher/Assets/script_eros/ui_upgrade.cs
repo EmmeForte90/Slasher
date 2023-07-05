@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 
 public class ui_upgrade : MonoBehaviour
 {
+    public gestione_gui gestione_gui;
     public hero_rule hero_rule;
     public game game;
     public info_comuni info_comuni;
@@ -44,6 +45,7 @@ public class ui_upgrade : MonoBehaviour
     }
 
     public void attiva_schermata_upgrade(){
+        gestione_gui.GO_gui.SetActive(false);
         Time.timeScale = 0f;
         scelta_abilita.Clear();
         foreach(KeyValuePair<string,string> attachStat in info_comuni.lista_abilita_nome){
@@ -86,6 +88,7 @@ public class ui_upgrade : MonoBehaviour
         hero_rule.aggiorna_abilita_livello(abilita_temp);
         Time.timeScale = 1f;
         game.check_esp_eccesso();
+        gestione_gui.GO_gui.SetActive(true);
     }
 
     private static List<string> Getabilita_random_su_tre(Dictionary<string, int> dictionary, int count)
