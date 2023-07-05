@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class game : MonoBehaviour
 {
+    public string test_nemico="nemico_1";
+
     public tempo_special tempo_special;
     public Transform hero_transform; 
 
@@ -177,7 +179,7 @@ public class game : MonoBehaviour
 
     private void spawn_nemico(float x, float y, float z){
         GameObject go_temp;
-        go_temp=Instantiate(lista_GO_nemici_tipo["nemico_1"],nemici.transform);
+        go_temp=Instantiate(lista_GO_nemici_tipo[test_nemico],nemici.transform);
         go_temp.transform.position=new Vector3(x,1,z);
         go_temp.SetActive(true);
     }
