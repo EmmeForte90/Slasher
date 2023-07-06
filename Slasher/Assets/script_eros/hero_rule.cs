@@ -169,8 +169,8 @@ public class hero_rule : MonoBehaviour
         if (!bool_ghiaccio){
             rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
         } else {
-            //rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
-            rb.AddRelativeForce(transform.position+moveDir*0.0001f*velocita_movimento);
+            rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
+            //rb.AddRelativeForce(transform.position+moveDir*0.0001f*velocita_movimento);
         }
         if (bool_movimento){skeletonAnimation.AnimationName = "move";}
         else {skeletonAnimation.AnimationName = "idle";}
