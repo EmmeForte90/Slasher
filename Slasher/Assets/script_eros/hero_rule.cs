@@ -6,6 +6,8 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    public bool bool_ghiaccio=false;
+
     public game game;
     public float tempo_freeze=0;
     public ParticleSystem ps_freeze;
@@ -150,6 +152,8 @@ public class hero_rule : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha6)){aggiorna_abilita_livello("scudo");}
         if (Input.GetKeyDown(KeyCode.Alpha7)){aggiorna_abilita_livello("shuriken");}
         if (Input.GetKeyDown(KeyCode.Z)){
+            if (bool_ghiaccio){bool_ghiaccio=false;} else {bool_ghiaccio=true;}
+            print ("bool ghiaccio: "+bool_ghiaccio);
             //game.eroe_distrugge_area(60);
         }
         /*
@@ -162,7 +166,12 @@ public class hero_rule : MonoBehaviour
     }
 
     void FixedUpdate(){
-        rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
+        if (!bool_ghiaccio){
+            rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
+        } else {
+            rb.MovePosition(transform.position+moveDir*0.1f*velocita_movimento);
+            //rb.AddRelativeForce(transform.position+moveDir*0.0001f*velocita_movimento);
+        }
         if (bool_movimento){skeletonAnimation.AnimationName = "move";}
         else {skeletonAnimation.AnimationName = "idle";}
         //rb.AddForce(moveDir.normalized * velocita_movimento * 10f, ForceMode.Force);
