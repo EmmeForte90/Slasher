@@ -22,10 +22,14 @@ public class game : MonoBehaviour
     public GameObject GO_cont_spawn_enemy_bordo;
     public Dictionary<int, GameObject> lista_GO_spawn_enemy_bordo = new Dictionary<int, GameObject>();
 
+    public GameObject GO_cont_spawn_enemy_cerchio;
+    public Dictionary<int, GameObject> lista_GO_spawn_enemy_cerchio = new Dictionary<int, GameObject>();
+
     public GameObject GO_sep_default;
 
     private int num_sep_vicino=0;
     private int num_sep_bordo=0;
+    private int num_sep_cerchio=0;
 
     private float tempo_spawn_vicino=1f;
     private float tempo_spawn_vicino_attuale=1f;
@@ -60,7 +64,13 @@ public class game : MonoBehaviour
                 lista_GO_spawn_enemy_bordo.Add(num_sep_bordo,child.gameObject);
             }
         }
-        //genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
+        foreach(Transform child in GO_cont_spawn_enemy_cerchio.transform) {
+            if (child.gameObject.active){
+                num_sep_cerchio++;
+                lista_GO_spawn_enemy_cerchio.Add(num_sep_cerchio,child.gameObject);
+            }
+        }
+        genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
 
         xp_next=get_next_level_xp(1);
     }
@@ -218,8 +228,8 @@ public class game : MonoBehaviour
     private void genera_sep_medi(){
         float x,y,z;
         int theta;
-        int radius=100;
-        int num_spaw=50;
+        int radius=50;      //100
+        int num_spaw=30;    //50
 
         for (int i=1;i<=num_spaw;i++){
             theta=360*i/num_spaw;
@@ -233,7 +243,7 @@ public class game : MonoBehaviour
 
     private void inst_sep(float x, float y, float z){
         GameObject go_temp;
-        go_temp=Instantiate(GO_sep_default,GO_cont_spawn_enemy_bordo.transform);
+        go_temp=Instantiate(GO_sep_default,GO_cont_spawn_enemy_cerchio.transform);
         go_temp.transform.position=new Vector3(x,1,z);
     }
     //fine blocco

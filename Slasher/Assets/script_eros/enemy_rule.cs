@@ -6,6 +6,8 @@ using Spine.Unity;
 
 public class enemy_rule : MonoBehaviour
 {
+    public bool bool_fantasma=false;
+
     public GameObject pf_vfx_destroy;
 
     public SkeletonAnimation skeletonAnimation;
@@ -35,8 +37,10 @@ public class enemy_rule : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         vitalita=vitalita_max;
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+        if (!bool_fantasma){
+            rb = GetComponent<Rigidbody>();
+            rb.freezeRotation = true;
+        }
 
         Vector3 screenPos_2 = cam_r.WorldToScreenPoint(hero.position);
         x_start_hero_screen=screenPos_2.x;
@@ -46,7 +50,9 @@ public class enemy_rule : MonoBehaviour
     void Update()
     {
         if (bool_morto){return;}
-        moveDir = (hero.position - transform.position).normalized;
+        if (!bool_fantasma){
+            moveDir = (hero.position - transform.position).normalized;
+        }
 
         transform.LookAt(cam.transform.position);   //il pupo mostra sempre la stessa faccia TELECAMERA
         //transform.LookAt(hero.transform.position);   //il pupo mostra sempre la stessa faccia HERO
@@ -55,9 +61,12 @@ public class enemy_rule : MonoBehaviour
     void FixedUpdate(){
         if (bool_morto){return;}
 
-        //rb.MovePosition(transform.position+moveDir*0.01f*velocita_movimento);
         if (hero_rule.tempo_freeze==0){
-            rb.MovePosition(transform.position+moveDir * velocita_movimento * Time.deltaTime);
+            if (!bool_fantasma){
+                rb.MovePosition(transform.position+moveDir * velocita_movimento * Time.deltaTime);
+            } else {
+                transform.position = Vector3.MoveTowards(transform.position, hero.position, (velocita_movimento*0.02f));
+            }
         }
     }
 
