@@ -110,8 +110,8 @@ Material:
     - Boolean_8c9ca0d8eb01493da7c19d2c85eb15eb: 1
     - Boolean_b0523346adc34c91af8a466392e41cd1: 1
     - Boolean_cf6c3701851a4241a6a2fdd166392aa5: 0
-    - Vector1_11828729941c42e482e8e129a5b5088b: 0
-    - Vector1_1e7704ebd5584b06be5b311be89b08c3: 0
+    - Vector1_11828729941c42e482e8e129a5b5088b: 0.5
+    - Vector1_1e7704ebd5584b06be5b311be89b08c3: -1.62
     - _AlphaClip: 0
     - _Blend: 0
     - _BlendOp: 0
