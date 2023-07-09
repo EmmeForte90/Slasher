@@ -6,6 +6,8 @@ using Spine.Unity;
 
 public class enemy_rule : MonoBehaviour
 {
+    private bool bool_colpibile=true;
+
     public bool bool_fantasma=false;
 
     public GameObject pf_vfx_destroy;
@@ -130,6 +132,7 @@ public class enemy_rule : MonoBehaviour
 
     public void danneggia_nemico(string tipo,float danni){
         if (bool_morto){return;}
+        if (!bool_colpibile){return;}
         print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
         switch (tipo){
             default:{//viene danneggiato dall'eroe
@@ -143,9 +146,17 @@ public class enemy_rule : MonoBehaviour
 
         StartCoroutine(anim_dmg_nemico());
 
+        bool_colpibile=false;
+        StartCoroutine(ritorna_colpibile_coroutine());
+
         if (vitalita<=0){
             attiva_morte_nemico();
         }
+    }
+
+    private IEnumerator ritorna_colpibile_coroutine(){
+        yield return new WaitForSeconds(0.2f);
+        bool_colpibile=true;
     }
 
     public void attiva_morte_nemico(){

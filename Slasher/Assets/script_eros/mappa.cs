@@ -128,7 +128,7 @@ public class mappa : MonoBehaviour
         } else {//devo generare un blocco figo
             numero_casuale=Random.Range(1,(num_blocchi_creazione_mappa_fighi+1));
             GameObject go_temp=Instantiate(lista_blocchi_creazione_mappa_fighi[numero_casuale]);
-            if ((x+y)%2==0){pos_y=-0.1f;}
+            if ((x+y)%4==0){pos_y=-0.1f;}
             go_temp.transform.SetParent(GO_mappa.transform);
             go_temp.transform.position=new Vector3(pos_x,pos_y,pos_z);
 

@@ -34,7 +34,6 @@ public class game : MonoBehaviour
     private float tempo_spawn_vicino=1f;
     private float tempo_spawn_vicino_attuale=1f;
 
-    private float tempo_spawn_bordo=1f;
     private float tempo_spawn_bordo_attuale=1f;
 
     private int eroe_livello=0;
@@ -42,7 +41,8 @@ public class game : MonoBehaviour
     private float xp_next=0;
     private float xp_eccesso=0;
 
-    private float tempo_attuale=0;
+    private float tempo_attuale_totale=0;
+    private int secondi_totali=0;
     public TMPro.TextMeshProUGUI txt_tempo;
 
     // Start is called before the first frame update
@@ -70,7 +70,7 @@ public class game : MonoBehaviour
                 lista_GO_spawn_enemy_cerchio.Add(num_sep_cerchio,child.gameObject);
             }
         }
-        genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
+        //genera_sep_medi();    //funzione usata per generare automaticamente gli spawn...presto potrai cancellare
 
         xp_next=get_next_level_xp(1);
     }
@@ -87,26 +87,26 @@ public class game : MonoBehaviour
     }
 
     private void setta_txt_tempo(){
-        tempo_attuale+=(1*Time.deltaTime);
-        int num_secondi=(int)tempo_attuale;
+        tempo_attuale_totale+=(1*Time.deltaTime);
+        secondi_totali=(int)tempo_attuale_totale;
 
-        if (num_secondi>0){
-            if (num_secondi%20==0){
+        if (secondi_totali>0){
+            if (secondi_totali%600==0){
                 tempo_special.attiva_special(9f, "ULTRA!", "BOOM!");
             }
         }
 
         int num_minuti=0;
-        if (num_secondi>=60){
-            num_minuti=num_secondi/60;
-            num_secondi-=(num_minuti*60);
+        if (secondi_totali>=60){
+            num_minuti=secondi_totali/60;
+            secondi_totali-=(num_minuti*60);
         }
         string testo="";
         if (num_minuti<10){testo+="0";}
         testo+=num_minuti.ToString();
         testo+=" : ";
-        if (num_secondi<10){testo+="0";}
-        testo+=num_secondi.ToString();
+        if (secondi_totali<10){testo+="0";}
+        testo+=secondi_totali.ToString();
         txt_tempo.SetText(testo);
 
         
@@ -126,8 +126,12 @@ public class game : MonoBehaviour
         */
 
         if (tempo_spawn_bordo_attuale<=0){
-            spawn_enemy("bordo");
-            tempo_spawn_bordo_attuale+=tempo_spawn_bordo;
+            print (secondi_totali/60);
+            switch (secondi_totali/60){
+                case 0:{spawn_enemy("bordo");tempo_spawn_bordo_attuale+=1f;break;}
+                case 1:{spawn_enemy("bordo");tempo_spawn_bordo_attuale+=0.5f;break;}
+            }
+            
         } else {
             tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
         }
