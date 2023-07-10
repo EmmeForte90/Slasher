@@ -133,7 +133,7 @@ public class enemy_rule : MonoBehaviour
     public void danneggia_nemico(string tipo,float danni){
         if (bool_morto){return;}
         if (!bool_colpibile){return;}
-        print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
+        //print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
         switch (tipo){
             default:{//viene danneggiato dall'eroe
                 if (hero_rule.lista_abilita_passive["danno"]>0){
@@ -160,6 +160,7 @@ public class enemy_rule : MonoBehaviour
     }
 
     public void attiva_morte_nemico(){
+        if (bool_morto){return;}
         bool_morto=true;
         GameObject go_temp;
         go_temp=Instantiate(obj_exp);

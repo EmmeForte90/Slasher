@@ -16,9 +16,6 @@ public class game : MonoBehaviour
     public GameObject lista_nemici_tipo;
     private Dictionary<string, GameObject> lista_GO_nemici_tipo = new Dictionary<string, GameObject>();
 
-    public GameObject GO_cont_spawn_enemy_vicino;
-    public Dictionary<int, GameObject> lista_GO_spawn_enemy_vicino = new Dictionary<int, GameObject>();
-
     public GameObject GO_cont_spawn_enemy_bordo;
     public Dictionary<int, GameObject> lista_GO_spawn_enemy_bordo = new Dictionary<int, GameObject>();
 
@@ -27,14 +24,11 @@ public class game : MonoBehaviour
 
     public GameObject GO_sep_default;
 
-    private int num_sep_vicino=0;
     private int num_sep_bordo=0;
     private int num_sep_cerchio=0;
 
-    private float tempo_spawn_vicino=1f;
-    private float tempo_spawn_vicino_attuale=1f;
-
     private float tempo_spawn_bordo_attuale=1f;
+    private float tempo_spawn_cerchio_attuale=1f;
 
     private int eroe_livello=0;
     private float xp_attuale=0;
@@ -42,21 +36,17 @@ public class game : MonoBehaviour
     private float xp_eccesso=0;
 
     private float tempo_attuale_totale=0;
+    private int tempo_attuale_secondi=0;
     private int secondi_totali=0;
     public TMPro.TextMeshProUGUI txt_tempo;
 
     // Start is called before the first frame update
     void Start()
     {
+        tempo_spawn_cerchio_attuale=301;
+
         foreach(Transform child in lista_nemici_tipo.transform) {
             lista_GO_nemici_tipo.Add(child.gameObject.name,child.gameObject);
-        }
-
-        foreach(Transform child in GO_cont_spawn_enemy_vicino.transform) {
-            if (child.gameObject.active){
-                num_sep_vicino++;
-                lista_GO_spawn_enemy_vicino.Add(num_sep_vicino,child.gameObject);
-            }
         }
         foreach(Transform child in GO_cont_spawn_enemy_bordo.transform) {
             if (child.gameObject.active){
@@ -88,25 +78,26 @@ public class game : MonoBehaviour
 
     private void setta_txt_tempo(){
         tempo_attuale_totale+=(1*Time.deltaTime);
-        secondi_totali=(int)tempo_attuale_totale;
+        tempo_attuale_secondi=(int)tempo_attuale_totale;
+        secondi_totali=tempo_attuale_secondi;
 
-        if (secondi_totali>0){
-            if (secondi_totali%600==0){
+        if (tempo_attuale_secondi>0){
+            if (tempo_attuale_secondi%600==0){
                 tempo_special.attiva_special(9f, "ULTRA!", "BOOM!");
             }
         }
 
         int num_minuti=0;
-        if (secondi_totali>=60){
-            num_minuti=secondi_totali/60;
-            secondi_totali-=(num_minuti*60);
+        if (tempo_attuale_secondi>=60){
+            num_minuti=tempo_attuale_secondi/60;
+            tempo_attuale_secondi-=(num_minuti*60);
         }
         string testo="";
         if (num_minuti<10){testo+="0";}
         testo+=num_minuti.ToString();
         testo+=" : ";
-        if (secondi_totali<10){testo+="0";}
-        testo+=secondi_totali.ToString();
+        if (tempo_attuale_secondi<10){testo+="0";}
+        testo+=tempo_attuale_secondi.ToString();
         txt_tempo.SetText(testo);
 
         
@@ -116,84 +107,130 @@ public class game : MonoBehaviour
     void Update()
     {
         setta_txt_tempo();
-        /*
-        if (tempo_spawn_vicino_attuale<=0){
-            spawn_enemy("vicino");
-            tempo_spawn_vicino_attuale+=tempo_spawn_vicino;
-        } else {
-            tempo_spawn_vicino_attuale-=(1f*Time.deltaTime);
-        }
-        */
 
-        if (tempo_spawn_bordo_attuale<=0){
-            print (secondi_totali/60);
+        if (tempo_spawn_bordo_attuale>0){
+            tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
+        } else {
             switch (secondi_totali/60){
-                case 0:{spawn_enemy("bordo");tempo_spawn_bordo_attuale+=1f;break;}
-                case 1:{spawn_enemy("bordo");tempo_spawn_bordo_attuale+=0.5f;break;}
+                case 0:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=1f;break;}
+                case 1:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=0.5f;break;}
+                case 2:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=0.2f;break;}
+                case 3:{
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=1.5f;
+                    break;
+                }
+                case 4:{spawn_enemy("bordo","demone");tempo_spawn_bordo_attuale+=70;break;}
+                case 5:{
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 6:{
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 7:{
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 8:{spawn_enemy("bordo","demone");tempo_spawn_bordo_attuale+=70;break;}
+                case 9:{
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
             }
             
+        }
+
+        if (tempo_spawn_cerchio_attuale>0){
+            tempo_spawn_cerchio_attuale-=(1f*Time.deltaTime);
         } else {
-            tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
+            switch (secondi_totali/60){
+                case 5:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
+                case 7:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
+                default:{
+                    tempo_spawn_cerchio_attuale+=2000;
+                    break;
+                }
+            }
         }
     }
 
-    private void spawn_enemy(string raggio){
+    private void spawn_enemy(string raggio, string id_nemico){
         int num_sep=0;
         switch (raggio){
-            case "vicino":{
-                for (int i=1;i<=num_sep_vicino;i++){
-                    lista_GO_spawn_enemy_vicino[i].GetComponent<SpriteRenderer>().color=Color.white;
-                }
-
-                num_sep=Random.Range(1,(num_sep_vicino+1));
-                spawn_enemy_point(raggio,num_sep);
-                break;
-            }
             case "bordo":{
                 for (int i=1;i<=num_sep_bordo;i++){
                     lista_GO_spawn_enemy_bordo[i].GetComponent<SpriteRenderer>().color=Color.white;
                 }
 
                 num_sep=Random.Range(1,(num_sep_bordo+1));
-                spawn_enemy_point(raggio,num_sep);
+                spawn_enemy_point(raggio,num_sep,id_nemico);
+                break;
+            }
+            case "cerchio_totale":{
+                for (int i=1;i<=num_sep_cerchio;i++){
+                    spawn_enemy_point(raggio,i,id_nemico);
+                }
                 break;
             }
         }
     }
 
-    private void spawn_enemy_point(string raggio, int num_sep){
+    private void spawn_enemy_point(string raggio, int num_sep, string id_nemico){
         switch (raggio){
-            case "vicino":{
-                Collider[] hitColliders = Physics.OverlapSphere(lista_GO_spawn_enemy_vicino[num_sep].transform.position, 1);
-                foreach (var hitCollider in hitColliders){
-                    if (hitCollider.tag=="roccia"){
-                        spawn_enemy(raggio);
-                        lista_GO_spawn_enemy_vicino[num_sep].GetComponent<SpriteRenderer>().color=Color.red;return;
-                    }
-                }
-                lista_GO_spawn_enemy_vicino[num_sep].GetComponent<SpriteRenderer>().color=Color.green;
-                spawn_nemico(lista_GO_spawn_enemy_vicino[num_sep].transform.position.x,lista_GO_spawn_enemy_vicino[num_sep].transform.position.y,lista_GO_spawn_enemy_vicino[num_sep].transform.position.z);
-                break;
-            }
             case "bordo":{
-                Collider[] hitColliders = Physics.OverlapSphere(lista_GO_spawn_enemy_bordo[num_sep].transform.position, 1);
-                foreach (var hitCollider in hitColliders){
-                    if (hitCollider.tag=="roccia"){
-                        spawn_enemy(raggio);
-                        lista_GO_spawn_enemy_bordo[num_sep].GetComponent<SpriteRenderer>().color=Color.red;
-                        return;
+                if (id_nemico!="piovra"){
+                    Collider[] hitColliders = Physics.OverlapSphere(lista_GO_spawn_enemy_bordo[num_sep].transform.position, 1);
+                    foreach (var hitCollider in hitColliders){
+                        if (hitCollider.tag=="roccia"){
+                            spawn_enemy(raggio,id_nemico);
+                            lista_GO_spawn_enemy_bordo[num_sep].GetComponent<SpriteRenderer>().color=Color.red;
+                            return;
+                        }
                     }
                 }
                 lista_GO_spawn_enemy_bordo[num_sep].GetComponent<SpriteRenderer>().color=Color.green;
-                spawn_nemico(lista_GO_spawn_enemy_bordo[num_sep].transform.position.x,lista_GO_spawn_enemy_bordo[num_sep].transform.position.y,lista_GO_spawn_enemy_bordo[num_sep].transform.position.z);
+                spawn_nemico(lista_GO_spawn_enemy_bordo[num_sep].transform.position.x,lista_GO_spawn_enemy_bordo[num_sep].transform.position.y,lista_GO_spawn_enemy_bordo[num_sep].transform.position.z,id_nemico);
+                break;
+            }
+            case "cerchio_totale":{
+                if (id_nemico!="piovra"){
+                    Collider[] hitColliders = Physics.OverlapSphere(lista_GO_spawn_enemy_cerchio[num_sep].transform.position, 1);
+                    foreach (var hitCollider in hitColliders){
+                        if (hitCollider.tag=="roccia"){
+                            spawn_enemy(raggio,id_nemico);
+                            lista_GO_spawn_enemy_cerchio[num_sep].GetComponent<SpriteRenderer>().color=Color.red;
+                            return;
+                        }
+                    }
+                }
+                lista_GO_spawn_enemy_cerchio[num_sep].GetComponent<SpriteRenderer>().color=Color.green;
+                spawn_nemico(lista_GO_spawn_enemy_cerchio[num_sep].transform.position.x,lista_GO_spawn_enemy_cerchio[num_sep].transform.position.y,lista_GO_spawn_enemy_cerchio[num_sep].transform.position.z,id_nemico);
+               
                 break;
             }
         }
     }
 
-    private void spawn_nemico(float x, float y, float z){
+    private void spawn_nemico(float x, float y, float z, string id_nemico){
         GameObject go_temp;
-        go_temp=Instantiate(lista_GO_nemici_tipo[test_nemico],nemici.transform);
+        go_temp=Instantiate(lista_GO_nemici_tipo[id_nemico],nemici.transform);
         go_temp.transform.position=new Vector3(x,1,z);
         go_temp.SetActive(true);
     }
@@ -210,7 +247,6 @@ public class game : MonoBehaviour
 
     public void eroe_guadagna_exp(float xp){
         xp_attuale+=xp;
-        print ("xp_attuale: "+xp_attuale);
         if (xp_attuale>=xp_next){
             eroe_livello++;
             xp_next=get_next_level_xp(eroe_livello);
