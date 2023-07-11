@@ -4822,7 +4822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4533183899907401033}
   - component: {fileID: 4533183899907401047}
-  - component: {fileID: 7676162010821129636}
+  - component: {fileID: 5042976801637680449}
   m_Layer: 0
   m_Name: obj_inv_20
   m_TagString: Untagged
@@ -4861,7 +4861,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7676162010821129636
+--- !u!114 &5042976801637680449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4870,11 +4870,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533183899907401032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6897d39525212c14cb046984dbb14f7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 35a3be519e26b9542af1f9daed6457ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  distanza: 60
+  hero_rule: {fileID: 0}
+  tempo_invincibilita: 20
   ps_attiva: {fileID: 4533183899009226405}
 --- !u!1001 &4533183899232827670
 PrefabInstance:

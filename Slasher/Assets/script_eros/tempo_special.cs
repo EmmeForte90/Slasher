@@ -8,6 +8,8 @@ using Spine.Unity;
 
 public class tempo_special : MonoBehaviour
 {
+    public bool bool_animazione=false;
+
     public GameObject GO_schermata_animazione_special;
     public SkeletonGraphic SkeletonAnimation_anim_eroe;
 
@@ -72,7 +74,9 @@ public class tempo_special : MonoBehaviour
     }
 
     private IEnumerator attiva_potere_hero(){
+        bool_animazione=true;
         yield return new WaitForSeconds(2f);
+        bool_animazione=false;
         hero_rule.attiva_potere_tempo_speciale();
         resetta_animazione();
     }

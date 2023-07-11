@@ -72,7 +72,7 @@ public class game : MonoBehaviour
             if (distanza_temp<=distanza_distruzione){
                 child.GetComponent<enemy_rule>().attiva_morte_nemico();
             }
-            print (distanza_temp);
+            //print (distanza_temp);
         }
     }
 
@@ -83,7 +83,7 @@ public class game : MonoBehaviour
 
         if (tempo_attuale_secondi>0){
             if (tempo_attuale_secondi%600==0){
-                tempo_special.attiva_special(9f, "ULTRA!", "BOOM!");
+                tempo_special.attiva_special(10f, "ULTRA!", "BOOM!");
             }
         }
 

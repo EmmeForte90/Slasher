@@ -6,13 +6,15 @@ using Spine.Unity;
 
 public class hero_rule : MonoBehaviour
 {
+    public tempo_special tempo_special;
+
     public bool bool_ghiaccio=false;
 
     public game game;
     public float tempo_freeze=0;
     public ParticleSystem ps_freeze;
 
-    private float tempo_invincibilita=0;
+    public float tempo_invincibilita=0;
     public ParticleSystem ps_invulnerabilita;
 
     public SphereCollider raggio_exp;
@@ -195,6 +197,7 @@ public class hero_rule : MonoBehaviour
     }
 
     public void check_danneggia_eroe(float danni, string tipo, string tipo_2){
+        if (tempo_special.bool_animazione){return;}
         if (tempo_invincibilita>0){return;}
         if (tempo_freeze>0){return;}
         if (bool_colpibile){
@@ -221,7 +224,7 @@ public class hero_rule : MonoBehaviour
     }
 
     public void danneggia_eroe(float danni){
-        print ("stò danneggiando l'eroe di "+danni);
+        //print ("stò danneggiando l'eroe di "+danni);
         vitalita-=danni;
         gestione_gui.setta_img_vitalita(vitalita,vitalita_max);
     }

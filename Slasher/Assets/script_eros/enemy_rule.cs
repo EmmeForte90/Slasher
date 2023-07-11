@@ -92,8 +92,11 @@ public class enemy_rule : MonoBehaviour
         //print ("nemico: collido con "+collision.gameObject.name+" ("+collision.gameObject.tag+")");
         switch (collision.gameObject.name){
             case "Eroe":{
-                hero_rule.check_danneggia_eroe(danno,"nemici","");
-                //hero_rule.danneggia_eroe(danno);
+                if (hero_rule.tempo_invincibilita<=0){
+                    hero_rule.check_danneggia_eroe(danno,"nemici","");
+                } else {
+                    danneggia_nemico("invulnerabilita_eroe",0.5f);
+                }
                 break;
             }
         }
