@@ -1,0 +1,19 @@
+Taurus.png
+size:1024,256
+filter:Linear,Linear
+bisto
+bounds:2,2,246,294
+rotate:90
+coda
+bounds:834,134,133,114
+gamba
+bounds:646,9,66,180
+rotate:90
+spalla
+bounds:298,16,115,346
+rotate:90
+spalla copia
+bounds:298,133,115,346
+rotate:90
+testa
+bounds:646,77,186,171

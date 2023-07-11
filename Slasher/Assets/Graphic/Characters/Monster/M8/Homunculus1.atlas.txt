@@ -1,0 +1,17 @@
+Homunculus1.png
+size:1024,256
+filter:Linear,Linear
+Ciuffo1
+bounds:345,89,217,165
+bocca giu
+bounds:345,2,85,73
+rotate:90
+bocca su
+bounds:420,18,82,69
+busto
+bounds:2,10,244,341
+rotate:90
+zampa copia 5
+bounds:564,203,148,51
+zanna
+bounds:564,129,76,72
