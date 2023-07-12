@@ -14,19 +14,18 @@ public class enemy_rule : MonoBehaviour
 
     public SkeletonAnimation skeletonAnimation;
 
-    public string id_nemico;
     public hero_rule hero_rule;
     public float danno=1f;
+    public float velocita_movimento=1;
+    public float vitalita_max=1;
 
     private Rigidbody rb;
     public Camera cam_r;
     public Transform cam;
     public Transform hero;
-    public float velocita_movimento=1;
     private float x_start_hero_screen;
 
     private float vitalita;
-    public float vitalita_max=1;
 
     float input_horizontal;
     bool bool_dir_dx=true;

@@ -116,6 +116,9 @@ public class mappa : MonoBehaviour
                     break;
                 }
             }
+            if ((x==0)&&(y==0)){//sarà un caso speciale per rimuovere l'unico blocco di energia che gli serve
+
+            }
 
             go_temp.SetActive(true);
             mappa_reale.Add(string_blocco,go_temp);
