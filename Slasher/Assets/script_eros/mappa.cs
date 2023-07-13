@@ -123,11 +123,13 @@ public class mappa : MonoBehaviour
             go_temp.SetActive(true);
             mappa_reale.Add(string_blocco,go_temp);
 
+            /*
             if (num_blocchi_generati>1){
                 GameObject go_temp_2=Instantiate(obj_vit_50);
                 go_temp_2.transform.SetParent(go_temp.transform);
                 go_temp_2.transform.localPosition=new Vector3(0,1,0);
             }
+            */
         } else {//devo generare un blocco figo
             numero_casuale=Random.Range(1,(num_blocchi_creazione_mappa_fighi+1));
             GameObject go_temp=Instantiate(lista_blocchi_creazione_mappa_fighi[numero_casuale]);

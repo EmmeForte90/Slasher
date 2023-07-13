@@ -65,12 +65,157 @@ public class game : MonoBehaviour
         xp_next=get_next_level_xp(1);
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        setta_txt_tempo();
+
+        if (tempo_spawn_bordo_attuale>0){
+            tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
+        } else {
+            switch (secondi_totali/60){
+                case 0:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=1f;break;}
+                case 1:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=0.5f;break;}
+                case 2:{spawn_enemy("bordo","cane");tempo_spawn_bordo_attuale+=0.5f;break;}
+                case 3:{
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=2f;
+                    break;
+                }
+                case 4:{spawn_enemy("bordo","demone");tempo_spawn_bordo_attuale+=70;break;}
+                case 5:{
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","volante");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 6:{
+                    spawn_enemy("bordo","imp_semplice");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","volante");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 7:{
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane_2");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 8:{spawn_enemy("bordo","demone");tempo_spawn_bordo_attuale+=70;break;}
+                case 9:{
+                    spawn_enemy("bordo","cane");
+                    spawn_enemy("bordo","cane_2");
+                    spawn_enemy("bordo","cane_2");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 10:{
+                    spawn_enemy("bordo","cane_2");
+                    spawn_enemy("bordo","volante");
+                    tempo_spawn_bordo_attuale+=0.5f;
+                    break;
+                }
+                case 11:{
+                    spawn_enemy("bordo","volante");
+                    tempo_spawn_bordo_attuale+=0.2f;
+                    break;
+                }
+                case 12:{
+                    spawn_enemy("bordo","demone");
+                    spawn_enemy("bordo","demone");
+                    tempo_spawn_bordo_attuale+=70;
+                    break;
+                }
+                case 13:{
+                    spawn_enemy("bordo","minotauro");
+                    tempo_spawn_bordo_attuale+=1f;
+                    break;
+                }
+                case 14:{
+                    spawn_enemy("bordo","piovra");
+                    tempo_spawn_bordo_attuale+=0.5f;
+                    break;
+                }
+                case 15:{
+                    spawn_enemy("bordo","imp_semplice");
+                    tempo_spawn_bordo_attuale+=0.1f;
+                    break;
+                }
+                case 16:{
+                    spawn_enemy("bordo","demone_collo");
+                    tempo_spawn_bordo_attuale+=70;
+                    break;
+                }
+                case 17:{
+                    spawn_enemy("bordo","cane");
+                    tempo_spawn_bordo_attuale+=0.1f;
+                    break;
+                }
+                case 18:{
+                    spawn_enemy("bordo","cane_2");
+                    tempo_spawn_bordo_attuale+=0.1f;
+                    break;
+                }
+                case 19:{
+                    spawn_enemy("bordo","volante");
+                    tempo_spawn_bordo_attuale+=0.1f;
+                    break;
+                }
+                case 20:{
+                    spawn_enemy("bordo","demone_collo");
+                    spawn_enemy("bordo","demone_collo");
+                    tempo_spawn_bordo_attuale+=70;
+                    break;
+                }
+                default:{
+                    tempo_spawn_bordo_attuale+=1000;
+                    break;
+                }
+            }
+            
+        }
+
+        if (tempo_spawn_cerchio_attuale>0){
+            tempo_spawn_cerchio_attuale-=(1f*Time.deltaTime);
+        } else {
+            switch (secondi_totali/60){
+                case 5:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
+                case 7:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
+                case 9:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
+                case 11:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
+                case 13:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=120;break;}
+                case 15:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=120;break;}
+                case 17:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=120;break;}
+                case 19:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 20:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 21:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 22:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 23:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 24:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 25:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 26:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 27:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 28:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=60;break;}
+                case 29:{spawn_enemy("cerchio_totale","piovra_2");tempo_spawn_cerchio_attuale+=1000;break;}
+                default:{
+                    tempo_spawn_cerchio_attuale+=2000;
+                    break;
+                }
+            }
+        }
+    }
+
     public void eroe_distrugge_area(float distanza_distruzione){
         float distanza_temp=0;
         foreach(Transform child in nemici.transform) {
             distanza_temp=Vector3.Distance(hero_transform.position, child.transform.position);
             if (distanza_temp<=distanza_distruzione){
-                child.GetComponent<enemy_rule>().attiva_morte_nemico();
+                child.GetComponent<enemy_rule>().danneggia_nemico("super_potere",5);
             }
             //print (distanza_temp);
         }
@@ -99,76 +244,6 @@ public class game : MonoBehaviour
         if (tempo_attuale_secondi<10){testo+="0";}
         testo+=tempo_attuale_secondi.ToString();
         txt_tempo.SetText(testo);
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        setta_txt_tempo();
-
-        if (tempo_spawn_bordo_attuale>0){
-            tempo_spawn_bordo_attuale-=(1f*Time.deltaTime);
-        } else {
-            switch (secondi_totali/60){
-                case 0:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=1f;break;}
-                case 1:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=0.5f;break;}
-                case 2:{spawn_enemy("bordo","imp_semplice");tempo_spawn_bordo_attuale+=0.2f;break;}
-                case 3:{
-                    spawn_enemy("bordo","imp_semplice");
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    tempo_spawn_bordo_attuale+=1.5f;
-                    break;
-                }
-                case 4:{spawn_enemy("bordo","demone");tempo_spawn_bordo_attuale+=70;break;}
-                case 5:{
-                    spawn_enemy("bordo","imp_semplice");
-                    spawn_enemy("bordo","imp_semplice");
-                    spawn_enemy("bordo","cane");
-                    tempo_spawn_bordo_attuale+=1f;
-                    break;
-                }
-                case 6:{
-                    spawn_enemy("bordo","imp_semplice");
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    tempo_spawn_bordo_attuale+=1f;
-                    break;
-                }
-                case 7:{
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    tempo_spawn_bordo_attuale+=1f;
-                    break;
-                }
-                case 8:{spawn_enemy("bordo","demone");tempo_spawn_bordo_attuale+=70;break;}
-                case 9:{
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    spawn_enemy("bordo","cane");
-                    tempo_spawn_bordo_attuale+=1f;
-                    break;
-                }
-            }
-            
-        }
-
-        if (tempo_spawn_cerchio_attuale>0){
-            tempo_spawn_cerchio_attuale-=(1f*Time.deltaTime);
-        } else {
-            switch (secondi_totali/60){
-                case 5:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
-                case 7:{spawn_enemy("cerchio_totale","piovra");tempo_spawn_cerchio_attuale+=120;break;}
-                default:{
-                    tempo_spawn_cerchio_attuale+=2000;
-                    break;
-                }
-            }
-        }
     }
 
     private void spawn_enemy(string raggio, string id_nemico){

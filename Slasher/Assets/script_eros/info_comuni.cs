@@ -49,7 +49,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_descrizione_generica.Add("magnetismo","Descrizione di Magnetismo");
         lista_abilita_descrizione_generica.Add("diminuire_cooldown","Descrizione di Prontezza");
 
-        lista_abilita_cooldown_iniziale.Add("catena",5);
+        lista_abilita_cooldown_iniziale.Add("catena",4);
         lista_abilita_cooldown_iniziale.Add("shuriken",5);
         lista_abilita_cooldown_iniziale.Add("laser",3);
         //lista_abilita_cooldown_iniziale.Add("sfera_orbitale",3);
@@ -58,7 +58,7 @@ public class info_comuni : MonoBehaviour
         lista_abilita_cooldown_iniziale.Add("meteore",3);
         lista_abilita_cooldown_iniziale.Add("scudo",5);
 
-        lista_abilita_durata_iniziale.Add("catena",3);
+        lista_abilita_durata_iniziale.Add("catena",4);
         lista_abilita_durata_iniziale.Add("shuriken",1);
         lista_abilita_durata_iniziale.Add("laser",0.1f);
         //lista_abilita_durata_iniziale.Add("sfera_orbitale",3);

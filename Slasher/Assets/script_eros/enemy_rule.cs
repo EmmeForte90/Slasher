@@ -6,6 +6,11 @@ using Spine.Unity;
 
 public class enemy_rule : MonoBehaviour
 {
+    private float last_y=0;
+    private float max_difference_y=50;
+
+    public MeshRenderer mesh;
+
     private bool bool_colpibile=true;
 
     public bool bool_fantasma=false;
@@ -64,6 +69,9 @@ public class enemy_rule : MonoBehaviour
 
         if (hero_rule.tempo_freeze==0){
             if (!bool_fantasma){
+                if (gameObject.transform.position.y>50){
+                    rb.velocity = Vector3.zero;
+                }
                 rb.MovePosition(transform.position+moveDir * velocita_movimento * Time.deltaTime);
             } else {
                 transform.position = Vector3.MoveTowards(transform.position, hero.position, (velocita_movimento*0.02f));
@@ -123,7 +131,7 @@ public class enemy_rule : MonoBehaviour
             case "sfera_orbitale":{danneggia_nemico("sfera_orbitale",hero_rule.lista_danni_abilita["sfera_orbitale"]);break;}
             case "esplosione_meteora":{danneggia_nemico("meteora",hero_rule.lista_danni_abilita["meteore"]);break;}
             case "scudo":{
-                print (-rb.velocity);
+                //if (!bool_fantasma){print (-rb.velocity);}
                 danneggia_nemico("scudo",hero_rule.lista_danni_abilita["scudo"]);
                 //rb.AddForce(-Vector3.forward * 1000 * Time.deltaTime,ForceMode.Impulse);
                 //rb.AddForce(new Vector3 (-rb.velocity.x, 0, - rb.velocity.z)*300*Time.deltaTime,ForceMode.Impulse);
@@ -167,14 +175,14 @@ public class enemy_rule : MonoBehaviour
         GameObject go_temp;
         go_temp=Instantiate(obj_exp);
         go_temp.transform.position=new Vector3(transform.position.x,1,transform.position.z);
-        StartCoroutine(anim_morte_nemico());
-    }
-
-    private IEnumerator anim_morte_nemico(){
-        gameObject.SetActive(false);
+        mesh.enabled=false;
         GameObject go_temp_2;
         go_temp_2=Instantiate(pf_vfx_destroy);
         go_temp_2.transform.position=new Vector3(transform.position.x,1,transform.position.z);
+        StartCoroutine(distruggi_gameobject());
+    }
+
+    private IEnumerator distruggi_gameobject(){
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
