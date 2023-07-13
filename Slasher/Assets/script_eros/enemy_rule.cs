@@ -6,6 +6,8 @@ using Spine.Unity;
 
 public class enemy_rule : MonoBehaviour
 {
+    public effetti effetti;
+
     private float last_y=0;
     private float max_difference_y=50;
 
@@ -144,6 +146,9 @@ public class enemy_rule : MonoBehaviour
         if (bool_morto){return;}
         if (!bool_colpibile){return;}
         //print ("stò danneggiando il nemico di "+danni+" del tipo "+tipo);
+
+        effetti.effetto_hit_rosso(transform.position.x,transform.position.y,transform.position.z);
+
         switch (tipo){
             default:{//viene danneggiato dall'eroe
                 if (hero_rule.lista_abilita_passive["danno"]>0){
@@ -154,7 +159,7 @@ public class enemy_rule : MonoBehaviour
         }
         vitalita-=danni;
 
-        StartCoroutine(anim_dmg_nemico());
+        //StartCoroutine(anim_dmg_nemico());
 
         bool_colpibile=false;
         StartCoroutine(ritorna_colpibile_coroutine());
